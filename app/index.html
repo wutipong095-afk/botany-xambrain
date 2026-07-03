@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>การทำสมองที่สอง — ครู</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>การทำสมองที่สอง</h1>
+        <p class="sub">แอปครู — อ่าน vault · ไป ExamFlow</p>
+      </div>
+      <div class="topbar-actions">
+        <button type="button" id="btn-examflow" class="btn primary">เปิด ExamFlow</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <p class="sidebar-label">บทเรียน (wiki)</p>
+        <ul id="wiki-list" class="wiki-list"></ul>
+        <p id="vault-path" class="vault-path"></p>
+      </aside>
+
+      <main class="content">
+        <div id="welcome" class="welcome">
+          <h2>ยินดีต้อนรับ</h2>
+          <p>เลือกบทเรียนจากแถบซ้าย หรือเปิด ExamFlow เพื่อสร้าง/ตรวจข้อสอบ</p>
+          <ul>
+            <li>ความรู้อยู่ในโฟลเดอร์ <code>wiki/</code> ของ vault</li>
+            <li>วัดผลนักเรียนที่ <a href="#" id="link-examflow">test.xambrain.com</a></li>
+          </ul>
+        </div>
+        <article id="article" class="article" hidden>
+          <h2 id="article-title"></h2>
+          <pre id="article-body" class="article-body"></pre>
+        </article>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <span>ส่งเสริมสุขภาพเชิงป้องกัน — ไม่ใช่การวินิจฉัยหรือรักษาโรค</span>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

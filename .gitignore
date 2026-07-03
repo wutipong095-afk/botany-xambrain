@@ -5,3 +5,12 @@
 # OS files
 Thumbs.db
 .DS_Store
+
+# Tauri teacher app
+app/node_modules/
+app/dist/
+app/src-tauri/target/
+app/src-tauri/gen/
+
+# Output (exam export)
+output/
