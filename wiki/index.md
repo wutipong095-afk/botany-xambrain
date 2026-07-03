@@ -36,7 +36,8 @@ tags:
 
 - [[thai-herbal]] — สมุนไพรไทย hub: ส่วนพืช → รส → ธาตุ (T0) 🌐
 - [[herbal-taste-9]] — รสยา 9 รส + สรรพคุณ (T1) 🌐
-- *(จะสร้าง)* dhatu-4-plants — ธาตุ 4 กับการเลือกยา · herbal-formula — ตำรับยา
+- [[dhatu-4-plants]] — ธาตุ 4 + รสแก้ธาตุ + เบญจกูล (T2) 🌐
+- *(จะสร้าง)* herbal-formula — ตำรับยา
 
 ## Questions
 
