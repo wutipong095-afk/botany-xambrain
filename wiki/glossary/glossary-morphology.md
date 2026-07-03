@@ -1,0 +1,88 @@
+---
+title: "คลังคำศัพท์: สัณฐานวิทยาพืช"
+type: glossary
+category: morphology
+created: 2026-07-03
+updated: 2026-07-03
+source_type: mixed
+tags:
+  - glossary
+  - morphology
+---
+
+# คลังคำศัพท์: สัณฐานวิทยาพืช (Morphology Glossary)
+
+> ศัพท์ไทย/อังกฤษ = จากซีทอาจารย์ ✅ [[source-plant-morphology]] และ node ดอก/ผล 🌐 · รากศัพท์ (etymology) = อ้างอิงทั่วไป (Gr.=กรีก, L.=ละติน) · ดู [[reference-sources]]
+
+## ราก (Root) → [[root-morphology]]
+
+| ไทย | อังกฤษ | รากศัพท์ / หมายเหตุ |
+|-----|--------|----------------------|
+| ราก | Root | — |
+| รากแก้ว | Tap root | จาก radicle (L. *radicula* = รากเล็ก) |
+| รากฝอย | Fibrous root | L. *fibra* = เส้นใย |
+| รากแขนง | Lateral root | L. *latus* = ด้านข้าง |
+| รากพิเศษ | Adventitious root | L. *adventicius* = มาจากภายนอก |
+| รากอากาศ | Aerial root | Gr. *aer* = อากาศ |
+
+## ลำต้น (Stem) → [[stem-morphology]]
+
+| ไทย | อังกฤษ | รากศัพท์ / หมายเหตุ |
+|-----|--------|----------------------|
+| ลำต้น | Stem | — |
+| ข้อ | Node | L. *nodus* = ปม |
+| ปล้อง | Internode | L. *inter* = ระหว่าง + nodus |
+| ตา | Bud | — |
+| เหง้า | Rhizome | Gr. *rhiza* = ราก (แต่เป็นลำต้น!) |
+| ทูเบอร์ | Tuber | L. *tuber* = ก้อนบวม |
+| บัลบ์ | Bulb | L. *bulbus* = หัวกลม |
+| คอร์ม | Corm | Gr. *kormos* = ลำต้น |
+| ไหล | Stolon | L. *stolo* = หน่อ |
+| มือพัน | Tendril | L. *tendere* = ยืด |
+
+## ใบ (Leaf) → [[leaf-morphology]]
+
+| ไทย | อังกฤษ | รากศัพท์ / หมายเหตุ |
+|-----|--------|----------------------|
+| ใบ | Leaf | — |
+| ก้านใบ | Petiole | L. *petiolus* = ก้านเล็ก |
+| แผ่นใบ | Blade / Lamina | L. *lamina* = แผ่นบาง |
+| เส้นใบ | Venation | L. *vena* = เส้น(เลือด) |
+| ใบเดี่ยว | Simple leaf | — |
+| ใบประกอบ | Compound leaf | L. *componere* = ประกอบ |
+| การเรียงใบ | Phyllotaxy | Gr. *phyllon* ใบ + *taxis* การจัดเรียง |
+| แบบขนนก | Pinnate | L. *pinna* = ขนนก |
+| แบบนิ้วมือ | Palmate | L. *palma* = ฝ่ามือ |
+
+## ดอก (Flower) → [[flower-morphology]]
+
+| ไทย | อังกฤษ | รากศัพท์ / หมายเหตุ |
+|-----|--------|----------------------|
+| ดอก | Flower | — |
+| กลีบเลี้ยง | Sepal (วงรวม: Calyx) | Gr. *kalyx* = ถ้วย |
+| กลีบดอก | Petal (วงรวม: Corolla) | Gr. *petalon* = แผ่น |
+| เกสรเพศผู้ | Stamen | L. *stamen* = เส้นด้าย |
+| อับเรณู | Anther | Gr. *antheros* = ออกดอก |
+| เกสรเพศเมีย | Pistil / Carpel | L. *pistillum* = สาก |
+| รังไข่ | Ovary | L. *ovum* = ไข่ |
+| ดอกช่อ | Inflorescence | L. *inflorescere* = เริ่มบาน |
+
+## ผลและเมล็ด (Fruit & Seed) → [[fruit-seed-morphology]]
+
+| ไทย | อังกฤษ | รากศัพท์ / หมายเหตุ |
+|-----|--------|----------------------|
+| ผล | Fruit | L. *fructus* |
+| ผนังผล | Pericarp | Gr. *peri* รอบ + *karpos* ผล |
+| ผลเดี่ยว/กลุ่ม/รวม | Simple/Aggregate/Multiple fruit | L. *aggregare* = รวมกลุ่ม |
+| เมล็ด | Seed | — |
+| เปลือกหุ้มเมล็ด | Seed coat / Testa | L. *testa* = เปลือกแข็ง |
+| ต้นอ่อน | Embryo | Gr. *embryon* = ตัวอ่อน |
+| รากอ่อน | Radicle | L. *radicula* = รากเล็ก |
+| ยอดอ่อน | Plumule | L. *plumula* = ขนนกเล็ก |
+| ใบเลี้ยง | Cotyledon | Gr. *kotyledon* = แอ่ง |
+| เอนโดสเปิร์ม | Endosperm | Gr. *endon* ภายใน + *sperma* เมล็ด |
+
+## ดูเพิ่ม
+
+- [[glossary-index]] — สารบัญคำศัพท์
+- คำศัพท์รสยา/ธาตุ (บาลี/สันสกฤต) → จะรวมใน glossary-herbal (ยังไม่สร้าง)

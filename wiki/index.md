@@ -37,7 +37,7 @@ tags:
 - [[thai-herbal]] — สมุนไพรไทย hub: ส่วนพืช → รส → ธาตุ (T0) 🌐
 - [[herbal-taste-9]] — รสยา 9 รส + สรรพคุณ (T1) 🌐
 - [[dhatu-4-plants]] — ธาตุ 4 + รสแก้ธาตุ + เบญจกูล (T2) 🌐
-- *(จะสร้าง)* herbal-formula — ตำรับยา
+- [[herbal-formula]] — ตำรับยา: ตรีกฏุก/ตรีผลา/เบญจกูล (T3) 🌐
 
 ## Questions
 
@@ -49,4 +49,5 @@ tags:
 
 ## Glossary (คลังคำศัพท์)
 
-*(ยังไม่มี — สั่ง "ทำคลังคำศัพท์ [หมวด]")*
+- [[glossary/glossary-index]] — สารบัญคำศัพท์
+- [[glossary/glossary-morphology]] — สัณฐานวิทยา (ไทย/อังกฤษ/รากศัพท์ L.-Gr.)

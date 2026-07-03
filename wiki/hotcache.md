@@ -11,8 +11,8 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: Layer S ครบ 5 อวัยวะ + Layer T แกนครบ (สมุนไพร hub + รสยา 9 รส + ธาตุ 4/เบญจกูล)
-- **เป้าหมายถัดไป**: herbal-formula (ตำรับยา), ทำข้อสอบ 3 ระดับ, คลังคำศัพท์, เนื้อเยื่อ/taxonomy
+- **Phase**: Layer S ครบ 5 อวัยวะ + Layer T ครบ (hub/รสยา/ธาตุ/ตำรับ) + glossary morphology
+- **เป้าหมายถัดไป**: รอข้อมูลเพิ่ม (ผู้ใช้แจ้ง) ก่อนทำข้อสอบ · ระหว่างรอ: glossary-herbal (บาลี), เนื้อเยื่อ/taxonomy
 - **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ
 - **ตัดสินใจแล้ว**:
   - โครงสร้าง + workflow เหมือน body-xambrain (ดู CLAUDE.md)
@@ -36,11 +36,13 @@ tags:
 4. ~~วางระบบอ้างอิง [[reference-sources]] + node ดอก/ผล-เมล็ด (external, มี URL)~~ ✅
 5. ~~เริ่ม Layer T: [[thai-herbal]] hub + [[herbal-taste-9]] (external, อ้างอิง ม.อ.)~~ ✅
 6. ~~[[dhatu-4-plants]]: ธาตุ 4 + รสแก้ธาตุ + เบญจกูล เชื่อม Layer S ครบวง~~ ✅
+7. ~~[[herbal-formula]] ตำรับ ตรีกฏุก/ตรีผลา/เบญจกูล (external)~~ ✅
+8. ~~glossary-morphology (ไทย/อังกฤษ/รากศัพท์) + glossary-index~~ ✅
 
 ## ต้องทำต่อ
 
-1. herbal-formula (ตำรับยา) เช่น พิกัดเบญจกูล ตรีผลา ตรีกฏุก
-2. ทำข้อสอบ 3 ระดับ + คลังคำศัพท์ (ตอนนี้เนื้อหาพอทำแล้ว)
+1. **ข้อสอบ 3 ระดับ — พักไว้ก่อน (ผู้ใช้ขอรอข้อมูลเยอะกว่านี้)**
+2. glossary-herbal (รสยา/ธาตุ + บาลี/สันสกฤต)
 3. ขยาย Layer S: เนื้อเยื่อพืช, taxonomy — หา certified source ก่อนถ้าได้
 3. เริ่ม Layer T: สมุนไพรไทย, รสยา 9 รส, เชื่อมธาตุ 4
 4. ทำข้อสอบ + คลังคำศัพท์ (morphology terms 3 ภาษา)
