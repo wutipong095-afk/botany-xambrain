@@ -16,11 +16,14 @@ tags:
 
 ## Source Summaries
 
-*(ยังไม่มี — เพิ่ม PDF ใน `raw/` แล้วสั่ง "ย่อยเนื้อหา")*
+- [[source-plant-morphology]] — สัณฐานวิทยาพืช: ราก ลำต้น ใบ (วชช.มุกดาหาร, 2026-07-03)
 
 ## Concepts — Layer S: พฤกษศาสตร์ (Structure)
 
-*(ยังไม่มี concept nodes — จะสร้างเมื่อย่อยเนื้อหา เช่น plant-morphology, plant-parts, plant-taxonomy)*
+- [[plant-morphology]] — สัณฐานวิทยาพืช (S1 hub)
+  - [[root-morphology]] — ราก (S2)
+  - [[stem-morphology]] — ลำต้น (S3)
+  - [[leaf-morphology]] — ใบ (S4)
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
