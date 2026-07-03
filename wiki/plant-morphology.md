@@ -25,8 +25,10 @@ tags:
 | ราก (Root) | ยึดเกาะ ดูดน้ำ/อาหาร | [[root-morphology]] |
 | ลำต้น (Stem) | พยุง ลำเลียง | [[stem-morphology]] |
 | ใบ (Leaf) | สังเคราะห์แสง คายน้ำ | [[leaf-morphology]] |
-| ดอก (Flower) | สืบพันธุ์ | *(ยังไม่มี node)* |
-| ผล/เมล็ด (Fruit/Seed) | ขยายพันธุ์ | *(ยังไม่มี node)* |
+| ดอก (Flower) | สืบพันธุ์ | [[flower-morphology]] 🌐 |
+| ผล/เมล็ด (Fruit/Seed) | ขยายพันธุ์ | [[fruit-seed-morphology]] 🌐 |
+
+> ✅ = จากซีทอาจารย์ (certified) · 🌐 = ค้นจากอินเทอร์เน็ต (external) ดู [[reference-sources]]
 
 ## การเชื่อมกับ 3 Layer
 
@@ -36,8 +38,9 @@ tags:
 
 ## Leads to
 
-- [[root-morphology]] · [[stem-morphology]] · [[leaf-morphology]]
+- [[root-morphology]] · [[stem-morphology]] · [[leaf-morphology]] · [[flower-morphology]] · [[fruit-seed-morphology]]
 
 ## Sources
 
-- [[source-plant-morphology]] — สัณฐานวิทยาพืช (วัชราภรณ์ ชนะเคน, วชช.มุกดาหาร)
+- [[source-plant-morphology]] — สัณฐานวิทยาพืช (วัชราภรณ์ ชนะเคน, วชช.มุกดาหาร) ✅ certified
+- ดอก, ผล/เมล็ด — external ดู [[reference-sources]]

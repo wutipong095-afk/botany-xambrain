@@ -13,6 +13,7 @@ tags:
 
 - [[hotcache]] — บริบทล่าสุดของ session (อ่านก่อนทุกครั้ง)
 - [[overview]] — แผนที่ความรู้ทั้งหมดของ wiki + framework 3 Layer
+- [[reference-sources]] — แหล่งอ้างอิงและระดับการรับรอง (certified ✅ / external 🌐)
 
 ## Source Summaries
 
@@ -24,6 +25,8 @@ tags:
   - [[root-morphology]] — ราก (S2)
   - [[stem-morphology]] — ลำต้น (S3)
   - [[leaf-morphology]] — ใบ (S4)
+  - [[flower-morphology]] — ดอก (S5) 🌐 external
+  - [[fruit-seed-morphology]] — ผลและเมล็ด (S6) 🌐 external
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
