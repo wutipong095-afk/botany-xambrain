@@ -61,3 +61,4 @@ tags:
 | 2026-07-03 | หลักฐานเชิงประจักษ์: อาหาร→โรคทั่วโลก (11 ล้าน/22%, NCDs 74%) | GBD 2017 *The Lancet*, EurekAlert, WHO (NCDs, EMRO) | [[food-as-balance]] |
 | 2026-07-03 | เมนูอาหารตามธาตุ (+14 เมนู): ลม/น้ำ/ไฟ/ดิน | ม.มหิดล gj.mahidol (tard, preg-food), ราชวิทยาลัยจุฬาภรณ์ cra.ac.th | `data/menu-db.json` · [[food-recommender]] |
 | 2026-07-03 | เมนูอาหารตามธาตุ รอบ 2 (+24 เมนู → 50 รวม): ดิน/ลม/ไฟ/น้ำ | ม.มหิดล gj.mahidol (tard, preg-food), ราชวิทยาลัยจุฬาภรณ์ cra.ac.th | `data/menu-db.json` · [[food-recommender]] |
+| 2026-07-03 | เมนูผู้ป่วย/ฟื้นตัว (+12 เมนู, patientFor) + กฎอาการผู้ป่วย | ม.มหิดล gj (chemo, กล้วยน้ำว้า), ศรีพัฒน์ CMU, ศิริราช si/rama, ม.สวนดุสิต | `data/menu-db.json` · `data/symptom-element.json` |
