@@ -67,3 +67,4 @@ tags:
 | 2026-07-03 | เมนูอาหารรอบ 4 (+15 เมนู → 92 รวม): เครื่องดื่ม CRA + อาหารอ่อนผู้ป่วย | cra.ac.th, gj.mahidol, ศรีพัฒน์ CMU (sriphat) | `data/menu-db.json` · [[food-recommender]] |
 | 2026-07-03 | เมนูอีสานคัดกรองสุขภาพ (+14 ใหม่, 4 แท็ก region) สุก ไม่ปลาดิบ/ปลาร้า | prijnr 2023 (CMU), gj.mahidol, KKU Smart Aging, SUT ผักอีสาน | `data/menu-db.json` · [[food-recommender]] |
 | 2026-07-03 | ยำสุขภาพ (+12 ใหม่, yumScreened) สัตว์สุก ไม่ปลาดิบ แคลอรีต่ำ | gj.mahidol, cra.ac.th, prijnr 2023, sriphat CMU | `data/menu-db.json` · [[food-recommender]] |
+| 2026-07-03 | วิเคราะห์เมนู Tier 2 รอบ 1 (แกง/ต้ม 28 + แกงหน่อไม้) + UI ดูวิเคราะห์ | doctor.or.th, inmu.mahidol, gj.mahidol, cra.ac.th, prijnr 2023 | `data/menu-analysis-tier2-round1.json` · `wiki/menus/` · `recommender.js` |

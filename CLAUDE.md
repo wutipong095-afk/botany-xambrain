@@ -148,6 +148,18 @@ wiki/         — เนื้อหาหลัก (concept nodes, source summa
 6. **TODO**: สิ่งที่ยังไม่ได้ทำ เรียงลำดับความสำคัญ
 7. บันทึกใน `output/report-{date}.md` (หรือ `.docx`)
 
+### 9. วิเคราะห์เมนู `[ชื่อเมนู หรือ id หรือ รอบ 1-5]`
+
+**Input**: เมนูใน `data/menu-db.json` หรือชุดรอบ (แกง/ต้ม · ยำ · อีสาน · นึ่งย่าง · ของว่าง)
+**Output**: Tier 2 ใน `data/menu-analysis-tier2-*.json` + (ถ้าระบุ `ลึก`) `wiki/menus/{id}.md`
+
+ขั้นตอน:
+1. อ่าน entry เดิม + แหล่งอ้างอิง (gj.mahidol, cra.ac.th, prijnr ฯลฯ)
+2. เติม **Tier 2**: `ingredients{core,optional}`, `layerS[]`, `whenCooked{suitAudience,avoidFor,summary}`, `analysisTier: 2`
+3. รัน `python scripts/merge-menu-analysis.py` รวมเข้า `menu-db.json`
+4. เมนูสำคัญ → **Tier 3** wiki ตามแม่แบบ [[food-analysis-ttm]] + แกงหน่อไม้
+5. อัพเดต `wiki/food-recommender.md` · `wiki/reference-sources.md`
+
 ## หลักการทั่วไป
 
 - อ่าน `wiki/hotcache.md` ก่อนเสมอเมื่อเริ่ม session ใหม่

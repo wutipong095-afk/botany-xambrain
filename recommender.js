@@ -327,6 +327,63 @@
     };
   }
 
+  function formatMenuAnalysis(menu) {
+    if (!menu || menu.analysisTier < 2) return null;
+    const ing = menu.ingredients || {};
+    const wc = menu.whenCooked || {};
+    return {
+      tier: menu.analysisTier,
+      core: ing.core || [],
+      optional: ing.optional || [],
+      layerS: menu.layerS || [],
+      suitAudience: wc.suitAudience || [],
+      avoidFor: wc.avoidFor || [],
+      summary: wc.summary || menu.note || "",
+      elements: menu.suitFor || [],
+      tastes: menu.tastes || [],
+      thermal: menu.thermal,
+      energy: menu.energy,
+    };
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderMenuAnalysisHtml(menu) {
+    const a = formatMenuAnalysis(menu);
+    if (!a) return "";
+    const list = (items) =>
+      items.length
+        ? `<ul class="analysis-list">${items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`
+        : "<p class=\"analysis-muted\">—</p>";
+    return `
+      <div class="analysis-detail" hidden>
+        <p class="analysis-summary">${escapeHtml(a.summary)}</p>
+        <div class="analysis-grid">
+          <div>
+            <strong>วัตถุดิบหลัก</strong>
+            ${list(a.core)}
+          </div>
+          <div>
+            <strong>เสริม (ตามฤดู)</strong>
+            ${list(a.optional)}
+          </div>
+        </div>
+        <p><strong>Layer S (ส่วนพืช)</strong></p>
+        ${list(a.layerS)}
+        <p><strong>เหมาะกับ (เมื่อปรุงสำเร็จ)</strong></p>
+        ${list(a.suitAudience)}
+        <p><strong>ควรระวัง</strong></p>
+        ${list(a.avoidFor)}
+        <p class="analysis-meta">ธาตุ ${escapeHtml(a.elements.join(", "))} · ฤทธิ์ ${escapeHtml(a.thermal)} · พลังงาน ${escapeHtml(a.energy)} · รส ${escapeHtml(a.tastes.join(" "))}</p>
+      </div>`;
+  }
+
   global.FoodRecommender = {
     PATIENT_CONTEXTS,
     parseSymptoms,
@@ -334,6 +391,8 @@
     bmiLabel,
     getAgeBand,
     inferCookMethod,
+    formatMenuAnalysis,
+    renderMenuAnalysisHtml,
     recommend,
   };
 })(typeof window !== "undefined" ? window : globalThis);

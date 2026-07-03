@@ -45,13 +45,27 @@ tags:
 
 | ไฟล์ | หน้าที่ | ฟิลด์หลัก |
 |------|---------|-----------|
-| `data/menu-db.json` | ฐานข้อมูลเมนู | `name, tastes[], thermal, energy, suitFor[], cautionFor[], symptoms[], mainPlants[], note, patientFor[]` |
+| `data/menu-db.json` | ฐานข้อมูลเมนู | `name, tastes[], thermal, energy, suitFor[], cautionFor[], symptoms[], mainPlants[], note, patientFor[]` · **Tier 2:** `analysisTier, ingredients{core,optional}, layerS[], whenCooked{suitAudience,avoidFor,summary}` |
 | `data/symptom-element.json` | กฎแปลงอาการ→ธาตุ→รส | `symptoms[], element, state, recommendTaste[], recommendThermal, why` |
 | `data/age-food.json` | กฎอายุสมุฏฐาน→ธาตุ/รสตามวัย | `bands[]: minAge, maxAge, samutthana, dominantElement, recommendTaste[], avoidTastes[], preferEnergy[], boostPatientContexts[]` |
 
 - `thermal`: ร้อน / อุ่น / กลาง / เย็น
 - `energy`: ต่ำ / กลาง / สูง (เชิงคุณภาพ — ปรับเป็น kcal จริงภายหลังได้)
 - `suitFor` / `cautionFor`: ธาตุ ดิน / น้ำ / ลม / ไฟ
+
+### วิเคราะห์เมนู 3 ระดับ (Tier)
+
+| Tier | เก็บที่ไหน | เนื้อหา |
+|------|-----------|---------|
+| **1** | `menu-db.json` (เดิม) | `tastes, thermal, energy, suitFor, symptoms, note` — ใช้จัดอันดับ |
+| **2** | `menu-db.json` + `data/menu-analysis-tier2-*.json` | `ingredients`, `layerS`, `whenCooked` — แสดงใน UI ปุ่ม「ดูวิเคราะห์」 |
+| **3** | `wiki/menus/{id}.md` | บทวิเคราะห์เต็ม S/U/T + แหล่งอ้างอิง — สอน/อ่านลึก |
+
+รอบ 1 (แกง/ต้ม): **28 เมนู** มี `analysisTier: 2` รวม **แกงหน่อไม้** (ใหม่) · Tier 3 ตัวอย่าง: [[menus/gaeng-nor-mai]], [[menus/tom-yum-goong-nam-sai]], [[menus/gaeng-liang]]
+
+```bash
+python scripts/merge-menu-analysis.py   # รวม tier2 เข้า menu-db.json
+```
 
 ## กระบวนการตัดสินใจ (Decision flow)
 
@@ -146,9 +160,10 @@ flowchart TD
 
 1. ✅ ฐานข้อมูล JSON (menu-db + symptom-element + age-food) + สเปกกลไก (node นี้)
 2. ✅ **เว็บ prototype** — `index.html` + `recommender.js` (ทั่วไป / ผู้ป่วย / อายุ)
-3. ✅ ขยายฐานเมนู (63 เมนู) + แท็กผู้ป่วย
-4. ⏭️ เติมค่า kcal + รูปภาพ
-5. ⏭️ ตัวกรองโรคประจำตัว/แพ้อาหาร + ธาตุเจ้าเรือนจากวันเกิด
+3. ✅ ขยายฐานเมนู (124 เมนู) + แท็กผู้ป่วย + **วิเคราะห์ Tier 2 รอบ 1 (แกง/ต้ม 28 เมนู)**
+4. ⏭️ วิเคราะห์ Tier 2 รอบ 2–5 (ยำ / อีสาน / นึ่งย่าง / ของว่าง)
+5. ⏭️ เติมค่า kcal + รูปภาพ
+6. ⏭️ ตัวกรองโรคประจำตัว/แพ้อาหาร + ธาตุเจ้าเรือนจากวันเกิด
 
 ## Prerequisites
 

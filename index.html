@@ -151,6 +151,35 @@
     }
     .tag.patient { background: var(--patient-bg); color: var(--patient); }
     .reasons { font-size: 0.82rem; color: var(--muted); margin: 0; padding-left: 1.1rem; }
+    .analysis-toggle {
+      margin: 0.35rem 0 0.5rem;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.82rem;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .analysis-toggle[aria-expanded="true"] { background: var(--accent); color: #fff; }
+    .analysis-detail {
+      font-size: 0.84rem;
+      border-top: 1px dashed var(--border);
+      margin-top: 0.5rem;
+      padding-top: 0.65rem;
+    }
+    .analysis-summary { margin: 0 0 0.5rem; font-weight: 500; }
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 520px) { .analysis-grid { grid-template-columns: 1fr; } }
+    .analysis-list { margin: 0.25rem 0 0.5rem; padding-left: 1.1rem; color: var(--muted); }
+    .analysis-meta { font-size: 0.78rem; color: var(--muted); margin: 0.5rem 0 0; }
+    .analysis-muted { color: var(--muted); margin: 0.25rem 0; font-size: 0.82rem; }
     .empty { color: var(--muted); text-align: center; padding: 1.5rem; }
     .error { color: #b91c1c; font-size: 0.9rem; }
     footer { font-size: 0.78rem; color: var(--muted); margin-top: 1.5rem; }
@@ -334,12 +363,19 @@
       }
 
       results.innerHTML = out.results
-        .map(({ menu, score, reasons }) => {
+        .map(({ menu, score, reasons }, idx) => {
           const patientTags = (menu.patientFor || [])
             .map((p) => `<span class="tag patient">${p}</span>`)
             .join("");
+          const hasAnalysis = menu.analysisTier >= 2;
+          const analysisBtn = hasAnalysis
+            ? `<button type="button" class="analysis-toggle" data-idx="${idx}" aria-expanded="false">ดูวิเคราะห์เมนู</button>`
+            : "";
+          const analysisBlock = hasAnalysis
+            ? FoodRecommender.renderMenuAnalysisHtml(menu)
+            : "";
           return `
-            <article class="result">
+            <article class="result" data-result-idx="${idx}">
               <h3>${menu.name}</h3>
               <div class="tags">
                 <span class="tag">ฤทธิ์ ${menu.thermal}</span>
@@ -348,10 +384,24 @@
                 ${patientTags}
               </div>
               <p style="margin:0 0 0.4rem;font-size:0.88rem">${menu.note || ""}</p>
+              ${analysisBtn}
+              ${analysisBlock}
               <ul class="reasons">${reasons.map((r) => `<li>${r}</li>`).join("")}</ul>
             </article>`;
         })
         .join("");
+
+      results.querySelectorAll(".analysis-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const article = btn.closest(".result");
+          const panel = article.querySelector(".analysis-detail");
+          if (!panel) return;
+          const open = panel.hidden;
+          panel.hidden = !open;
+          btn.setAttribute("aria-expanded", String(open));
+          btn.textContent = open ? "ซ่อนวิเคราะห์" : "ดูวิเคราะห์เมนู";
+        });
+      });
     }
 
     el("tab-general").addEventListener("click", () => setMode(false));
