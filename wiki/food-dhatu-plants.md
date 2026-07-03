@@ -9,7 +9,9 @@ prerequisites:
   - herbal-taste-9
   - dhatu-4-plants
 source_type: external
+curriculum_anchor: "TA301 Food and Nutrition for Applied Thai Traditional Medicine (ม.ธรรมศาสตร์)"
 references:
+  - "https://moodle.tu.ac.th/course/index.php?categoryid=1253"
   - "https://www.gj.mahidol.ac.th/main/tard/"
   - "https://chulabhornchannel.cra.ac.th/health-articles/37234/"
   - "https://www.hrdi.or.th/articles/Detail/26"
@@ -25,6 +27,7 @@ tags:
 # อาหารตามธาตุ: ผัก–ผลไม้ รสตามธาตุเจ้าเรือน (Food by Constitution)
 
 > 🌐 **source_type: external** — ค้นจากอินเทอร์เน็ต (ไม่มีในซีทอาจารย์) แหล่งสถาบัน: ศูนย์การแพทย์กาญจนาภิเษก ม.มหิดล · ราชวิทยาลัยจุฬาภรณ์ · สวพส. · รพ.พิษณุโลก · ดูที่มาท้ายหน้า · ระบบอ้างอิง [[reference-sources]]
+> 📎 **Curriculum anchor**: หัวข้อนี้ตรงกับรายวิชา **TA301 Food and Nutrition for Applied Thai Traditional Medicine** (ม.ธรรมศาสตร์) — ดู [[reference-sources]] หมวด Curriculum anchors
 
 ## สาระสำคัญ
 
@@ -104,6 +107,7 @@ tags:
 
 ## Prerequisites
 
+- [[food-as-balance]] — แกนความรู้ "อาหารคือสมดุล" (กรอบราก)
 - [[herbal-taste-9]] — สรรพคุณของแต่ละรส
 - [[dhatu-4-plants]] — รสแก้ธาตุพิการ + ตัวยาประจำธาตุ
 
@@ -111,6 +115,7 @@ tags:
 
 - [[thai-herbal]] — hub เชื่อมส่วนพืช → รส → ธาตุ
 - [[plant-morphology]] — ส่วนของพืช (ระบุ "ส่วนที่กิน")
+- [[food-analysis-ttm]] — วิเคราะห์อาหาร 1 จานแบบแผนไทย (รส–ฤทธิ์–พลังงาน)
 
 ## ที่มา (External sources) — เข้าถึง 2026-07-03
 

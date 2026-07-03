@@ -15,6 +15,10 @@ tags:
 - [[overview]] — แผนที่ความรู้ทั้งหมดของ wiki + framework 3 Layer
 - [[reference-sources]] — แหล่งอ้างอิงและระดับการรับรอง (certified ✅ / external 🌐)
 
+## แกนความรู้ (Foundational axes)
+
+- [[food-as-balance]] — อาหารคือสมดุล: 4 กระบวนทัศน์ (สากล/ไทย/อายุรเวท/จีน) (AX1) 🌐 — กรอบรากของสาขาอาหาร (ครูเฮนรี่)
+
 ## Source Summaries
 
 - [[source-plant-morphology]] — สัณฐานวิทยาพืช: ราก ลำต้น ใบ (วชช.มุกดาหาร, 2026-07-03)
@@ -32,6 +36,8 @@ tags:
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
 - [[food-dhatu-plants]] — อาหารตามธาตุ: ผัก–ผลไม้ รสตามธาตุเจ้าเรือน (U1) 🌐 — สะพาน Layer U↔T
+- [[food-analysis-ttm]] — วิเคราะห์อาหารแบบแผนไทย: รส–ฤทธิ์–พลังงาน (แคลอรี↔ธาตุไฟ) (U2) 🌐
+- [[food-recommender]] — เครื่องแนะนำเมนูตามร่างกาย (BMI+อาการ→เมนู) + ฐานข้อมูล JSON (U3) 🌐
 
 ## Concepts — Layer T: ภูมิปัญญาไทย (Thai Traditional)
 
