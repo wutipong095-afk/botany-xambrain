@@ -65,3 +65,4 @@ tags:
 | 2026-07-03 | อายุสมุฏฐาน 4 วัย → ธาตุ/รสตามวัย (`age-food.json`) | ม.เชียงใหม่ med.cmu, ม.มหิดล gj, samunpri, สารานุกรมไทย | `data/age-food.json` · [[food-recommender]] · `recommender.js` |
 | 2026-07-03 | เมนูอาหารรอบ 3 (+14 เมนู → 77 รวม): ของว่าง/เครื่องดื่มธาตุดิน-น้ำ-ไฟ | ราชวิทยาลัยจุฬาภรณ์ cra.ac.th, ม.มหิดล gj (miang-kham, okra, preg-food) | `data/menu-db.json` · [[food-recommender]] |
 | 2026-07-03 | เมนูอาหารรอบ 4 (+15 เมนู → 92 รวม): เครื่องดื่ม CRA + อาหารอ่อนผู้ป่วย | cra.ac.th, gj.mahidol, ศรีพัฒน์ CMU (sriphat) | `data/menu-db.json` · [[food-recommender]] |
+| 2026-07-03 | เมนูอีสานคัดกรองสุขภาพ (+14 ใหม่, 4 แท็ก region) สุก ไม่ปลาดิบ/ปลาร้า | prijnr 2023 (CMU), gj.mahidol, KKU Smart Aging, SUT ผักอีสาน | `data/menu-db.json` · [[food-recommender]] |
