@@ -39,6 +39,7 @@ tags:
 ## Leads to
 
 - [[root-morphology]] · [[stem-morphology]] · [[leaf-morphology]] · [[flower-morphology]] · [[fruit-seed-morphology]]
+- [[plant-tissue]] — ระดับเนื้อเยื่อ (ละเอียดกว่าอวัยวะ)
 
 ## Sources
 

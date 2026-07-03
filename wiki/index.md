@@ -27,6 +27,7 @@ tags:
   - [[leaf-morphology]] — ใบ (S4)
   - [[flower-morphology]] — ดอก (S5) 🌐 external
   - [[fruit-seed-morphology]] — ผลและเมล็ด (S6) 🌐 external
+- [[plant-tissue]] — เนื้อเยื่อพืช: เจริญ/ถาวร, xylem/phloem (S7) 🌐 external
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 

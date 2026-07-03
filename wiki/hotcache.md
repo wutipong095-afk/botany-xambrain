@@ -11,8 +11,8 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: Layer S ครบ 5 อวัยวะ + Layer T ครบ (hub/รสยา/ธาตุ/ตำรับ) + glossary morphology
-- **เป้าหมายถัดไป**: รอข้อมูลเพิ่ม (ผู้ใช้แจ้ง) ก่อนทำข้อสอบ · ระหว่างรอ: glossary-herbal (บาลี), เนื้อเยื่อ/taxonomy
+- **Phase**: Layer S = 5 อวัยวะ + เนื้อเยื่อพืช (S7) · Layer T ครบ · glossary morphology
+- **เป้าหมายถัดไป**: รอข้อมูลเพิ่มก่อนทำข้อสอบ · ระหว่างรอ: taxonomy (การจำแนกพืช), glossary-herbal (บาลี)
 - **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ
 - **ตัดสินใจแล้ว**:
   - โครงสร้าง + workflow เหมือน body-xambrain (ดู CLAUDE.md)
@@ -38,12 +38,13 @@ tags:
 6. ~~[[dhatu-4-plants]]: ธาตุ 4 + รสแก้ธาตุ + เบญจกูล เชื่อม Layer S ครบวง~~ ✅
 7. ~~[[herbal-formula]] ตำรับ ตรีกฏุก/ตรีผลา/เบญจกูล (external)~~ ✅
 8. ~~glossary-morphology (ไทย/อังกฤษ/รากศัพท์) + glossary-index~~ ✅
+9. ~~[[plant-tissue]] (S7) เนื้อเยื่อเจริญ/ถาวร + xylem/phloem (external, สสวท.)~~ ✅
 
 ## ต้องทำต่อ
 
 1. **ข้อสอบ 3 ระดับ — พักไว้ก่อน (ผู้ใช้ขอรอข้อมูลเยอะกว่านี้)**
-2. glossary-herbal (รสยา/ธาตุ + บาลี/สันสกฤต)
-3. ขยาย Layer S: เนื้อเยื่อพืช, taxonomy — หา certified source ก่อนถ้าได้
+2. taxonomy (การจำแนกพืช วงศ์/สกุล/ชนิด)
+3. glossary-herbal (รสยา/ธาตุ + บาลี/สันสกฤต)
 3. เริ่ม Layer T: สมุนไพรไทย, รสยา 9 รส, เชื่อมธาตุ 4
 4. ทำข้อสอบ + คลังคำศัพท์ (morphology terms 3 ภาษา)
 5. (ระยะยาว) เว็บ interactive คล้ายแผนของ body-xambrain

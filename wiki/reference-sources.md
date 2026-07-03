@@ -43,3 +43,4 @@ tags:
 | 2026-07-03 | รสยา 9 รส + สรรพคุณ | คณะการแพทย์แผนไทย ม.อ. (ttmed.psu.ac.th), Poonrada | [[herbal-taste-9]], [[thai-herbal]] |
 | 2026-07-03 | ธาตุ 4 + รสแก้ธาตุ + เบญจกูล | ม.มหิดล (pharmacy), เภสัชกรรมไทย (samunpri), be7herb | [[dhatu-4-plants]] |
 | 2026-07-03 | ตำรับ ตรีกฏุก/ตรีผลา/เบญจกูล | ม.สงขลานครินทร์ (ttmed 197), samunpri, be7herb | [[herbal-formula]] |
+| 2026-07-03 | เนื้อเยื่อพืช (เจริญ/ถาวร, xylem/phloem) | สสวท. (scimath 7031), วิกิพีเดียไทย | [[plant-tissue]] |
