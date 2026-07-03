@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เครื่องแนะนำเมนูตามร่างกาย — Botany-Xambrain</title>
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --card: #fff;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --accent: #2d6a4f;
+      --accent-soft: #d8f3dc;
+      --warn: #9a3412;
+      --warn-bg: #fff7ed;
+      --patient: #1d4e89;
+      --patient-bg: #e8f1fa;
+      --border: #ddd6c8;
+      --radius: 12px;
+      font-family: "Segoe UI", "Noto Sans Thai", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.25rem; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .warn {
+      background: var(--warn-bg);
+      border: 1px solid #fdba74;
+      color: var(--warn);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      margin-bottom: 1rem;
+    }
+    .warn.patient { background: var(--patient-bg); border-color: #93c5fd; color: var(--patient); }
+    .mode-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .mode-tabs button {
+      flex: 1;
+      padding: 0.65rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .mode-tabs button.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      font-weight: 600;
+    }
+    .mode-tabs button.active.patient-tab {
+      border-color: var(--patient);
+      background: var(--patient-bg);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .card h2 { font-size: 1rem; margin: 0 0 0.75rem; }
+    label { display: block; font-size: 0.88rem; margin-bottom: 0.25rem; color: var(--muted); }
+    input[type="number"], textarea {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    textarea { min-height: 72px; resize: vertical; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .chip {
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fafafa;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    .chip:hover { background: var(--accent-soft); }
+    .chip.on { background: var(--accent-soft); border-color: var(--accent); }
+    .patient-only { display: none; }
+    body.patient-mode .patient-only { display: block; }
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .context-grid label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin: 0;
+      color: var(--text);
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+    button.primary {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    body.patient-mode button.primary { background: var(--patient); }
+    button.primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    .meta { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+    .result {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      margin-bottom: 0.65rem;
+      background: #fff;
+    }
+    .result h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.5rem; }
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      background: #eee;
+    }
+    .tag.patient { background: var(--patient-bg); color: var(--patient); }
+    .reasons { font-size: 0.82rem; color: var(--muted); margin: 0; padding-left: 1.1rem; }
+    .empty { color: var(--muted); text-align: center; padding: 1.5rem; }
+    .error { color: #b91c1c; font-size: 0.9rem; }
+    footer { font-size: 0.78rem; color: var(--muted); margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>เครื่องแนะนำเมนูตามร่างกาย</h1>
+    <p class="sub">Botany-Xambrain · แพทย์แผนไทย + โภชนาการ (TA301)</p>
+
+    <div id="warn-general" class="warn">
+      คำแนะนำนี้อ้างอิงภูมิปัญญาแพทย์แผนไทย <strong>เพื่อการส่งเสริมสุขภาพเชิงป้องกัน</strong> —
+      ไม่ใช่การวินิจฉัยหรือรักษาโรค และไม่ทดแทนคำแนะนำของแพทย์/นักกำหนดอาหาร
+    </div>
+    <div id="warn-patient" class="warn patient" hidden>
+      <strong>โหมดผู้ป่วย/ฟื้นตัว</strong> — แสดงเฉพาะเมนูอ่อน ย่อยง่าย จากฐานข้อมูลที่มีแท็กผู้ป่วย
+      หากมีอาการรุนแรง เรื้อรัง โรคประจำตัว ตั้งครรภ์ หรือแพ้อาหาร ให้ปรึกษาผู้เชี่ยวชาญก่อน
+    </div>
+
+    <div class="mode-tabs" role="tablist">
+      <button type="button" id="tab-general" class="active" role="tab" aria-selected="true">ทั่วไป</button>
+      <button type="button" id="tab-patient" class="patient-tab" role="tab" aria-selected="false">ผู้ป่วย / ฟื้นตัว</button>
+    </div>
+
+    <form id="form">
+      <div class="card">
+        <h2>ข้อมูลร่างกาย</h2>
+        <div class="row">
+          <div>
+            <label for="weight">น้ำหนัก (กก.)</label>
+            <input type="number" id="weight" min="20" max="300" step="0.1" placeholder="เช่น 65" />
+          </div>
+          <div>
+            <label for="height">ส่วนสูง (ซม.)</label>
+            <input type="number" id="height" min="100" max="250" step="0.1" placeholder="เช่น 165" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>อาการ (คั่นด้วยจุลภาค)</h2>
+        <div class="chips" id="symptom-chips"></div>
+        <textarea id="symptoms" placeholder="เช่น ท้องอืด, เบื่ออาหาร"></textarea>
+      </div>
+
+      <div class="card patient-only">
+        <h2>บริบทผู้ป่วย</h2>
+        <p class="meta" style="margin-top:0">เลือกสถานการณ์ที่ตรง (ไม่เลือก = แสดงเมนูผู้ป่วยทั้งหมดที่เข้าเกณฑ์)</p>
+        <div class="context-grid" id="patient-contexts"></div>
+      </div>
+
+      <button type="submit" class="primary" id="submit-btn">แนะนำเมนู</button>
+    </form>
+
+    <div id="summary" class="meta" hidden></div>
+    <div id="results"></div>
+    <p id="load-error" class="error" hidden></p>
+
+    <footer>
+      เปิดผ่านเว็บเซิร์ฟเวอร์ท้องถิ่น (เช่น <code>python -m http.server 8080</code>) แล้วเข้า
+      <code>http://localhost:8080/</code> · ข้อมูลจาก <code>data/menu-db.json</code>
+    </footer>
+  </div>
+
+  <script src="recommender.js"></script>
+  <script>
+    const SYMPTOM_SUGGESTIONS = [
+      "ท้องอืด", "เบื่ออาหาร", "ท้องเสีย", "อ่อนเพลีย", "ร้อนใน",
+      "กลืนลำบาก", "คลื่นไส้", "แผลในปาก", "หวัด", "ท้องผูก",
+    ];
+
+    let menuDb = null;
+    let symptomDb = null;
+    let patientMode = false;
+
+    const el = (id) => document.getElementById(id);
+
+    async function loadData() {
+      const [menuRes, symRes] = await Promise.all([
+        fetch("data/menu-db.json"),
+        fetch("data/symptom-element.json"),
+      ]);
+      if (!menuRes.ok || !symRes.ok) throw new Error("โหลด JSON ไม่สำเร็จ — ใช้ local server");
+      menuDb = await menuRes.json();
+      symptomDb = await symRes.json();
+    }
+
+    function buildChips() {
+      const box = el("symptom-chips");
+      SYMPTOM_SUGGESTIONS.forEach((s) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "chip";
+        b.textContent = s;
+        b.addEventListener("click", () => {
+          const ta = el("symptoms");
+          const parts = FoodRecommender.parseSymptoms(ta.value);
+          if (parts.includes(s)) {
+            ta.value = parts.filter((p) => p !== s).join(", ");
+            b.classList.remove("on");
+          } else {
+            ta.value = parts.length ? `${ta.value.replace(/,\s*$/, "")}, ${s}` : s;
+            b.classList.add("on");
+          }
+        });
+        box.appendChild(b);
+      });
+    }
+
+    function buildPatientContexts() {
+      const box = el("patient-contexts");
+      FoodRecommender.PATIENT_CONTEXTS.forEach((ctx) => {
+        const id = `ctx-${ctx}`;
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="checkbox" name="patientCtx" value="${ctx}" id="${id}" /> ${ctx}`;
+        box.appendChild(label);
+      });
+    }
+
+    function setMode(isPatient) {
+      patientMode = isPatient;
+      document.body.classList.toggle("patient-mode", isPatient);
+      el("tab-general").classList.toggle("active", !isPatient);
+      el("tab-patient").classList.toggle("active", isPatient);
+      el("tab-general").setAttribute("aria-selected", String(!isPatient));
+      el("tab-patient").setAttribute("aria-selected", String(isPatient));
+      el("warn-patient").hidden = !isPatient;
+      el("results").innerHTML = "";
+      el("summary").hidden = true;
+    }
+
+    function selectedPatientContexts() {
+      return [...document.querySelectorAll('input[name="patientCtx"]:checked')].map((i) => i.value);
+    }
+
+    function renderResults(out) {
+      const summary = el("summary");
+      const results = el("results");
+
+      if (out.bmi != null) {
+        summary.textContent = `BMI ${out.bmi.toFixed(1)} (${out.bmiLabel}) · พลังงานที่อนุญาต: ${out.energyAllowed.join(", ")}${out.patientMode ? " · โหมดผู้ป่วย" : ""}`;
+        summary.hidden = false;
+      }
+
+      if (!out.results.length) {
+        results.innerHTML = '<p class="empty">ไม่พบเมนูที่เข้าเกณฑ์ — ลองเปลี่ยนอาการหรือบริบทผู้ป่วย</p>';
+        return;
+      }
+
+      results.innerHTML = out.results
+        .map(({ menu, score, reasons }) => {
+          const patientTags = (menu.patientFor || [])
+            .map((p) => `<span class="tag patient">${p}</span>`)
+            .join("");
+          return `
+            <article class="result">
+              <h3>${menu.name}</h3>
+              <div class="tags">
+                <span class="tag">ฤทธิ์ ${menu.thermal}</span>
+                <span class="tag">พลังงาน ${menu.energy}</span>
+                <span class="tag">รส ${(menu.tastes || []).join(" ")}</span>
+                ${patientTags}
+              </div>
+              <p style="margin:0 0 0.4rem;font-size:0.88rem">${menu.note || ""}</p>
+              <ul class="reasons">${reasons.map((r) => `<li>${r}</li>`).join("")}</ul>
+            </article>`;
+        })
+        .join("");
+    }
+
+    el("tab-general").addEventListener("click", () => setMode(false));
+    el("tab-patient").addEventListener("click", () => setMode(true));
+
+    el("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!menuDb) return;
+      const out = FoodRecommender.recommend({
+        menus: menuDb.menus,
+        rules: symptomDb.rules,
+        weightKg: parseFloat(el("weight").value),
+        heightCm: parseFloat(el("height").value),
+        symptomText: el("symptoms").value,
+        patientMode,
+        patientContexts: patientMode ? selectedPatientContexts() : [],
+        limit: 5,
+      });
+      renderResults(out);
+    });
+
+    buildChips();
+    buildPatientContexts();
+    loadData().catch((err) => {
+      el("load-error").hidden = false;
+      el("load-error").textContent = err.message;
+      el("submit-btn").disabled = true;
+    });
+  </script>
+</body>
+</html>
