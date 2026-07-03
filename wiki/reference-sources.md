@@ -63,3 +63,5 @@ tags:
 | 2026-07-03 | เมนูอาหารตามธาตุ รอบ 2 (+24 เมนู → 50 รวม): ดิน/ลม/ไฟ/น้ำ | ม.มหิดล gj.mahidol (tard, preg-food), ราชวิทยาลัยจุฬาภรณ์ cra.ac.th | `data/menu-db.json` · [[food-recommender]] |
 | 2026-07-03 | เมนูผู้ป่วย/ฟื้นตัว (+12 เมนู, patientFor) + กฎอาการผู้ป่วย | ม.มหิดล gj (chemo, กล้วยน้ำว้า), ศรีพัฒน์ CMU, ศิริราช si/rama, ม.สวนดุสิต | `data/menu-db.json` · `data/symptom-element.json` |
 | 2026-07-03 | อายุสมุฏฐาน 4 วัย → ธาตุ/รสตามวัย (`age-food.json`) | ม.เชียงใหม่ med.cmu, ม.มหิดล gj, samunpri, สารานุกรมไทย | `data/age-food.json` · [[food-recommender]] · `recommender.js` |
+| 2026-07-03 | เมนูอาหารรอบ 3 (+14 เมนู → 77 รวม): ของว่าง/เครื่องดื่มธาตุดิน-น้ำ-ไฟ | ราชวิทยาลัยจุฬาภรณ์ cra.ac.th, ม.มหิดล gj (miang-kham, okra, preg-food) | `data/menu-db.json` · [[food-recommender]] |
+| 2026-07-03 | เมนูอาหารรอบ 4 (+15 เมนู → 92 รวม): เครื่องดื่ม CRA + อาหารอ่อนผู้ป่วย | cra.ac.th, gj.mahidol, ศรีพัฒน์ CMU (sriphat) | `data/menu-db.json` · [[food-recommender]] |
