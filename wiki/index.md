@@ -31,7 +31,7 @@ tags:
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
-*(ยังไม่มี — เช่น food-plants, medicinal-plants, dye-plants)*
+- [[food-dhatu-plants]] — อาหารตามธาตุ: ผัก–ผลไม้ รสตามธาตุเจ้าเรือน (U1) 🌐 — สะพาน Layer U↔T
 
 ## Concepts — Layer T: ภูมิปัญญาไทย (Thai Traditional)
 

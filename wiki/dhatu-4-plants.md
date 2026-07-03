@@ -71,6 +71,7 @@ tags:
 ## Leads to
 
 - [[herbal-formula]] — พิกัดยา (เบญจกูล/ตรีกฏุก/ตรีผลา)
+- [[food-dhatu-plants]] — อาหารเป็นยา: เลือกผัก–ผลไม้ตามธาตุเจ้าเรือน (Layer U)
 
 ## Prerequisites
 

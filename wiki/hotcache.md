@@ -11,7 +11,7 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: Layer S = 5 อวัยวะ + เนื้อเยื่อพืช (S7) · Layer T ครบ · glossary morphology
+- **Phase**: Layer S = 5 อวัยวะ + เนื้อเยื่อพืช (S7) · Layer T ครบ · **Layer U เริ่มแล้ว (U1 อาหารตามธาตุ)** · glossary morphology
 - **เป้าหมายถัดไป**: รอข้อมูลเพิ่มก่อนทำข้อสอบ · ระหว่างรอ: taxonomy (การจำแนกพืช), glossary-herbal (บาลี)
 - **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ
 - **ตัดสินใจแล้ว**:
@@ -23,10 +23,10 @@ tags:
 
 ## Last Session (2026-07-03)
 
-- Scaffold โปรเจกต์ botany-xambrain + CLAUDE.md/overview/index/hotcache + git init
-- **ย่อยเนื้อหา สัณฐานวิทยาพืช** (3 PDF: ราก 29น. + ลำต้น 26น. text-based, ใบ 4น. image)
-- สร้าง [[source-plant-morphology]] + concept nodes: [[plant-morphology]] (hub), [[root-morphology]], [[stem-morphology]], [[leaf-morphology]] (provisional)
-- ใส่ cross-layer link: เหง้าขิง/ข่า/ขมิ้น = ลำต้นใต้ดิน → สมุนไพร (Layer T)
+- **ค้นคว้า+สร้าง [[food-dhatu-plants]] (U1)** — ผัก–ผลไม้ที่คนไทยกิน รสตามธาตุเจ้าเรือน (ดิน/น้ำ/ลม/ไฟ)
+- เปิด **Layer U** (เดิมว่าง): ตารางธาตุ→รสควรกิน→ผักผลไม้ + เชื่อม Layer S (ส่วนที่กิน) + ชื่อวิทย์ 12 ชนิด
+- external 4 แหล่งสถาบัน: ม.มหิดล กาญจนาภิเษก, ราชวิทยาลัยจุฬาภรณ์, สวพส., รพ.พิษณุโลก
+- ใส่ลิงก์ย้อนกลับใน [[dhatu-4-plants]], [[thai-herbal]] + log [[reference-sources]] + index
 
 ## สิ่งที่ทำแล้ว
 
@@ -39,6 +39,7 @@ tags:
 7. ~~[[herbal-formula]] ตำรับ ตรีกฏุก/ตรีผลา/เบญจกูล (external)~~ ✅
 8. ~~glossary-morphology (ไทย/อังกฤษ/รากศัพท์) + glossary-index~~ ✅
 9. ~~[[plant-tissue]] (S7) เนื้อเยื่อเจริญ/ถาวร + xylem/phloem (external, สสวท.)~~ ✅
+10. ~~เริ่ม Layer U: [[food-dhatu-plants]] (U1) — ผัก–ผลไม้ที่คนไทยกิน รสตามธาตุเจ้าเรือน (external 4 แหล่งสถาบัน) เชื่อม Layer S/T ครบวง~~ ✅
 
 ## ต้องทำต่อ
 
