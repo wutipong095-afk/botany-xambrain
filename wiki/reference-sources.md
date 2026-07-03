@@ -60,3 +60,4 @@ tags:
 | 2026-07-03 | อาหารคือสมดุล: เปรียบเทียบ 4 กระบวนทัศน์ + บรรณานุกรม | WHO (healthy diet), FAO (FBDG), ม.สงขลานครินทร์ (ttmed 97 อายุรเวท), รพ.รามา (mahidol) | [[food-as-balance]] |
 | 2026-07-03 | หลักฐานเชิงประจักษ์: อาหาร→โรคทั่วโลก (11 ล้าน/22%, NCDs 74%) | GBD 2017 *The Lancet*, EurekAlert, WHO (NCDs, EMRO) | [[food-as-balance]] |
 | 2026-07-03 | เมนูอาหารตามธาตุ (+14 เมนู): ลม/น้ำ/ไฟ/ดิน | ม.มหิดล gj.mahidol (tard, preg-food), ราชวิทยาลัยจุฬาภรณ์ cra.ac.th | `data/menu-db.json` · [[food-recommender]] |
+| 2026-07-03 | เมนูอาหารตามธาตุ รอบ 2 (+24 เมนู → 50 รวม): ดิน/ลม/ไฟ/น้ำ | ม.มหิดล gj.mahidol (tard, preg-food), ราชวิทยาลัยจุฬาภรณ์ cra.ac.th | `data/menu-db.json` · [[food-recommender]] |
