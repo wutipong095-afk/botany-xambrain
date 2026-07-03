@@ -11,8 +11,8 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: Layer S ครบ 5 อวัยวะ (ราก/ลำต้น/ใบ = certified, ดอก/ผล-เมล็ด = external มีอ้างอิง)
-- **เป้าหมายถัดไป**: เนื้อเยื่อพืช + taxonomy, เริ่ม Layer T (สมุนไพร รสยา ธาตุ), ทำข้อสอบ/คำศัพท์
+- **Phase**: Layer S ครบ 5 อวัยวะ + เริ่ม Layer T (สมุนไพร hub + รสยา 9 รส) แล้ว
+- **เป้าหมายถัดไป**: dhatu-4-plants (ธาตุ 4 กับยา), herbal-formula, ทำข้อสอบ/คำศัพท์, เนื้อเยื่อ/taxonomy
 - **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ
 - **ตัดสินใจแล้ว**:
   - โครงสร้าง + workflow เหมือน body-xambrain (ดู CLAUDE.md)
@@ -34,10 +34,12 @@ tags:
 2. ~~ย่อยเนื้อหา สัณฐานวิทยา (ราก/ลำต้น/ใบ)~~ ✅
 3. ~~ตัดต่อภาพใบ (8 รูป) + ถอดเนื้อหาเข้า [[leaf-morphology]]~~ ✅
 4. ~~วางระบบอ้างอิง [[reference-sources]] + node ดอก/ผล-เมล็ด (external, มี URL)~~ ✅
+5. ~~เริ่ม Layer T: [[thai-herbal]] hub + [[herbal-taste-9]] (external, อ้างอิง ม.อ.)~~ ✅
 
 ## ต้องทำต่อ
 
-1. ขยาย Layer S: เนื้อเยื่อพืช, การจำแนกพืช (taxonomy) — หา certified source ก่อนถ้าได้
+1. Layer T ต่อ: dhatu-4-plants (ธาตุ 4 กับการเลือกยา), herbal-formula (ตำรับยา)
+2. ขยาย Layer S: เนื้อเยื่อพืช, การจำแนกพืช (taxonomy) — หา certified source ก่อนถ้าได้
 3. เริ่ม Layer T: สมุนไพรไทย, รสยา 9 รส, เชื่อมธาตุ 4
 4. ทำข้อสอบ + คลังคำศัพท์ (morphology terms 3 ภาษา)
 5. (ระยะยาว) เว็บ interactive คล้ายแผนของ body-xambrain

@@ -34,7 +34,9 @@ tags:
 
 ## Concepts — Layer T: ภูมิปัญญาไทย (Thai Traditional)
 
-*(ยังไม่มี — เช่น thai-herbal, herbal-formula, taste-9, dhatu-4-plants)*
+- [[thai-herbal]] — สมุนไพรไทย hub: ส่วนพืช → รส → ธาตุ (T0) 🌐
+- [[herbal-taste-9]] — รสยา 9 รส + สรรพคุณ (T1) 🌐
+- *(จะสร้าง)* dhatu-4-plants — ธาตุ 4 กับการเลือกยา · herbal-formula — ตำรับยา
 
 ## Questions
 
