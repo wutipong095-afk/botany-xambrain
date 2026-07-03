@@ -1,0 +1,7 @@
+# Obsidian workspace (เปลี่ยนทุกครั้งที่เปิด ไม่ต้อง track)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# OS files
+Thumbs.db
+.DS_Store
