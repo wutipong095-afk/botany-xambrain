@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1",
+  "updated": "2026-07-03",
+  "note": "อายุสมุฏฐาน (แพทย์แผนไทย) → ธาตุ/รสที่เน้นในแต่ละวัย สำหรับเครื่องแนะนำเมนู (ดู wiki/food-recommender.md U3). ใช้ร่วมกับ BMI+อาการ — ไม่ทดแทนการประเมินแพทย์",
+  "sources": [
+    "https://www.med.cmu.ac.th/web/suandok/article-suandok/11268/",
+    "https://www.gj.mahidol.ac.th/main/tard/",
+    "https://www.samunpri.com/pharmacy/%E0%B8%A3%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B1%E0%B8%A2/",
+    "https://saranukromthai.or.th/oldchild/2712"
+  ],
+  "bands": [
+    {
+      "id": "patham",
+      "name": "ปฐมวัย (วัยเด็ก)",
+      "minAge": 0,
+      "maxAge": 15,
+      "samutthana": "อาโป/เสมหะ",
+      "dominantElement": "น้ำ",
+      "recommendTaste": ["หวาน", "เปรี้ยว", "ขม", "จืด"],
+      "recommendThermal": "กลาง",
+      "preferEnergy": ["ต่ำ", "กลาง"],
+      "avoidTastes": ["เผ็ดร้อน"],
+      "boostPatientContexts": [],
+      "why": "วัยเด็กสมุฏฐานเสมหะ (ธาตุน้ำ) — เน้นรสหวาน เปรี้ยว ขม จืด ย่อยง่าย หลีกเลี่ยงเผ็ดจัด",
+      "modernNote": "โภชนาการสากล: เน้นครบ 5 หมู่ โปรตีน-แคลเซียมสำหรับเติบโต · อาหารนุ่ม ไม่เผ็ดจัด"
+    },
+    {
+      "id": "machima",
+      "name": "มัชฌิมวัย (วัยหนุ่มสาว)",
+      "minAge": 16,
+      "maxAge": 31,
+      "samutthana": "อาโป/โลหิต-ดี",
+      "dominantElement": "น้ำ",
+      "recommendTaste": ["เปรี้ยว", "ฝาด", "ขม", "เค็ม"],
+      "recommendThermal": "กลาง",
+      "preferEnergy": ["ต่ำ", "กลาง", "สูง"],
+      "avoidTastes": [],
+      "boostPatientContexts": [],
+      "why": "วัยกลางสมุฏฐานโลหิต-ดี — รสเปรี้ยวฝาด เปรี้ยวเค็ม ขม ช่วยระบบไหลเวียน-เผาผลาญ",
+      "modernNote": "โภชนาการสากล: พลังงานตามกิจกรรม · ลดหวาน-เค็มจัดถ้าน้ำหนักเกิน"
+    },
+    {
+      "id": "pacchima-mid",
+      "name": "ปัจฉิมวัย (วัยผู้ใหญ่)",
+      "minAge": 32,
+      "maxAge": 63,
+      "samutthana": "วาโย/ลม",
+      "dominantElement": "ลม",
+      "recommendTaste": ["ขม", "เผ็ดร้อน", "เค็ม", "ฝาด"],
+      "recommendThermal": "อุ่น",
+      "preferEnergy": ["ต่ำ", "กลาง"],
+      "avoidTastes": [],
+      "boostPatientContexts": [],
+      "why": "วัยผู้ใหญ่สมุฏฐานลม — รสขม เผ็ดร้อน เค็ม ฝาด ช่วยขับลม กระตุ้นไฟย่อย (ตามตำรารสยาแก้ตามวัย)",
+      "modernNote": "โภชนาการสากล: คุมน้ำหนัก-NCDs · ผักผลไม้เพียงพอ"
+    },
+    {
+      "id": "pacchima-elder",
+      "name": "ปัจฉิมวัย (ผู้สูงอายุ 64+)",
+      "minAge": 64,
+      "maxAge": 120,
+      "samutthana": "วาโย/ลม + เสื่อมถอย",
+      "dominantElement": "ลม",
+      "recommendTaste": ["จืด", "ขม", "หวาน"],
+      "recommendThermal": "อุ่น",
+      "preferEnergy": ["ต่ำ", "กลาง"],
+      "avoidTastes": ["เผ็ดร้อน"],
+      "boostPatientContexts": ["ผู้สูงอายุ", "ฟื้นตัว", "กลืนลำบาก"],
+      "why": "ผู้สูงอายุลมกำเริบง่าย ไฟย่อยหย่อน — อาหารอ่อน จืด อุ่น ย่อยง่าย หลีกเลี่ยงเผ็ดจัด-ทอดมัน (ม.เชียงใหม่)",
+      "modernNote": "โภชนาการสากล: โปรตีนเพียงพอ ป้องกันมลัดถอยกล้ามเนื้อ · นุ่ม กลืนง่าย"
+    }
+  ]
+}

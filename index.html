@@ -82,6 +82,16 @@
     }
     textarea { min-height: 72px; resize: vertical; }
     .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .age-hint {
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #f0f4f8;
+      border-radius: 8px;
+      padding: 0.65rem 0.75rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
     .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
     .chip {
       padding: 0.3rem 0.65rem;
@@ -168,7 +178,7 @@
     <form id="form">
       <div class="card">
         <h2>ข้อมูลร่างกาย</h2>
-        <div class="row">
+        <div class="row row-3">
           <div>
             <label for="weight">น้ำหนัก (กก.)</label>
             <input type="number" id="weight" min="20" max="300" step="0.1" placeholder="เช่น 65" />
@@ -177,7 +187,12 @@
             <label for="height">ส่วนสูง (ซม.)</label>
             <input type="number" id="height" min="100" max="250" step="0.1" placeholder="เช่น 165" />
           </div>
+          <div>
+            <label for="age">อายุ (ปี)</label>
+            <input type="number" id="age" min="1" max="120" step="1" placeholder="เช่น 70" />
+          </div>
         </div>
+        <div id="age-hint" class="age-hint" hidden></div>
       </div>
 
       <div class="card">
@@ -201,7 +216,7 @@
 
     <footer>
       เปิดผ่านเว็บเซิร์ฟเวอร์ท้องถิ่น (เช่น <code>python -m http.server 8080</code>) แล้วเข้า
-      <code>http://localhost:8080/</code> · ข้อมูลจาก <code>data/menu-db.json</code>
+      <code>http://localhost:8080/</code> · ข้อมูลจาก <code>data/*.json</code>
     </footer>
   </div>
 
@@ -214,18 +229,41 @@
 
     let menuDb = null;
     let symptomDb = null;
+    let ageDb = null;
     let patientMode = false;
 
     const el = (id) => document.getElementById(id);
 
     async function loadData() {
-      const [menuRes, symRes] = await Promise.all([
+      const [menuRes, symRes, ageRes] = await Promise.all([
         fetch("data/menu-db.json"),
         fetch("data/symptom-element.json"),
+        fetch("data/age-food.json"),
       ]);
-      if (!menuRes.ok || !symRes.ok) throw new Error("โหลด JSON ไม่สำเร็จ — ใช้ local server");
+      if (!menuRes.ok || !symRes.ok || !ageRes.ok) {
+        throw new Error("โหลด JSON ไม่สำเร็จ — ใช้ local server");
+      }
       menuDb = await menuRes.json();
       symptomDb = await symRes.json();
+      ageDb = await ageRes.json();
+    }
+
+    function updateAgeHint() {
+      const ageVal = el("age").value;
+      const hint = el("age-hint");
+      if (!ageVal || !ageDb) {
+        hint.hidden = true;
+        return;
+      }
+      const band = FoodRecommender.getAgeBand(Number(ageVal), ageDb.bands);
+      if (!band) {
+        hint.hidden = true;
+        return;
+      }
+      hint.hidden = false;
+      hint.innerHTML = `<strong>${band.name}</strong> · สมุฏฐาน${band.samutthana} · ธาตุ${band.dominantElement}<br>
+        รสที่เน้น: ${band.recommendTaste.join(", ")} · หลีกเลี่ยง: ${(band.avoidTastes || []).join(", ") || "—"}<br>
+        <span style="font-size:0.8rem">${band.modernNote || ""}</span>`;
     }
 
     function buildChips() {
@@ -280,8 +318,13 @@
       const summary = el("summary");
       const results = el("results");
 
-      if (out.bmi != null) {
-        summary.textContent = `BMI ${out.bmi.toFixed(1)} (${out.bmiLabel}) · พลังงานที่อนุญาต: ${out.energyAllowed.join(", ")}${out.patientMode ? " · โหมดผู้ป่วย" : ""}`;
+      if (out.bmi != null || out.ageBand) {
+        const parts = [];
+        if (out.bmi != null) parts.push(`BMI ${out.bmi.toFixed(1)} (${out.bmiLabel})`);
+        if (out.ageBand) parts.push(`วัย ${out.ageBand.name}`);
+        parts.push(`พลังงานที่อนุญาต: ${out.energyAllowed.join(", ")}`);
+        if (out.patientMode) parts.push("โหมดผู้ป่วย");
+        summary.textContent = parts.join(" · ");
         summary.hidden = false;
       }
 
@@ -320,8 +363,10 @@
       const out = FoodRecommender.recommend({
         menus: menuDb.menus,
         rules: symptomDb.rules,
+        ageBands: ageDb.bands,
         weightKg: parseFloat(el("weight").value),
         heightCm: parseFloat(el("height").value),
+        ageYears: el("age").value,
         symptomText: el("symptoms").value,
         patientMode,
         patientContexts: patientMode ? selectedPatientContexts() : [],
@@ -332,7 +377,8 @@
 
     buildChips();
     buildPatientContexts();
-    loadData().catch((err) => {
+    el("age").addEventListener("input", updateAgeHint);
+    loadData().then(() => updateAgeHint()).catch((err) => {
       el("load-error").hidden = false;
       el("load-error").textContent = err.message;
       el("submit-btn").disabled = true;

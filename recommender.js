@@ -76,6 +76,53 @@
     };
   }
 
+  function getAgeBand(age, bands) {
+    if (age == null || Number.isNaN(age) || age < 0) return null;
+    return bands.find((b) => age >= b.minAge && age <= b.maxAge) ?? null;
+  }
+
+  function mergeTargets(symptomTargets, ageTargets) {
+    return {
+      elements: [...new Set([...symptomTargets.elements, ...ageTargets.elements])],
+      tastes: [...new Set([...symptomTargets.tastes, ...ageTargets.tastes])],
+      thermals: [...new Set([...symptomTargets.thermals, ...ageTargets.thermals])],
+      whys: [...symptomTargets.whys, ...ageTargets.whys],
+      avoidTastes: ageTargets.avoidTastes ?? [],
+      boostPatientContexts: ageTargets.boostPatientContexts ?? [],
+      preferEnergy: ageTargets.preferEnergy ?? null,
+    };
+  }
+
+  function aggregateAgeTargets(ageBand) {
+    if (!ageBand) {
+      return {
+        elements: [],
+        tastes: [],
+        thermals: [],
+        whys: [],
+        avoidTastes: [],
+        boostPatientContexts: [],
+        preferEnergy: null,
+      };
+    }
+    return {
+      elements: [ageBand.dominantElement],
+      tastes: ageBand.recommendTaste ?? [],
+      thermals: [ageBand.recommendThermal],
+      whys: [`อายุ ${ageBand.minAge}–${ageBand.maxAge} ปี (${ageBand.name}) · ${ageBand.samutthana} → ${ageBand.why}`],
+      avoidTastes: ageBand.avoidTastes ?? [],
+      boostPatientContexts: ageBand.boostPatientContexts ?? [],
+      preferEnergy: ageBand.preferEnergy ?? null,
+      band: ageBand,
+    };
+  }
+
+  function refineEnergyAllowed(base, ageTargets, patientMode) {
+    if (patientMode) return base;
+    if (!ageTargets.preferEnergy?.length) return base;
+    return base.filter((e) => ageTargets.preferEnergy.includes(e));
+  }
+
   function thermalCompatible(menuThermal, targetThermals, patientMode) {
     if (!targetThermals.length) return true;
     const menuRank = THERMAL_RANK[menuThermal] ?? 1;
@@ -95,13 +142,33 @@
       energyAllowed,
       patientMode,
       patientContexts,
+      ageBand,
     } = ctx;
 
     let score = 0;
     const reasons = [];
 
     if (!energyAllowed.includes(menu.energy)) {
-      return { menu, score: -999, reasons: [`พลังงาน ${menu.energy} ไม่เข้าเกณฑ์ BMI`] };
+      return { menu, score: -999, reasons: [`พลังงาน ${menu.energy} ไม่เข้าเกณฑ์`] };
+    }
+
+    if (targets.avoidTastes?.length) {
+      const bad = targets.avoidTastes.filter((t) => menu.tastes?.includes(t));
+      if (bad.length) {
+        score -= bad.length * 4;
+        reasons.push(`รสที่ควรหลีกเลี่ยงตามวัย: ${bad.join(", ")}`);
+      }
+    }
+
+    if (ageBand) {
+      reasons.push(`วัย ${ageBand.name} (สมุฏฐาน${ageBand.samutthana})`);
+      const agePatientBoost = (targets.boostPatientContexts ?? []).filter((p) =>
+        menu.patientFor?.includes(p)
+      );
+      score += agePatientBoost.length * 5;
+      if (agePatientBoost.length) {
+        reasons.push(`เหมาะวัยนี้: ${agePatientBoost.join(", ")}`);
+      }
     }
 
     if (patientMode) {
@@ -159,8 +226,10 @@
     const {
       menus,
       rules,
+      ageBands = [],
       weightKg,
       heightCm,
+      ageYears,
       symptomText,
       patientMode = false,
       patientContexts = [],
@@ -169,9 +238,16 @@
 
     const symptoms = parseSymptoms(symptomText);
     const bmi = calcBmi(weightKg, heightCm);
-    const energyAllowed = allowedEnergy(bmi, patientMode);
+    const ageBand = getAgeBand(
+      ageYears != null && ageYears !== "" ? Number(ageYears) : null,
+      ageBands
+    );
+    let energyAllowed = allowedEnergy(bmi, patientMode);
     const matchedRules = matchSymptomRules(symptoms, rules);
-    const targets = aggregateTargets(matchedRules);
+    const symptomTargets = aggregateTargets(matchedRules);
+    const ageTargets = aggregateAgeTargets(ageBand);
+    const targets = mergeTargets(symptomTargets, ageTargets);
+    energyAllowed = refineEnergyAllowed(energyAllowed, ageTargets, patientMode);
 
     const scored = menus
       .map((menu) =>
@@ -181,6 +257,7 @@
           energyAllowed,
           patientMode,
           patientContexts,
+          ageBand,
         })
       )
       .filter((r) => r.score > -999)
@@ -190,6 +267,8 @@
     return {
       bmi,
       bmiLabel: bmiLabel(bmi),
+      ageYears: ageBand ? Number(ageYears) : null,
+      ageBand,
       energyAllowed,
       matchedRules: matchedRules.map((m) => m.rule),
       targets,
@@ -205,6 +284,7 @@
     parseSymptoms,
     calcBmi,
     bmiLabel,
+    getAgeBand,
     recommend,
   };
 })(typeof window !== "undefined" ? window : globalThis);
