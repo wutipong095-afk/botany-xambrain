@@ -97,6 +97,7 @@ tags:
 - [[food-dhatu-plants]] (U1) — เลือกผัก-ผลไม้ตามธาตุ = การประยุกต์กระบวนทัศน์ไทย
 - [[food-analysis-ttm]] (U2) — สะพาน "แคลอรี ↔ ธาตุไฟ" = จุดที่สากลกับไทยมาบรรจบ
 - [[food-recommender]] (U3) — เครื่องแนะนำเมนู **บูรณาการทั้งสอง** (BMI=สากล + อาการ→ธาตุ=ไทย) → รูปธรรมของแกนนี้
+- [[human-unnatural-life]] (AX2) — แกนคู่: การเคลื่อนไหว + ระบบรางวัล (โดพามีน) ที่ชีวิตสมัยใหม่ขัดกับการออกแบบร่างกาย
 
 ## บรรณานุกรม (Bibliography)
 
@@ -115,7 +116,7 @@ tags:
 
 ## Leads to
 
-- [[food-dhatu-plants]] · [[food-analysis-ttm]] · [[food-recommender]]
+- [[food-dhatu-plants]] · [[food-analysis-ttm]] · [[food-recommender]] · [[human-unnatural-life]]
 - (ต่อยอดได้) node แยกเจาะ อายุรเวท / แพทย์แผนจีน สำหรับเปรียบเทียบเชิงลึก
 
 ## ที่มา (External sources) — เข้าถึง 2026-07-03
