@@ -15,6 +15,42 @@
 
   const THERMAL_RANK = { เย็น: 0, กลาง: 1, อุ่น: 2, ร้อน: 3 };
 
+  const COOK_METHOD_SCORE = {
+    นึ่ง: 2,
+    ย่าง: 1,
+    อบ: 1,
+    ต้ม: 1,
+    ผัด: 0,
+    ประกอบ: 0,
+    ของว่าง: 0,
+    อื่นๆ: 0,
+    ทอด: -3,
+  };
+
+  function inferCookMethod(menu) {
+    if (menu.cookMethod) return menu.cookMethod;
+    const n = menu.name ?? "";
+    if (/ทอด|ไข่เจียว/.test(n)) return "ทอด";
+    if (/นึ่ง/.test(n)) return "นึ่ง";
+    if (/ย่าง|เผา/.test(n)) return "ย่าง";
+    if (/อบ/.test(n)) return "อบ";
+    if (/ต้ม|โจ๊ก|ซุป|แกง|ข้าวต้ม|มันต้ม|ก๋วยเตี๋ยว/.test(n)) return "ต้ม";
+    if (/ผัด/.test(n)) return "ผัด";
+    if (/ยำ|ส้มตำ|ลาบ|น้ำตก|แจ่ว|เมี่ยง|น้ำพริก/.test(n)) return "ประกอบ";
+    if (/น้ำ|ชา|เต้าฮวย|ไอศกรีม|ซาหริ่ม|ข้าวแช่|วุ้น|กล้วย|เชื่อม|ลอดช่อง|บัวลอย/.test(n)) {
+      return "ของว่าง";
+    }
+    return "อื่นๆ";
+  }
+
+  function scoreCookMethod(menu, bmi, patientMode) {
+    const method = inferCookMethod(menu);
+    let delta = COOK_METHOD_SCORE[method] ?? 0;
+    if (method === "ทอด" && bmi != null && bmi >= 25) delta -= 2;
+    if (patientMode && (method === "นึ่ง" || method === "ต้ม" || method === "อบ")) delta += 1;
+    return { method, delta };
+  }
+
   function parseSymptoms(text) {
     return text
       .split(/[,，、\n]/)
@@ -143,6 +179,7 @@
       patientMode,
       patientContexts,
       ageBand,
+      bmi,
     } = ctx;
 
     let score = 0;
@@ -219,6 +256,16 @@
       score -= 2;
     }
 
+    const cook = scoreCookMethod(menu, bmi, patientMode);
+    if (cook.delta) {
+      score += cook.delta;
+      if (cook.delta > 0) {
+        reasons.push(`วิธีปรุง${cook.method} — ไขมันน้อยกว่าทอด`);
+      } else if (cook.method === "ทอด") {
+        reasons.push("วิธีปรุงทอด — ไขมันสูง ระวังน้ำหนักเกิน");
+      }
+    }
+
     return { menu, score, reasons };
   }
 
@@ -258,6 +305,7 @@
           patientMode,
           patientContexts,
           ageBand,
+          bmi,
         })
       )
       .filter((r) => r.score > -999)
@@ -285,6 +333,7 @@
     calcBmi,
     bmiLabel,
     getAgeBand,
+    inferCookMethod,
     recommend,
   };
 })(typeof window !== "undefined" ? window : globalThis);
