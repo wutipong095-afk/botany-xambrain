@@ -8,6 +8,8 @@ updated: 2026-07-03
 attribution: "กรอบแนวคิดโดย ครูเฮนรี่ — 'อาหาร = สมดุลของร่างกาย'"
 source_type: external
 references:
+  - "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)30041-8/fulltext"
+  - "https://www.who.int/health-topics/noncommunicable-diseases"
   - "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
   - "https://www.fao.org/nutrition/education/food-dietary-guidelines/en/"
   - "https://www.ttmed.psu.ac.th/th/blog/97"
@@ -58,6 +60,25 @@ tags:
 
 > ⚠️ แผนที่นี้เป็น **การเทียบเชิงหน้าที่เพื่อการเรียนรู้** ไม่ใช่การเคลมว่าเท่ากันตามหลักวิชาแต่ละสำนัก
 
+## หลักฐานเชิงประจักษ์ (Evidence) — อาหารกับการเกิดโรคทั่วโลก ⭐
+
+แกน "อาหาร = สมดุล/ป้องกันโรค" ไม่ใช่แค่ปรัชญา — มีตัวเลขระดับโลกรองรับ:
+
+| ตัวชี้วัด | ค่า | แหล่ง |
+|-----------|-----|-------|
+| การตายทั่วโลกที่ **อาหารไม่ดี** เป็นปัจจัยเสี่ยง / ปี | **~11 ล้านคน = ~22% (1 ใน 5)** | GBD 2017, *The Lancet* |
+| — โรคหัวใจ-หลอดเลือด (นำมาสุด) | ~10 ล้านคน | GBD 2017 |
+| — มะเร็ง | ~913,000 คน | GBD 2017 |
+| — เบาหวานชนิดที่ 2 | ~339,000 คน | GBD 2017 |
+| **โรคไม่ติดต่อ (NCDs)** ในภาพรวม | **74% ของการตายทั่วโลก** (~41 ล้าน/ปี) | WHO |
+
+- **สาเหตุหลักจากอาหาร**: "กินน้อยเกินไป" (ขาดธัญพืชเต็มเมล็ด ผลไม้ ถั่ว/เมล็ด) + **โซเดียมสูงเกิน** — อันตรายกว่าน้ำตาล/เนื้อแดง/ของแปรรูป
+- **อาหารไม่ดี = 1 ใน 5 ปัจจัยเสี่ยงหลักของ NCDs** (ร่วมกับ บุหรี่ เหล้า ขาดการเคลื่อนไหว มลพิษอากาศ) — WHO
+
+> ⚠️ **ตีความให้ถูก**: 22% = สัดส่วนการตายที่ **"ป้องกันได้ถ้าแก้อาหาร"** (attributable risk) — อาหารเป็น *ปัจจัยเสี่ยง* ร่วมกับพันธุกรรม/สิ่งแวดล้อม **ไม่ใช่สาเหตุเดี่ยว** · เป็นข้อมูล *การตาย* (แม่นกว่า "จำนวนผู้ป่วย") · GBD เป็นค่าประมาณมีช่วงความเชื่อมั่น
+
+→ ตรงกับที่ WHO ว่า "อาหารดีป้องกันทั้งทุพโภชนาการและ NCDs" และเป็นเหตุผลเชิงตัวเลขว่าทำไม [[food-recommender]] (U3) จึงเน้น **ป้องกัน** ไม่ใช่รักษา
+
 ## จุดร่วม (Convergence)
 
 1. **อาหาร = ตัวปรับสมดุล** ไม่ใช่แค่พลังงาน/ความอร่อย
@@ -99,6 +120,10 @@ tags:
 
 ## ที่มา (External sources) — เข้าถึง 2026-07-03
 
+- [Health effects of dietary risks in 195 countries, 1990–2017 — GBD, *The Lancet*](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)30041-8/fulltext) — ตัวเลข 11 ล้าน/22%
+- [Globally, 1 in 5 deaths associated with poor diet — EurekAlert (สรุปงาน Lancet)](https://www.eurekalert.org/news-releases/494822)
+- [Noncommunicable diseases (74% ของการตาย) — WHO](https://www.who.int/health-topics/noncommunicable-diseases)
+- [Unhealthy diet as NCD risk — WHO EMRO](https://www.emro.who.int/noncommunicable-diseases/causes/unhealthy-diets.html)
 - [Healthy diet — WHO fact sheet](https://www.who.int/news-room/fact-sheets/detail/healthy-diet)
 - [Food-Based Dietary Guidelines — FAO](https://www.fao.org/nutrition/education/food-dietary-guidelines/en/)
 - [การดูธาตุเจ้าเรือนตามแนวทางการแพทย์อายุรเวท — คณะการแพทย์แผนไทย ม.สงขลานครินทร์](https://www.ttmed.psu.ac.th/th/blog/97)
