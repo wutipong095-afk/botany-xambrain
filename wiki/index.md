@@ -9,6 +9,8 @@ tags:
 
 # Index
 
+> **โปรเจกต์: การทำสมองที่สอง** (repo: botany-xambrain)
+
 ## Meta
 
 - [[hotcache]] — บริบทล่าสุดของ session (อ่านก่อนทุกครั้ง)
