@@ -59,3 +59,4 @@ tags:
 | 2026-07-03 | เตโชธาตุ/ไฟ 4 กอง + ฤทธิ์ร้อน-เย็น (สะพานแคลอรี↔ธาตุไฟ) | ม.มหิดล (pharmacy 98), รพ.พริ้นซ์ (princhealth), คลินิกพังงา | [[food-analysis-ttm]] |
 | 2026-07-03 | อาหารคือสมดุล: เปรียบเทียบ 4 กระบวนทัศน์ + บรรณานุกรม | WHO (healthy diet), FAO (FBDG), ม.สงขลานครินทร์ (ttmed 97 อายุรเวท), รพ.รามา (mahidol) | [[food-as-balance]] |
 | 2026-07-03 | หลักฐานเชิงประจักษ์: อาหาร→โรคทั่วโลก (11 ล้าน/22%, NCDs 74%) | GBD 2017 *The Lancet*, EurekAlert, WHO (NCDs, EMRO) | [[food-as-balance]] |
+| 2026-07-03 | เมนูอาหารตามธาตุ (+14 เมนู): ลม/น้ำ/ไฟ/ดิน | ม.มหิดล gj.mahidol (tard, preg-food), ราชวิทยาลัยจุฬาภรณ์ cra.ac.th | `data/menu-db.json` · [[food-recommender]] |

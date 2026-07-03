@@ -1,6 +1,11 @@
 {
   "schema_version": "0.1",
   "updated": "2026-07-03",
+  "sources": [
+    "https://www.gj.mahidol.ac.th/main/tard/",
+    "https://chulabhornchannel.cra.ac.th/health-articles/37234/",
+    "https://www.gj.mahidol.ac.th/main/preg-food/"
+  ],
   "note": "ฐานข้อมูลเมนูอาหารไทยเชิงแพทย์แผนไทย — ใช้ป้อนเครื่องแนะนำเมนู (ดู wiki/food-recommender.md U3). thermal: ร้อน|อุ่น|กลาง|เย็น · energy: ต่ำ|กลาง|สูง (เชิงคุณภาพ) · suitFor/cautionFor = ธาตุ ดิน|น้ำ|ลม|ไฟ",
   "menus": [
     {
@@ -146,6 +151,174 @@
       "symptoms": ["ร้อนใน", "กระหายน้ำ", "อ่อนเพลียจากร้อน", "แผลในปาก"],
       "mainPlants": ["ใบบัวบก", "เก๊กฮวย", "รางจืด"],
       "note": "สมุนไพรฤทธิ์เย็น ดับร้อน คลายกระหาย เหมาะหน้าร้อน/ธาตุไฟ"
+    },
+    {
+      "id": "kaprao-gai",
+      "name": "กะเพราไก่",
+      "tastes": ["เผ็ดร้อน", "เค็ม"],
+      "thermal": "ร้อน",
+      "energy": "กลาง",
+      "suitFor": ["ลม"],
+      "cautionFor": ["ไฟ"],
+      "symptoms": ["ท้องอืด", "เบื่ออาหาร", "ปวดหัว", "นอนไม่หลับ"],
+      "mainPlants": ["กะเพรา", "พริก", "กระเทียม"],
+      "note": "รสเผ็ดร้อนขับลม — ม.มหิดล gj.mahidol + ราชวิทยาลัยจุฬาภรณ์ cra.ac.th"
+    },
+    {
+      "id": "kai-phat-khing",
+      "name": "ไก่ผัดขิง",
+      "tastes": ["เผ็ดร้อน", "เค็ม"],
+      "thermal": "ร้อน",
+      "energy": "กลาง",
+      "suitFor": ["ลม"],
+      "cautionFor": ["ไฟ"],
+      "symptoms": ["ท้องอืด", "มือเท้าเย็น", "ขี้หนาว", "ย่อยช้า"],
+      "mainPlants": ["ขิง", "กะเพรา", "พริก"],
+      "note": "ขิงรสเผ็ดร้อนขับลม อบอุ่นกาย — gj.mahidol + cra.ac.th"
+    },
+    {
+      "id": "phat-khii-mao-thale",
+      "name": "ผัดขี้เมาทะเล",
+      "tastes": ["เผ็ดร้อน", "เค็ม"],
+      "thermal": "ร้อน",
+      "energy": "กลาง",
+      "suitFor": ["ลม"],
+      "cautionFor": ["ไฟ"],
+      "symptoms": ["ท้องอืด", "เบื่ออาหาร", "ปวดหัว"],
+      "mainPlants": ["พริก", "กะเพรา", "กระเทียม", "ขิง"],
+      "note": "เครื่องเทศเผ็ดร้อนขับลม — cra.ac.th (ธาตุลม)"
+    },
+    {
+      "id": "hor-mok-bai-yor",
+      "name": "ห่อหมกใบยอ",
+      "tastes": ["เค็ม", "หวาน", "เผ็ดร้อน"],
+      "thermal": "อุ่น",
+      "energy": "กลาง",
+      "suitFor": ["น้ำ"],
+      "cautionFor": [],
+      "symptoms": ["เสมหะมาก", "น้ำมูกไหล", "ท้องเสีย", "น้ำหนักเกิน"],
+      "mainPlants": ["ใบยอ", "พริก", "หอมแดง", "กะชาย"],
+      "note": "ใบยอรสขม ลดธาตุน้ำ — gj.mahidol + cra.ac.th"
+    },
+    {
+      "id": "mara-phat-khai",
+      "name": "มะระผัดไข่",
+      "tastes": ["ขม", "เค็ม"],
+      "thermal": "เย็น",
+      "energy": "ต่ำ",
+      "suitFor": ["น้ำ", "ไฟ"],
+      "cautionFor": [],
+      "symptoms": ["เสมหะมาก", "ร้อนใน", "น้ำหนักเกิน"],
+      "mainPlants": ["มะระ", "ไข่ไก่"],
+      "note": "มะระรสขม ฤทธิ์เย็น ลดธาตุน้ำ-ไฟ — gj.mahidol + cra.ac.th"
+    },
+    {
+      "id": "nam-prik-mara-khino",
+      "name": "น้ำพริกมะระขี้นก",
+      "tastes": ["ขม", "เผ็ดร้อน", "เค็ม"],
+      "thermal": "เย็น",
+      "energy": "ต่ำ",
+      "suitFor": ["น้ำ", "ไฟ"],
+      "cautionFor": [],
+      "symptoms": ["เสมหะมาก", "ร้อนใน", "ท้องเสีย"],
+      "mainPlants": ["มะระขี้นก", "พริก", "กระเทียม"],
+      "note": "มะระขี้นกรสขม ลดธาตุน้ำ — gj.mahidol + cra.ac.th"
+    },
+    {
+      "id": "gaeng-khilek",
+      "name": "แกงขี้เหล็ก",
+      "tastes": ["ขม", "เผ็ดร้อน"],
+      "thermal": "เย็น",
+      "energy": "ต่ำ",
+      "suitFor": ["ไฟ", "น้ำ"],
+      "cautionFor": [],
+      "symptoms": ["ร้อนใน", "แผลในปาก", "สิว", "เสมหะมาก"],
+      "mainPlants": ["ขี้เหล็ก", "มะพร้าว(กะทิ)", "พริก"],
+      "note": "ขี้เหล็กรสขมฤทธิ์เย็น ดับพิษร้อน — cra.ac.th + gj.mahidol"
+    },
+    {
+      "id": "phat-phak-bung",
+      "name": "ผัดผักบุ้ง",
+      "tastes": ["ขม", "เค็ม"],
+      "thermal": "เย็น",
+      "energy": "ต่ำ",
+      "suitFor": ["ไฟ"],
+      "cautionFor": [],
+      "symptoms": ["ร้อนใน", "ท้องผูก", "กระหายน้ำ", "แผลในปาก"],
+      "mainPlants": ["ผักบุ้ง", "กระเทียม", "พริก"],
+      "note": "ผักบุ้งรสขม ฤทธิ์เย็น ลดธาตุไฟ — gj.mahidol + cra.ac.th"
+    },
+    {
+      "id": "taeng-kwa-phat-khai",
+      "name": "แตงกวาผัดไข่",
+      "tastes": ["จืด", "เค็ม"],
+      "thermal": "เย็น",
+      "energy": "ต่ำ",
+      "suitFor": ["ไฟ"],
+      "cautionFor": [],
+      "symptoms": ["ร้อนใน", "แผลในปาก", "กระหายน้ำ"],
+      "mainPlants": ["แตงกวา", "ไข่ไก่"],
+      "note": "แตงกวาฤทธิ์เย็น ลดความร้อนในร่างกาย — gj.mahidol + cra.ac.th"
+    },
+    {
+      "id": "buab-phat-khai",
+      "name": "บวบผัดไข่",
+      "tastes": ["จืด", "หวาน"],
+      "thermal": "เย็น",
+      "energy": "ต่ำ",
+      "suitFor": ["ไฟ"],
+      "cautionFor": [],
+      "symptoms": ["ร้อนใน", "ผื่นคัน", "กระหายน้ำ"],
+      "mainPlants": ["บวบ", "ไข่ไก่"],
+      "note": "บวบฤทธิ์เย็นชุ่มชื้น เหมาะธาตุไฟ — gj.mahidol + cra.ac.th"
+    },
+    {
+      "id": "gaeng-pa",
+      "name": "แกงป่า",
+      "tastes": ["เผ็ดร้อน", "ขม", "ฝาด"],
+      "thermal": "อุ่น",
+      "energy": "กลาง",
+      "suitFor": ["ดิน"],
+      "cautionFor": ["ลม"],
+      "symptoms": ["อ่อนเพลีย", "ย่อยช้า", "เบื่ออาหาร"],
+      "mainPlants": ["พริก", "ข่า", "ตะไคร้", "มะขามเปียก", "ผักป่า"],
+      "note": "รสฝาด-เผ็ดร้อน เหมาะธาตุดิน — cra.ac.th (ธาตุดิน)"
+    },
+    {
+      "id": "sato-phat-kung",
+      "name": "สะตอผัดกุ้ง",
+      "tastes": ["ฝาด", "เค็ม", "หวาน"],
+      "thermal": "กลาง",
+      "energy": "กลาง",
+      "suitFor": ["ดิน"],
+      "cautionFor": [],
+      "symptoms": ["อ่อนเพลีย", "เบื่ออาหาร"],
+      "mainPlants": ["สะตอ", "กุ้ง", "พริก"],
+      "note": "สะตอรสฝาด เหมาะธาตุดิน — cra.ac.th (ธาตุดิน)"
+    },
+    {
+      "id": "gaeng-luang-pla",
+      "name": "แกงเหลืองปลา",
+      "tastes": ["เผ็ดร้อน", "เปรี้ยว"],
+      "thermal": "อุ่น",
+      "energy": "กลาง",
+      "suitFor": ["ลม", "น้ำ"],
+      "cautionFor": ["ไฟ"],
+      "symptoms": ["ท้องอืด", "เบื่ออาหาร", "เสมหะมาก"],
+      "mainPlants": ["ขมิ้น", "พริก", "มะขาม", "ใบมะกรูด"],
+      "note": "ขมิ้นรสเผ็ดร้อน ขับลม — gj.mahidol (อาหารครรภ์ตามแผนไทย)"
+    },
+    {
+      "id": "tom-jued-tao-hu-tamlueng",
+      "name": "ต้มจืดเต้าหู้หมูสับใส่ตำลึง",
+      "tastes": ["จืด", "ขม"],
+      "thermal": "เย็น",
+      "energy": "ต่ำ",
+      "suitFor": ["ไฟ"],
+      "cautionFor": [],
+      "symptoms": ["ร้อนใน", "อ่อนเพลีย", "ย่อยยาก"],
+      "mainPlants": ["ตำลึง", "เต้าหู้", "หมูสับ"],
+      "note": "ตำลึงรสขมฤทธิ์เย็น จืดย่อยง่าย — gj.mahidol (อาหารครรภ์ตามแผนไทย)"
     }
   ]
 }
