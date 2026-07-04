@@ -95,12 +95,18 @@
     const elements = new Set();
     const tastes = new Set();
     const thermals = new Set();
+    const states = new Set();
+    const stateByElement = {};
     const whys = [];
 
     for (const { rule, hit } of matchedRules) {
       elements.add(rule.element);
       rule.recommendTaste.forEach((t) => tastes.add(t));
       thermals.add(rule.recommendThermal);
+      if (rule.state) {
+        states.add(rule.state);
+        stateByElement[rule.element] = rule.state;
+      }
       whys.push(`${hit.join(", ")} → ${rule.why}`);
     }
 
@@ -108,6 +114,8 @@
       elements: [...elements],
       tastes: [...tastes],
       thermals: [...thermals],
+      states: [...states],
+      stateByElement,
       whys,
     };
   }
@@ -122,6 +130,8 @@
       elements: [...new Set([...symptomTargets.elements, ...ageTargets.elements])],
       tastes: [...new Set([...symptomTargets.tastes, ...ageTargets.tastes])],
       thermals: [...new Set([...symptomTargets.thermals, ...ageTargets.thermals])],
+      states: symptomTargets.states ?? [],
+      stateByElement: symptomTargets.stateByElement ?? {},
       whys: [...symptomTargets.whys, ...ageTargets.whys],
       avoidTastes: ageTargets.avoidTastes ?? [],
       boostPatientContexts: ageTargets.boostPatientContexts ?? [],
@@ -247,6 +257,28 @@
     for (const taste of targets.tastes) {
       if (menu.tastes?.includes(taste)) {
         score += 2;
+      }
+    }
+
+    if (targets.states?.length) {
+      const hasDeficient = targets.states.includes("หย่อน");
+      const hasExcess = targets.states.includes("กำเริบ");
+      if (hasDeficient) {
+        if (menu.energy === "สูง") {
+          score += 2;
+          reasons.push("มีอาการ 'หย่อน/พร่อง' → เสริมพลังงานสูง");
+        } else if (menu.energy === "กลาง") {
+          score += 1;
+        }
+      }
+      if (hasExcess) {
+        if (menu.energy === "ต่ำ") {
+          score += 1;
+          reasons.push("มีอาการ 'กำเริบ' → เมนูเบา/ระบาย");
+        } else if (menu.energy === "สูง") {
+          score -= patientMode ? 2 : 1;
+          reasons.push("มีอาการ 'กำเริบ' → หลีกเลี่ยงเมนูหนัก");
+        }
       }
     }
 

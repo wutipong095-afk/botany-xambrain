@@ -92,7 +92,25 @@
       margin-bottom: 0.75rem;
       line-height: 1.5;
     }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .chips { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .chip-group:last-child { border-bottom: none; }
+    .chip-group-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: #eef2eb;
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      margin-right: 0.25rem;
+      white-space: nowrap;
+    }
     .chip {
       padding: 0.3rem 0.65rem;
       border-radius: 999px;
@@ -251,15 +269,33 @@
 
   <script src="recommender.js"></script>
   <script>
-    const SYMPTOM_SUGGESTIONS = [
-      "ท้องอืด", "เบื่ออาหาร", "ท้องเสีย", "อ่อนเพลีย", "ร้อนใน",
-      "กลืนลำบาก", "คลื่นไส้", "แผลในปาก", "หวัด", "ท้องผูก",
-    ];
-
     let menuDb = null;
     let symptomDb = null;
     let ageDb = null;
     let patientMode = false;
+
+    const ELEMENT_ORDER = ["ลม", "ไฟ", "น้ำ", "ดิน"];
+    const ELEMENT_STATE_ICON = { กำเริบ: "↑", หย่อน: "↓" };
+
+    function buildSymptomGroups(rules) {
+      const groups = new Map();
+      for (const rule of rules) {
+        const key = `${rule.element}·${rule.state}`;
+        if (!groups.has(key)) {
+          groups.set(key, { element: rule.element, state: rule.state, symptoms: new Set() });
+        }
+        const g = groups.get(key);
+        rule.symptoms.forEach((s) => g.symptoms.add(s));
+      }
+      const arr = [...groups.values()].map((g) => ({ ...g, symptoms: [...g.symptoms] }));
+      arr.sort((a, b) => {
+        const ea = ELEMENT_ORDER.indexOf(a.element);
+        const eb = ELEMENT_ORDER.indexOf(b.element);
+        if (ea !== eb) return ea - eb;
+        return a.state.localeCompare(b.state);
+      });
+      return arr;
+    }
 
     const el = (id) => document.getElementById(id);
 
@@ -297,23 +333,35 @@
 
     function buildChips() {
       const box = el("symptom-chips");
-      SYMPTOM_SUGGESTIONS.forEach((s) => {
-        const b = document.createElement("button");
-        b.type = "button";
-        b.className = "chip";
-        b.textContent = s;
-        b.addEventListener("click", () => {
-          const ta = el("symptoms");
-          const parts = FoodRecommender.parseSymptoms(ta.value);
-          if (parts.includes(s)) {
-            ta.value = parts.filter((p) => p !== s).join(", ");
-            b.classList.remove("on");
-          } else {
-            ta.value = parts.length ? `${ta.value.replace(/,\s*$/, "")}, ${s}` : s;
-            b.classList.add("on");
-          }
+      box.innerHTML = "";
+      if (!symptomDb) return;
+      const groups = buildSymptomGroups(symptomDb.rules);
+      groups.forEach((g) => {
+        const section = document.createElement("div");
+        section.className = "chip-group";
+        const label = document.createElement("span");
+        label.className = "chip-group-label";
+        label.textContent = `ธาตุ${g.element} ${ELEMENT_STATE_ICON[g.state] || ""} ${g.state}`;
+        section.appendChild(label);
+        g.symptoms.forEach((s) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "chip";
+          b.textContent = s;
+          b.addEventListener("click", () => {
+            const ta = el("symptoms");
+            const parts = FoodRecommender.parseSymptoms(ta.value);
+            if (parts.includes(s)) {
+              ta.value = parts.filter((p) => p !== s).join(", ");
+              b.classList.remove("on");
+            } else {
+              ta.value = parts.length ? `${ta.value.replace(/,\s*$/, "")}, ${s}` : s;
+              b.classList.add("on");
+            }
+          });
+          section.appendChild(b);
         });
-        box.appendChild(b);
+        box.appendChild(section);
       });
     }
 
@@ -425,14 +473,18 @@
       renderResults(out);
     });
 
-    buildChips();
     buildPatientContexts();
     el("age").addEventListener("input", updateAgeHint);
-    loadData().then(() => updateAgeHint()).catch((err) => {
-      el("load-error").hidden = false;
-      el("load-error").textContent = err.message;
-      el("submit-btn").disabled = true;
-    });
+    loadData()
+      .then(() => {
+        buildChips();
+        updateAgeHint();
+      })
+      .catch((err) => {
+        el("load-error").hidden = false;
+        el("load-error").textContent = err.message;
+        el("submit-btn").disabled = true;
+      });
   </script>
 </body>
 </html>

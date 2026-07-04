@@ -1,31 +1,52 @@
 import { invoke } from "@tauri-apps/api/core";
 import { openUrl } from "@tauri-apps/plugin-opener";
+import {
+  buildLinkIndex,
+  renderMarkdown,
+  resolveWikiLink,
+  stripLeadingHeading,
+  type WikiEntry,
+} from "./markdown";
 
-interface WikiEntry {
-  path: string;
-  title: string;
-}
+let wikiEntries: WikiEntry[] = [];
 
 const wikiListEl = document.querySelector("#wiki-list") as HTMLUListElement;
 const vaultPathEl = document.querySelector("#vault-path") as HTMLParagraphElement;
 const welcomeEl = document.querySelector("#welcome") as HTMLDivElement;
 const articleEl = document.querySelector("#article") as HTMLElement;
 const articleTitleEl = document.querySelector("#article-title") as HTMLHeadingElement;
-const articleBodyEl = document.querySelector("#article-body") as HTMLPreElement;
-
-function stripFrontmatter(raw: string): string {
-  if (raw.startsWith("---")) {
-    const end = raw.indexOf("\n---", 3);
-    if (end !== -1) {
-      return raw.slice(end + 4).trimStart();
-    }
-  }
-  return raw;
-}
+const articleBodyEl = document.querySelector("#article-body") as HTMLDivElement;
 
 async function openExamFlow() {
   const url = await invoke<string>("examflow_url");
   await openUrl(url);
+}
+
+function setActiveSidebar(path: string) {
+  document.querySelectorAll(".wiki-list li").forEach((li) => li.classList.remove("active"));
+  document.querySelector(`[data-path="${CSS.escape(path)}"]`)?.classList.add("active");
+}
+
+async function hydrateImages(container: HTMLElement) {
+  const imgs = container.querySelectorAll<HTMLImageElement>("img.wiki-image.pending");
+  await Promise.all(
+    [...imgs].map(async (img) => {
+      const path = img.getAttribute("data-asset");
+      if (!path) return;
+      const width = img.getAttribute("data-width");
+      try {
+        const dataUrl = await invoke<string>("read_asset_data_url", { relativePath: path });
+        img.src = dataUrl;
+        img.classList.remove("pending");
+        if (width) img.style.maxWidth = `${width}px`;
+      } catch {
+        img.classList.add("wiki-image-missing");
+        img.alt = `ไม่พบรูป: ${path}`;
+        const cap = img.parentElement?.querySelector(".wiki-figure-caption");
+        if (cap) cap.textContent = `ไม่พบรูป: ${path}`;
+      }
+    })
+  );
 }
 
 async function loadWikiFile(entry: WikiEntry) {
@@ -33,10 +54,39 @@ async function loadWikiFile(entry: WikiEntry) {
   welcomeEl.hidden = true;
   articleEl.hidden = false;
   articleTitleEl.textContent = entry.title;
-  articleBodyEl.textContent = stripFrontmatter(raw);
 
-  document.querySelectorAll(".wiki-list li").forEach((li) => li.classList.remove("active"));
-  document.querySelector(`[data-path="${CSS.escape(entry.path)}"]`)?.classList.add("active");
+  let html = renderMarkdown(raw);
+  html = stripLeadingHeading(html, entry.title);
+  articleBodyEl.innerHTML = html;
+
+  articleBodyEl.querySelectorAll('a[href^="http"]').forEach((a) => {
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener noreferrer");
+  });
+
+  await hydrateImages(articleBodyEl);
+
+  setActiveSidebar(entry.path);
+}
+
+async function navigateWikiLink(target: string) {
+  const entry = resolveWikiLink(target);
+  if (entry) {
+    await loadWikiFile(entry);
+    return;
+  }
+  articleBodyEl.insertAdjacentHTML(
+    "beforeend",
+    `<p class="link-error">ไม่พบบทเรียน: ${target}</p>`
+  );
+}
+
+function onArticleClick(e: MouseEvent) {
+  const el = (e.target as HTMLElement).closest("a.wikilink");
+  if (!el) return;
+  e.preventDefault();
+  const target = el.getAttribute("data-wiki");
+  if (target) void navigateWikiLink(target);
 }
 
 async function init() {
@@ -46,6 +96,8 @@ async function init() {
     void openExamFlow();
   });
 
+  articleBodyEl.addEventListener("click", onArticleClick);
+
   try {
     const vaultPath = await invoke<string>("get_vault_info");
     vaultPathEl.textContent = vaultPath;
@@ -53,10 +105,11 @@ async function init() {
     vaultPathEl.textContent = "ไม่พบ vault wiki/";
   }
 
-  const entries = await invoke<WikiEntry[]>("list_wiki_entries");
-  wikiListEl.innerHTML = "";
+  wikiEntries = await invoke<WikiEntry[]>("list_wiki_entries");
+  buildLinkIndex(wikiEntries);
 
-  for (const entry of entries) {
+  wikiListEl.innerHTML = "";
+  for (const entry of wikiEntries) {
     const li = document.createElement("li");
     li.dataset.path = entry.path;
     const btn = document.createElement("button");
@@ -68,10 +121,8 @@ async function init() {
     wikiListEl.appendChild(li);
   }
 
-  const indexEntry = entries.find((e) => e.path === "index.md");
-  if (indexEntry) {
-    await loadWikiFile(indexEntry);
-  }
+  const indexEntry = wikiEntries.find((e) => e.path === "index.md");
+  if (indexEntry) await loadWikiFile(indexEntry);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
