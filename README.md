@@ -140,7 +140,7 @@ botany-xambrain/
 - ทุกไฟล์มี YAML frontmatter · ใช้ wikilink `[[name]]` · รูป `![[folder/image.png]]`
 - **AI เป็นผู้ช่วย ไม่ใช่ผู้ตัดสิน** — กฎ JSON เลือกเมนู, ข้อสอบวัดผล, ครูเป็นเจ้าของความรู้
 - **ส่งเสริมสุขภาพเชิงป้องกัน — ไม่ใช่การวินิจฉัยหรือรักษาโรค** (ต้องแสดงคำเตือนในทุกหน้าเผยแพร่)
-- **Git** — remote บน GitHub (repo หลัก); ไฟล์ใหญ่ (รูป/PDF) ยังอยู่ local ตาม `.gitignore`
+- **Git** — `master` ผ่าน PR + CI (`check-text`); มาตรฐาน branch/commit ดู [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 ---
 
@@ -148,7 +148,7 @@ botany-xambrain/
 
 - [`ARCHITECTURE.md`](ARCHITECTURE.md) — สถาปัตยกรรมระบบ (3 ชั้น + แอปครู)
 - [`app/README.md`](app/README.md) — แอปครู Tauri (.exe)
-- [`CLAUDE.md`](CLAUDE.md) — สเปกทางเทคนิค + ชุดคำสั่ง (workflows)
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — มาตรฐาน Git (branch, PR, CI)
 - [`wiki/index.md`](wiki/index.md) — สารบัญ concept nodes ทั้งหมด
 - [`wiki/overview.md`](wiki/overview.md) — แผนที่ความรู้ + framework 3 Layer
 - [`wiki/hotcache.md`](wiki/hotcache.md) — บริบทล่าสุดของ session (อ่านก่อนเริ่มทุกครั้ง)

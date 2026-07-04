@@ -28,8 +28,11 @@ wiki/         — เนื้อหาหลัก (concept nodes, source summa
 
 ## Git
 
-- **Local only** — ไม่ใช้ GitHub (ข้อมูลรูปภาพใหญ่)
-- `.gitignore` ตัด `.obsidian/workspace.json` และ OS files
+- **Remote**: GitHub — merge ผ่าน **Pull Request** เท่านั้น (ดู [`CONTRIBUTING.md`](CONTRIBUTING.md))
+- **Branch**: ห้าม commit ตรง `master` — ใช้ `<type>/<name>` เช่น `content/`, `fix/`, `chore/`
+- **CI**: GitHub Actions (`.github/workflows/ci.yml`) รัน `scripts/check-text.py` ทุก PR
+- **Line endings**: LF ทั้ง repo (`.gitattributes`)
+- **Ignore**: `.gitignore` — Obsidian workspace, OS files, `app/node_modules`, `output/`
 
 ## ชุดคำสั่ง (Workflows)
 
