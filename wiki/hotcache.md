@@ -2,7 +2,7 @@
 title: "Hotcache"
 type: meta
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 tags:
   - meta
 ---
@@ -22,6 +22,14 @@ tags:
   - Botany Literacy 5 ระดับ: Naming → Identifying → Using → Connecting → Conserving
   - ข้อสอบ 3 ระดับ: L1 จำ/ระบุ, L2 เชื่อมโยง, L3 วินิจฉัย/ประยุกต์
   - Git local only
+
+## Last Session (2026-07-04)
+
+- **ย่อย PDF ใหม่ 2 ไฟล์**: `ดอก ผล เมล็ด.pdf` (7 ห.) → [[source-flower-fruit-seed]] · `สัณฐานวิทยา_ใบ.pdf` (58 ห.) → [[source-leaf-extended]]
+- **อัพเดต S5/S6**: [[flower-morphology]] · [[fruit-seed-morphology]] จาก external → **mixed** (certified + สสวท.)
+- **ขยาย S4**: [[leaf-morphology]] — 6 ประเภทใบ · ใบดัดแปลง 10 · ผิว/เนื้อใบ
+- **ตัดภาพ**: `assets/ดอก-ผล-เมล็ด/` (14 JPEG) · catalog [[catalog-flower-fruit-seed]]
+- **แก้ path รูป**: wikilink ใช้ `assets/...` ให้ Obsidian แสดงรูปได้
 
 ## Last Session (2026-07-03)
 
@@ -48,6 +56,8 @@ tags:
 12. ~~[[food-recommender]] (U3) + `data/*.json` — เครื่องแนะนำเมนู (BMI+อาการ→เมนู) + prototype~~ ✅
 13. ~~[[food-as-balance]] (AX1) — แกนความรู้ อาหาร=สมดุล เทียบ 4 กระบวนทัศน์ (ครูเฮนรี่)~~ ✅
 14. ~~[[human-unnatural-life]] (AX2) — แกนความรู้ ชีวิตผิดธรรมชาติ: เคลื่อนไหว + โดพามีน/ความสุขหลอก~~ ✅
+15. ~~ย่อย `ดอก ผล เมล็ด.pdf` + อัพเดต S5/S6 (mixed certified)~~ ✅
+16. ~~ย่อย `สัณฐานวิทยา_ใบ.pdf` 58 ห. + ขยาย S4~~ ✅
 
 ## ต้องทำต่อ
 

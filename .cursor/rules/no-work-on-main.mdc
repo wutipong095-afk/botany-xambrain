@@ -1,0 +1,39 @@
+---
+description: ห้ามแก้ไข/commit บน main หรือ master — ต้องสร้าง feature branch ก่อน
+alwaysApply: true
+---
+
+# ห้ามทำงานบน main / master
+
+## กฎ
+
+ก่อนแก้ไฟล์ commit push หรือทำงาน implementation ใดๆ ให้ตรวจ branch ปัจจุบัน:
+
+```bash
+git branch --show-current
+```
+
+ถ้าอยู่บน **`main`** หรือ **`master`**:
+
+1. **หยุด** — อย่าแก้โค้ด อย่า commit อย่า push
+2. แจ้งผู้ใช้ทันทีว่าอยู่บน protected branch
+3. ถามหรือเสนอสร้าง feature branch ก่อน เช่น:
+
+```bash
+git checkout -b feature/<short-description>
+```
+
+4. ทำงานต่อได้ **หลัง** checkout ไป branch อื่นแล้วเท่านั้น
+
+## ข้อยกเว้น (ทำได้บน main/master)
+
+- อ่านไฟล์ / ตอบคำถาม / อธิบายโค้ด (read-only)
+- `git status`, `git log`, `git diff` — ดูสถานะเท่านั้น
+- งานที่ผู้ใช้ **ระบุชัด** ว่าต้องการทำบน main/master โดยตรง
+
+## ตัวอย่าง
+
+```
+# ❌ อยู่บน master แล้วแก้ recommender.js + commit
+# ✅ แจ้งผู้ใช้ → git checkout -b fix/recommender-p3 → แล้วค่อยแก้
+```

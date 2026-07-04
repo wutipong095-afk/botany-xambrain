@@ -54,14 +54,29 @@ tags:
 
 → concept node: [[leaf-morphology]] · catalog: [[catalog-leaf-morphology]]
 
-![[สัณฐานวิทยาของใบ/p001-02.png|400]]
+![[assets/สัณฐานวิทยาของใบ/p001-02.png|400]]
 
 - **หน้า 1**: แบบของใบประกอบ — นิ้วมือ (penta/tri/bifoliolate) vs ขนนก (odd/even-pinnate, bi/tripinnate)
 - **หน้า 2**: การเรียงใบ (phyllotaxy) — สลับ/ตรงข้าม/วงรอบ/decussate/spiral/distichous
 - **หน้า 3**: รูปร่างใบ (leaf shape) 16 แบบ — subulate → spathulate
-- **หน้า 4**: ปลายใบ/โคนใบ/ขอบใบ (apex/base/margin)
+- **หน้า 4**: ปลายใบ 9 แบบ · โคนใบ 8 แบบ · ขอบใบ 8 แบบ (apex/base/margin)
 
-→ เนื้อหาถอดจากภาพครบแล้วใน [[leaf-morphology]]
+→ เนื้อหาถอดจากภาพครบแล้วใน [[leaf-morphology]] (อัพเดต 2026-07-04 — แก้หน้า 4 ให้ตรงสไลด์)
+
+**ขยาย**: PDF 58 หน้า `raw/สัณฐานวิทยา_ใบ.pdf` → [[source-leaf-extended]] · ใบดัดแปลง/ผิวใบ/6 ประเภทใบ
+
+---
+
+## Part 4: ดอก ผล เมล็ด — 7 หน้า (image-based)
+
+→ concept nodes: [[flower-morphology]] · [[fruit-seed-morphology]] · catalog: [[catalog-flower-fruit-seed]] · source: [[source-flower-fruit-seed]]
+
+- **หน้า 1**: ดอก + ช่อดอก 8 แบบ + aestivation
+- **หน้า 2**: รูปดอก 9 แบบ
+- **หน้า 3**: วงเกสรเพศผู้
+- **หน้า 4**: วงเกสรเพศเมีย · placentation · รังไข่
+- **หน้า 5**: ผลสด/แห้ง 13 ชนิด
+- **หน้า 6–7**: แผ่นอ้างอิง EN/ZH (เสริม)
 
 ---
 

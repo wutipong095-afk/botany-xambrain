@@ -54,6 +54,30 @@ tags:
 | แบบขนนก | Pinnate | L. *pinna* = ขนนก |
 | แบบนิ้วมือ | Palmate | L. *palma* = ฝ่ามือ |
 
+### ปลายใบ / โคนใบ / ขอบใบ
+
+| ไทย | อังกฤษ | รากศัพท์ / หมายเหตุ |
+|-----|--------|----------------------|
+| ปลายใบ | Apex | L. *apex* = ยอด |
+| โคนใบ / ฐานใบ | Base | — |
+| ขอบใบ | Margin | L. *margo* = ขอบ |
+| ปลายเรียวแหลม | Acuminate | L. *acuminatus* = แหลม |
+| ปลายเว้าบุ๋ม | Retuse | L. *retusus* = บุ๋ม |
+| ปลายเว้าตื้น | Emarginate | L. *emarginatus* = มีขอบเว้า |
+| โคนตัด | Truncate (base) | L. *truncatus* = ตัด |
+| ขอบใบจักเป็นพู | Lobed | L. *lobus* = พู |
+| ขอบใบหยักแบบขนนก | Pinnatifid | L. *pinna* + *findere* = แบ่ง |
+| ขอบใบแฉกแบบนิ้วมือ | Palmatifid | L. *palma* + *findere* |
+
+### รูปร่างใบ (สรุป)
+
+| ไทย | อังกฤษ | หมายเหตุ |
+|-----|--------|----------|
+| รูปวงกลม | Orbicular | L. *orbis* = วงกลม |
+| รูปหัวใจ | Cordate | L. *cor* = หัวใจ |
+| รูปใบหอก | Lanceolate | L. *lancea* = หอก |
+| รูปไข่ | Ovate | L. *ovum* = ไข่ |
+
 ## ดอก (Flower) → [[flower-morphology]]
 
 | ไทย | อังกฤษ | รากศัพท์ / หมายเหตุ |

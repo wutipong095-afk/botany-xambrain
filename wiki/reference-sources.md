@@ -33,6 +33,8 @@ tags:
 ## Certified sources (ซีทอาจารย์)
 
 - [[source-plant-morphology]] — สัณฐานวิทยาพืช: ราก ลำต้น ใบ (วัชราภรณ์ ชนะเคน, วชช.มุกดาหาร)
+- [[source-leaf-extended]] — สัณฐานวิทยาใบ ฉบับเต็ม 58 หน้า (วชช.มุกดาหาร)
+- [[source-flower-fruit-seed]] — ดอก ผล เมล็ด 7 หน้า (วชช.มุกดาหาร)
 
 ## Curriculum anchors (วิชา/หลักสูตรทางการที่รองรับ)
 
@@ -75,3 +77,7 @@ tags:
 | 2026-07-04 | ให้ scoring engine ใช้ `state` (กำเริบ/หย่อน) — หย่อน→บำรุงพลังงานสูง · กำเริบ→เลือกเมนูเบา/ระบาย | หลักธาตุ 4 แผนไทย ([[dhatu-4-plants]]) + TA301 (บำรุง vs ระบาย) | `recommender.js` (aggregateTargets + scoreMenu) |
 | 2026-07-04 | ปรับ `energy` เมนูกะทิ/หวานเข้ม 11 เมนู กลาง→สูง (ห่อหมก, บวชชี, ตะโก้, ซาหริ่ม, ลอดช่อง, ไอศกรีม, ฯลฯ) — แก้ distribution สูง=3→14 | ตำรับกะทิเข้มข้น: [ราชวิทยาลัยจุฬาภรณ์](https://www.cra.ac.th) · [gj.mahidol](https://www.gj.mahidol.ac.th) | `data/menu-db.json` |
 | 2026-07-04 | Symptom chips ใน `index.html` โหลด dynamic จาก `symptom-element.json` (เดิม hardcode 10) จัดกลุ่มตามธาตุ+state | ปรับตามฐานกฎจริง | `index.html` (buildSymptomGroups + buildChips) |
+| 2026-07-04 | แก้ [[leaf-morphology]] ให้ตรง PDF หน้า 4 — เพิ่ม acuminate/lobed · แก้ retuse↔emarginate · โcoนตัดแทน auriculate · ตาราง 9+8+8 แบบ | [[source-plant-morphology]] (วชช.มุกดาหาร, สไลด์ใบ p004-02) | `wiki/leaf-morphology.md` · `wiki/glossary/glossary-morphology.md` |
+| 2026-07-04 | ย่อย `raw/ดอก ผล เมล็ด.pdf` (7 ห.) — ดอก/ช่อดอก/รูปดอก/เกสร/ผลสด-แห้ง · ตัดภาพ 14 ไฟล์ | วชช.มุกดาหาร (วัชราภรณ์ ชนะเคน) | [[source-flower-fruit-seed]] · [[flower-morphology]] · [[fruit-seed-morphology]] · `assets/ดอก-ผล-เมล็ด/` |
+| 2026-07-04 | ย่อย `raw/สัณฐานวิทยา_ใบ.pdf` (58 ห.) — 6 ประเภทใบ · ใบดัดแปลง 10 · ผิว/เนื้อใบ · equitant | วชช.มุกดาหาร (Watchaaraporn Chanaken) + KU/Mahidol key (external ในสไลด์) | [[source-leaf-extended]] · [[leaf-morphology]] |
+| 2026-07-04 | แก้ path รูป Obsidian — เติม prefix `assets/` ใน wikilink รูป | convention ใหม่ | `wiki/leaf-morphology.md` · `assets/catalog-leaf-morphology.md` |

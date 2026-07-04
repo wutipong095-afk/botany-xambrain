@@ -4,9 +4,11 @@ id: S1
 type: concept
 layer: structure
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 sources:
   - source-plant-morphology
+  - source-flower-fruit-seed
+  - source-leaf-extended
 tags:
   - structure
   - morphology
@@ -25,10 +27,10 @@ tags:
 | ราก (Root) | ยึดเกาะ ดูดน้ำ/อาหาร | [[root-morphology]] |
 | ลำต้น (Stem) | พยุง ลำเลียง | [[stem-morphology]] |
 | ใบ (Leaf) | สังเคราะห์แสง คายน้ำ | [[leaf-morphology]] |
-| ดอก (Flower) | สืบพันธุ์ | [[flower-morphology]] 🌐 |
-| ผล/เมล็ด (Fruit/Seed) | ขยายพันธุ์ | [[fruit-seed-morphology]] 🌐 |
+| ดอก (Flower) | สืบพันธุ์ | [[flower-morphology]] ✅🌐 |
+| ผล/เมล็ด (Fruit/Seed) | ขยายพันธุ์ | [[fruit-seed-morphology]] ✅🌐 |
 
-> ✅ = จากซีทอาจารย์ (certified) · 🌐 = ค้นจากอินเทอร์เน็ต (external) ดู [[reference-sources]]
+> ✅ = จากซีทอาจารย์ · 🌐 = อ้างอิงเสริม · ✅🌐 = mixed
 
 ## การเชื่อมกับ 3 Layer
 
@@ -43,5 +45,6 @@ tags:
 
 ## Sources
 
-- [[source-plant-morphology]] — สัณฐานวิทยาพืช (วัชราภรณ์ ชนะเคน, วชช.มุกดาหาร) ✅ certified
-- ดอก, ผล/เมล็ด — external ดู [[reference-sources]]
+- [[source-plant-morphology]] — ราก ลำต้น ใบ ✅
+- [[source-leaf-extended]] — ใบ ฉบับเต็ม ✅
+- [[source-flower-fruit-seed]] — ดอก ผล เมล็ด ✅
