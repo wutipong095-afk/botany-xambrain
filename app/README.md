@@ -3,6 +3,7 @@
 แอปเดสก์ท็อป **การทำสมองที่สอง — ครู** (Tauri 2)
 
 - อ่านบทเรียนจาก `../wiki/` (โหมด dev) หรือ `resources/vault/wiki/` (ตอน build)
+- **Markdown renderer** — หัวข้อ ตาราง รายการ + **คลิก [[wikilink]]** ไปบทอื่นได้
 - ปุ่มเปิด [ExamFlow](https://test.xambrain.com) สำหรับสร้าง/ตรวจข้อสอบ
 
 ## ความต้องการของระบบ (Windows)
@@ -43,5 +44,7 @@ app/
 ## หมายเหตุ
 
 - โหมด dev อ่าน vault จาก `botany-xambrain/wiki/` โดยอัตโนมัติ
-- ยังไม่มี markdown renderer เต็มรูป — แสดง plain text (ตัด YAML frontmatter)
+- **Release (.exe)** ฝัง `wiki/` + `assets/` ใน installer — ครูไม่ต้องมี repo
+- มุมล่าง sidebar แสดง `[bundled]` หรือ `[dev]` ตามแหล่งข้อมูล
+- รองรับ `![[โฟลเดอร์/รูป.png|500]]` — โหลดจาก `assets/` ใน vault (ตัดต่อจาก PDF)
 - ดูสถาปัตยกรรมรวมที่ [`../ARCHITECTURE.md`](../ARCHITECTURE.md)

@@ -171,5 +171,5 @@ wiki/         — เนื้อหาหลัก (concept nodes, source summa
 - ชื่อวิทยาศาสตร์ของพืชเขียนแบบ *Genus species* (italic) พร้อมวงศ์ (Family)
 - ทุกไฟล์มี YAML frontmatter (title, type, created, tags)
 - ใช้ Obsidian wikilink syntax `[[name]]` ไม่ใช้ markdown link
-- รูปภาพใช้ `![[folder/image.png]]`
+- รูปภาพใช้ `![[assets/folder/image.png]]` — ไฟล์อยู่ใน `assets/` (ไม่ใช่ root vault)
 - commit message เป็นภาษาอังกฤษ

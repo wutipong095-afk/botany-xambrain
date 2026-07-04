@@ -33,6 +33,8 @@ tags:
 ## Certified sources (ซีทอาจารย์)
 
 - [[source-plant-morphology]] — สัณฐานวิทยาพืช: ราก ลำต้น ใบ (วัชราภรณ์ ชนะเคน, วชช.มุกดาหาร)
+- [[source-leaf-extended]] — สัณฐานวิทยาใบ ฉบับเต็ม 58 หน้า (วชช.มุกดาหาร)
+- [[source-flower-fruit-seed]] — ดอก ผล เมล็ด 7 หน้า (วชช.มุกดาหาร)
 
 ## Curriculum anchors (วิชา/หลักสูตรทางการที่รองรับ)
 
@@ -69,3 +71,13 @@ tags:
 | 2026-07-03 | ยำสุขภาพ (+12 ใหม่, yumScreened) สัตว์สุก ไม่ปลาดิบ แคลอรีต่ำ | gj.mahidol, cra.ac.th, prijnr 2023, sriphat CMU | `data/menu-db.json` · [[food-recommender]] |
 | 2026-07-03 | วิเคราะห์เมนู Tier 2 รอบ 1 (แกง/ต้ม 28 + แกงหน่อไม้) + UI ดูวิเคราะห์ | doctor.or.th, inmu.mahidol, gj.mahidol, cra.ac.th, prijnr 2023 | `data/menu-analysis-tier2-round1.json` · `wiki/menus/` · `recommender.js` |
 | 2026-07-03 | มนุษย์ใช้ชีวิตผิดธรรมชาติ: เคลื่อนไหว + โดพามีน/ความสุขหลอก (AX2) | WHO (physical activity, NCDs), NIH/NIMH (reward system) | [[human-unnatural-life]] |
+| 2026-07-04 | กฎอาการผู้ป่วย: ท้องเสีย(ฝาด) · คลื่นไส้/กลืนลำบาก(อาหารอ่อน) · ฟื้นตัวหลังไข้/ผ่าตัด | [ศูนย์ความเป็นเลิศเคมีบำบัด gj.mahidol](https://www.gj.mahidol.ac.th/main/knowledge-2/chemo-nutrition/) · [ศูนย์ศรีพัฒน์ CMU](https://sriphat.med.cmu.ac.th) · [ศิริราช si.mahidol](https://www.si.mahidol.ac.th) · [รพ.รามาธิบดี](https://www.rama.mahidol.ac.th) | `data/symptom-element.json` (กฎ 8, 11, 12, 13) |
+| 2026-07-04 | ติดแท็กอาการเพิ่มให้เมนู (26 เมนู): กระหายน้ำมาก · ปัสสาวะเหลือง · ท้องผูกจากร้อน · บวมน้ำ · อ้วนง่าย · ตัวหนักเมื่อยล้า · ฟื้นตัว/หลังไข้/หลังผ่าตัด/อ่อนเพลียมาก | อ้างอิงเดิม (gj.mahidol, cra.ac.th, sriphat, si/rama) ดูแถวก่อนหน้า | `data/menu-db.json` |
+| 2026-07-04 | ทำความสะอาด `recommendTaste` — ถอด "เย็น" (thermal ถือแล้ว) และ "สุขุม" (เป็นฤทธิ์ ไม่ใช่ 1 ใน 9 รส) | ตาม [[herbal-taste-9]] (ม.สงขลานครินทร์) | `data/symptom-element.json` (กฎ 2, 4, 5) |
+| 2026-07-04 | ให้ scoring engine ใช้ `state` (กำเริบ/หย่อน) — หย่อน→บำรุงพลังงานสูง · กำเริบ→เลือกเมนูเบา/ระบาย | หลักธาตุ 4 แผนไทย ([[dhatu-4-plants]]) + TA301 (บำรุง vs ระบาย) | `recommender.js` (aggregateTargets + scoreMenu) |
+| 2026-07-04 | ปรับ `energy` เมนูกะทิ/หวานเข้ม 11 เมนู กลาง→สูง (ห่อหมก, บวชชี, ตะโก้, ซาหริ่ม, ลอดช่อง, ไอศกรีม, ฯลฯ) — แก้ distribution สูง=3→14 | ตำรับกะทิเข้มข้น: [ราชวิทยาลัยจุฬาภรณ์](https://www.cra.ac.th) · [gj.mahidol](https://www.gj.mahidol.ac.th) | `data/menu-db.json` |
+| 2026-07-04 | Symptom chips ใน `index.html` โหลด dynamic จาก `symptom-element.json` (เดิม hardcode 10) จัดกลุ่มตามธาตุ+state | ปรับตามฐานกฎจริง | `index.html` (buildSymptomGroups + buildChips) |
+| 2026-07-04 | แก้ [[leaf-morphology]] ให้ตรง PDF หน้า 4 — เพิ่ม acuminate/lobed · แก้ retuse↔emarginate · โคนตัดแทน auriculate · ตาราง 9+8+8 แบบ | [[source-plant-morphology]] (วชช.มุกดาหาร, สไลด์ใบ p004-02) | `wiki/leaf-morphology.md` · `wiki/glossary/glossary-morphology.md` |
+| 2026-07-04 | ย่อย `raw/ดอก ผล เมล็ด.pdf` (7 ห.) — ดอก/ช่อดอก/รูปดอก/เกสร/ผลสด-แห้ง · ตัดภาพ 14 ไฟล์ | วชช.มุกดาหาร (วัชราภรณ์ ชนะเคน) | [[source-flower-fruit-seed]] · [[flower-morphology]] · [[fruit-seed-morphology]] · `assets/ดอก-ผล-เมล็ด/` |
+| 2026-07-04 | ย่อย `raw/สัณฐานวิทยา_ใบ.pdf` (58 ห.) — 6 ประเภทใบ · ใบดัดแปลง 10 · ผิว/เนื้อใบ · equitant | วชช.มุกดาหาร (Watchaaraporn Chanaken) + KU/Mahidol key (external ในสไลด์) | [[source-leaf-extended]] · [[leaf-morphology]] |
+| 2026-07-04 | แก้ path รูป Obsidian — เติม prefix `assets/` ใน wikilink รูป | convention ใหม่ | `wiki/leaf-morphology.md` · `assets/catalog-leaf-morphology.md` |

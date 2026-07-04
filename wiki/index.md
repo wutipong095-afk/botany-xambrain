@@ -15,6 +15,7 @@ tags:
 
 - [[hotcache]] — บริบทล่าสุดของ session (อ่านก่อนทุกครั้ง)
 - [[overview]] — แผนที่ความรู้ทั้งหมดของ wiki + framework 3 Layer
+- [[knowledge-extraction-pipeline]] — pipeline ย่อยความรู้: ย่อย → ตรวจอักษร → ตัดภาพ
 - [[reference-sources]] — แหล่งอ้างอิงและระดับการรับรอง (certified ✅ / external 🌐)
 
 ## แกนความรู้ (Foundational axes)
@@ -25,6 +26,8 @@ tags:
 ## Source Summaries
 
 - [[source-plant-morphology]] — สัณฐานวิทยาพืช: ราก ลำต้น ใบ (วชช.มุกดาหาร, 2026-07-03)
+- [[source-leaf-extended]] — สัณฐานวิทยาใบ ฉบับเต็ม 58 หน้า (2026-07-04)
+- [[source-flower-fruit-seed]] — ดอก ผล เมล็ด 7 หน้า (2026-07-04)
 
 ## Concepts — Layer S: พฤกษศาสตร์ (Structure)
 
@@ -32,8 +35,8 @@ tags:
   - [[root-morphology]] — ราก (S2)
   - [[stem-morphology]] — ลำต้น (S3)
   - [[leaf-morphology]] — ใบ (S4)
-  - [[flower-morphology]] — ดอก (S5) 🌐 external
-  - [[fruit-seed-morphology]] — ผลและเมล็ด (S6) 🌐 external
+  - [[flower-morphology]] — ดอก (S5) ✅🌐 mixed
+  - [[fruit-seed-morphology]] — ผลและเมล็ด (S6) ✅🌐 mixed
 - [[plant-tissue]] — เนื้อเยื่อพืช: เจริญ/ถาวร, xylem/phloem (S7) 🌐 external
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
