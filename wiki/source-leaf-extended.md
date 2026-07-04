@@ -57,7 +57,7 @@ tags:
 1. Succulent — หนา อมน้ำ
 2. Coriaceous — หนาเหนียวคล้ายหนัง
 3. Hyaline — บางโปร่งแสง
-4. Membranous — บางอ่อน พับม้วยง่าย
+4. Membranous — บางอ่อน พับม้วนง่าย
 
 ## ใบดัดแปลง 10 แบบ (Modify Leaf)
 

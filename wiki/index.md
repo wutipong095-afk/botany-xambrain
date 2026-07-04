@@ -15,6 +15,7 @@ tags:
 
 - [[hotcache]] — บริบทล่าสุดของ session (อ่านก่อนทุกครั้ง)
 - [[overview]] — แผนที่ความรู้ทั้งหมดของ wiki + framework 3 Layer
+- [[knowledge-extraction-pipeline]] — pipeline ย่อยความรู้: ย่อย → ตรวจอักษร → ตัดภาพ
 - [[reference-sources]] — แหล่งอ้างอิงและระดับการรับรอง (certified ✅ / external 🌐)
 
 ## แกนความรู้ (Foundational axes)

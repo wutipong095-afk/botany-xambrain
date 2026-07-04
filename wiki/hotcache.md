@@ -16,6 +16,7 @@ tags:
 - **ทิศทางใหม่**: ทำเป็น "ฐานข้อมูล+เครื่องแนะนำเมนู" สำหรับประชาชน (ป้อน BMI+อาการ→เมนู) · ข้อมูลอยู่ `data/*.json` · เฟสถัดไป = เว็บ prototype
 - **เป้าหมายถัดไป**: รอข้อมูลเพิ่มก่อนทำข้อสอบ · ระหว่างรอ: taxonomy (การจำแนกพืช), glossary-herbal (บาลี)
 - **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ
+- **Pipeline ย่อยความรู้**: [[knowledge-extraction-pipeline]] — ย่อย → ตรวจอักษร (`scripts/check-text.py`) → ตัดภาพ (`scripts/extract-images.py`)
 - **ตัดสินใจแล้ว**:
   - โครงสร้าง + workflow เหมือน body-xambrain (ดู CLAUDE.md)
   - Framework 3 Layer: S=พฤกษศาสตร์ / U=การใช้ประโยชน์ / T=ภูมิปัญญาไทย
