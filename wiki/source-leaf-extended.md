@@ -17,7 +17,7 @@ tags:
 **แหล่งข้อมูล**: วัชราภรณ์ ชนะเคน (Watchaaraporn Chanaken) — วิทยาลัยชุมชนมุกดาหาร
 **รูปแบบ**: 58 หน้า (text + image slides) — ขยายจาก PDF 4 หน้าใน [[source-plant-morphology]] Part 3
 
-→ concept node: [[leaf-morphology]] (S4) · รูป 4 หน้าเดิม: [[catalog-leaf-morphology]]
+→ concept node: [[leaf-morphology]] (S4) · รูป 4 หน้าเดิม: [[catalog-leaf-morphology]] · รูปขยาย: [[catalog-สัณฐานวิทยา_ใบ]]
 
 ---
 
