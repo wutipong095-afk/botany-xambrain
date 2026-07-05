@@ -2,7 +2,7 @@
 title: "Hotcache"
 type: meta
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-07-05
 tags:
   - meta
 ---
@@ -23,6 +23,13 @@ tags:
   - Botany Literacy 5 ระดับ: Naming → Identifying → Using → Connecting → Conserving
   - ข้อสอบ 3 ระดับ: L1 จำ/ระบุ, L2 เชื่อมโยง, L3 วินิจฉัย/ประยุกต์
   - Git local only
+
+## Last Session (2026-07-05)
+
+- **ย่อย PDF ใหม่**: `ไม้ดอก1.pdf` (29 ห.) → [[source-maidok1]]
+- **ตัดภาพ**: `assets/ไม้ดอก1/` (76 ไฟล์) · catalog [[catalog-maidok1]]
+- **ขยาย S5 [[flower-morphology]]**: ก้านดอกย่อย/ฐานรอง · สมมาตร (ตัวอย่างชบา-บัว-อัญชัน) · ความครบ vs สมบูรณ์เพศ · ช่อดอก 12 แบบ + racemose/cymose · รูปดอก/perianth เสริม
+- **sync ศัพท์**: ก้านดอกย่อย · ช่อแบบหาง · dichlamydeous/homochlamydeous เข้า glossary
 
 ## Last Session (2026-07-04)
 
@@ -60,6 +67,7 @@ tags:
 14. ~~[[human-unnatural-life]] (AX2) — แกนความรู้ ชีวิตผิดธรรมชาติ: เคลื่อนไหว + โดพามีน/ความสุขหลอก~~ ✅
 15. ~~ย่อย `ดอก ผล เมล็ด.pdf` + อัพเดต S5/S6 (mixed certified)~~ ✅
 16. ~~ย่อย `สัณฐานวิทยา_ใบ.pdf` 58 ห. + ขยาย S4~~ ✅
+17. ~~ย่อย `ไม้ดอก1.pdf` 29 ห. + ขยาย S5 (certified ฉบับเต็มดอก)~~ ✅
 
 ## ต้องทำต่อ
 

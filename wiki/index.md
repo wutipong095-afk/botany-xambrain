@@ -2,7 +2,7 @@
 title: "Index"
 type: overview
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-05
 tags:
   - meta
 ---
@@ -28,6 +28,7 @@ tags:
 - [[source-plant-morphology]] — สัณฐานวิทยาพืช: ราก ลำต้น ใบ (วชช.มุกดาหาร, 2026-07-03)
 - [[source-leaf-extended]] — สัณฐานวิทยาใบ ฉบับเต็ม 58 หน้า (2026-07-04)
 - [[source-flower-fruit-seed]] — ดอก ผล เมล็ด 7 หน้า (2026-07-04)
+- [[source-maidok1]] — ไม้ดอก 1 ฉบับเต็ม 29 หน้า (2026-07-05)
 
 ## Concepts — Layer S: พฤกษศาสตร์ (Structure)
 

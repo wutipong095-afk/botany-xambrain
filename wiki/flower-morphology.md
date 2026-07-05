@@ -4,12 +4,13 @@ id: S5
 type: concept
 layer: structure
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-07-05
 prerequisites:
   - plant-morphology
 source_type: mixed
 sources:
   - source-flower-fruit-seed
+  - source-maidok1
 references:
   - "https://www.scimath.org/lesson-biology/item/10518-2019-07-18-01-42-50"
   - "https://www.trueplookpanya.com/learning/detail/33299"
@@ -21,11 +22,11 @@ tags:
 
 # ดอก (Flower)
 
-> ✅🌐 **source_type: mixed** — โครง 5 หัวข้อหลัก (ส่วนประกอบ · ช่อดอก · รูปดอก · เกสรผู้ · เกสรเมีย) จากสไลด์อาจารย์ ([[source-flower-fruit-seed]]) · หัวข้อสมมาตร/การเชื่อมกลีบ/เพศพืช/การผสมเกสร/วงศ์เด่น เป็นพฤกษศาสตร์มาตรฐานเสริม (🌐)
+> ✅🌐 **source_type: mixed** — ส่วนประกอบ/ตำแหน่งรังไข่/สมมาตร/ความสมบูรณ์/ช่อดอก จากสไลด์อาจารย์ ([[source-maidok1]] 29 ห. + [[source-flower-fruit-seed]] 7 ห.) · เกสรผู้/เมีย · placentation · รูปดอก 9 แบบ · ผล/เมล็ด จาก [[source-flower-fruit-seed]] · หัวข้อเชื่อมกลีบ/เพศพืช/การผสมเกสร/วงศ์เด่น/รูปดอกเสริม = พฤกษศาสตร์มาตรฐาน (🌐)
 
 ## สาระสำคัญ
 
-ดอกเป็นอวัยวะ **สืบพันธุ์** ของพืชดอก (angiosperm) เจริญเปลี่ยนแปลงมาจากใบ ทำหน้าที่สร้างเซลล์สืบพันธุ์และพัฒนาไปเป็นผลและเมล็ด ดอกที่มีครบ 4 ชั้นถือเป็น "ใบดัดแปลง" ที่เรียงซ้อนบนฐานดอก
+ดอกเป็นอวัยวะ **สืบพันธุ์** ของพืชดอก (angiosperm) — ส่วนของพืชที่เปลี่ยนแปลงจาก**ตาดอก** (flowering bud) เพื่อทำหน้าที่สืบพันธุ์ สร้างเซลล์สืบพันธุ์และพัฒนาไปเป็นผลและเมล็ด ดอกที่มีครบ 4 ชั้นถือเป็น "ใบดัดแปลง" ที่เรียงซ้อนบนฐานดอก
 
 ## ส่วนประกอบของดอก
 
@@ -33,12 +34,15 @@ tags:
 
 | ส่วน | ไทย | หน้าที่ |
 |------|-----|---------|
-| ก้านดอก | peduncle | ค้ำจุนดอก |
-| ฐานดอก | receptacle | ฐานยึดอวัยวะดอก |
-| วงนอก | กลีบเลี้ยง (sepal) รวม = calyx | ห่อหุ้มดอกตูม |
-| วงใน | กลีบดอก (petal) รวม = corolla | สี/กลิ่น ล่อผสมเกสร |
-| เกสรเพศผู้ | stamen รวม = androecium | filament + anther → ละอองเรณู |
-| เกสรเพศเมีย | pistil/carpel รวม = gynoecium | ovary + style + stigma |
+| ก้านดอก | peduncle | ส่วนล่างสุด ติดลำต้น/กิ่ง หรือเป็นก้านช่อดอก |
+| ก้านดอกย่อย | pedicel | ก้านดอกย่อยในช่อ · หรือก้านดอกเดี่ยวต่อจากฐานดอก |
+| ฐานรองดอก | receptacle | ปลายก้าน รองรับอวัยวะดอกทั้งหมด |
+| วงนอก | กลีบเลี้ยง (sepal) รวม = calyx | ห่อหุ้ม/ป้องกันดอกตูม (ส่วนใหญ่สีเขียว) · บางชนิดมีสีล่อแมลง |
+| วงใน | กลีบดอก (petal) รวม = corolla | ล่อแมลง · น้ำมันหอม · น้ำหวานที่โคน (บางชนิด) |
+| เกสรเพศผู้ | stamen รวม = androecium | filament + anther → ละอองเรณู (เซลล์สืบพันธุ์เพศผู้) |
+| เกสรเพศเมีย | pistil/carpel รวม = gynoecium | ovary (มี ovule/egg) + style + stigma |
+
+![[assets/ไม้ดอก1/p010-04.png|480]]
 
 > 💡 กลีบเลี้ยง + กลีบดอก รวมเรียก **วงกลีบรวม (perianth)** — ถ้าแยกกลีบเลี้ยงกับกลีบดอกไม่ออก (สี/รูปเหมือนกัน) เรียกกลีบรวมว่า **tepal** เช่น บัวหลวง จำปี จำปา ว่านสี่ทิศ กล้วยไม้บางส่วน
 
@@ -46,16 +50,22 @@ tags:
 
 | ไทย | อังกฤษ | ลักษณะ | ตัวอย่าง |
 |-----|--------|--------|----------|
-| สมมาตรตามรัศมี | actinomorphic (radial) | ผ่าแบ่งครึ่งเท่ากันได้หลายแนว | ชบา พริก มะเขือ ผักบุ้ง |
-| สมมาตรด้านข้าง | zygomorphic (bilateral) | ผ่าแบ่งครึ่งเท่ากันได้แนวเดียว | ดอกถั่ว แค กล้วยไม้ เข็ม |
-| ไม่สมมาตร | asymmetric | ผ่าครึ่งเท่ากันไม่ได้ | คานน่า (พุทธรักษา) |
+| สมมาตรตามรัศมี | actinomorphic (radial) | แบ่งครึ่งได้ 2 ระนาบขึ้นไป | ชบา บัว พริก มะเขือ |
+| สมมาตรด้านข้าง | zygomorphic (bilateral) | แบ่งครึ่งได้แนวเดียว | กล้วยไม้ อัญชัน ดอกถั่ว แค |
+| ไม่สมมาตร | asymmetric | แบ่งครึ่งเท่ากันไม่ได้เลย | พุทธรักษา (คานน่า) |
+
+![[assets/ไม้ดอก1/p018-01.jpeg|480]]
 
 ## การเชื่อม/แยกของกลีบ 🌐
 
 - **กลีบเลี้ยง**: แยกเป็นกลีบ (polysepalous) · เชื่อมติดกัน (gamosepalous เช่น ชบา มะเขือ)
 - **กลีบดอก**: แยกเป็นกลีบ (polypetalous/choripetalous เช่น กุหลาบ พู่ระหง) · เชื่อมเป็นหลอด (gamopetalous/sympetalous เช่น ผักบุ้ง แพงพวย ทองอุไร)
 
-## ช่อดอก (Inflorescence) — 8 แบบ
+## ช่อดอก (Inflorescence)
+
+![[assets/ไม้ดอก1/p027-01.jpeg|520]]
+
+### ชื่อไทยหลัก (จากสไลด์อาจารย์ ✅)
 
 | ไทย | อังกฤษ | ลักษณะสั้นๆ |
 |-----|--------|-------------|
@@ -67,16 +77,34 @@ tags:
 | ช่อแยกแขนง | panicle | raceme แตกแขนง |
 | ช่อเชิงหลั่น | corymb | ก้านนอกยาวกว่า เรียงระดับเดียว |
 | ช่อเชิงลดมีกาบ | spadix | เชิงลด + กาบหุ้ม (spathe) |
+| ช่อกระจุกรอบ/ช่อฉัตร | verticillate/whorled | ดอกเรียงเป็นชั้นรอบแกน |
+| ช่อแบบหาง | catkin/ament | ช่อห้อย ดอกเล็ก (มักแยกเพศ) |
+| ดอกเดี่ยว | solitary | ดอกเดียวต่อก้าน |
+
+### จำแนกตามแกนเจริญ 🌐
+
+| ประเภท | อังกฤษ | ลักษณะแกน | ตัวอย่างช่อ |
+|--------|--------|-----------|-------------|
+| **Racemose** (ไม่จำกัด) | indefinite | แกนหลักเจริญต่อหลังดอก | raceme · panicle · spike · umbel · capitulum |
+| **Cymose** (จำกัด) | definite | แกนหลักสิ้นที่ดอกปลาย | cyme (uniparous/biparous/multiparous) |
 
 ## การเรียงกลีบดอกในตาดอก (Aestivation)
 
 - **เรียงจรดกัน** (valvate) · **เรียงเวียน** (contorted) · **เรียงซ้อนเหลื่อม** (imbricate)
 
-## รูปดอก (Corolla shape) — 9 แบบ
+## รูปดอก (Corolla shape)
 
-![[assets/ดอก-ผล-เมล็ด/p002-02.jpeg|520]]
+![[assets/ดอก-ผล-เมล็ด/p002-02.jpeg|480]]
 
-bilabiate · campanulate · funnelform · ligulate · salverform · tubular · urceolate · rotate · papilionaceous
+**9 แบบหลัก** (สไลด์ [[source-flower-fruit-seed]] ✅): bilabiate · campanulate · funnelform · ligulate · salverform · tubular · urceolate · rotate · papilionaceous
+
+**เสริม** (แผ่นอ้างอิง [[source-maidok1]] 🌐): cruciate · infundibular · personate · calyptrate · spurred · saccate · unguiculate · coronate · cucullate · carinate · disk (ดอกวงใน composite)
+
+### วงกลีบและการเชื่อม (Perianth) 🌐
+
+- **จำนวนวง/กลีบ**: uniseriate/biseriate · trimerous/tetramerous/pentamerous
+- **แยกชั้น**: dichlamydeous (แยก sepal/petal) · homochlamydeous (tepal)
+- **การเชื่อม 4 แบบ**: aposepalous+apopetalous · aposepalous+sympetalous · synsepalous+apopetalous · synsepalous+sympetalous
 
 ## วงเกสรเพศผู้ (Androecium)
 
@@ -94,6 +122,8 @@ bilabiate · campanulate · funnelform · ligulate · salverform · tubular · u
 - **คาร์เพล**: apocarpous (แยก) · syncarpous (เชื่อม)
 - **Placentation**: parietal · axile · free-central · basal
 - **ตำแหน่งรังไข่ (จำนวนชั้น)**: superior · half-inferior · inferior
+
+![[assets/ไม้ดอก1/p011-01.jpeg|460]]
 
 ### ตำแหน่งรังไข่เทียบวงกลีบ (ประเภทดอกตามฐานดอก) 🌐
 
@@ -121,15 +151,17 @@ bilabiate · campanulate · funnelform · ligulate · salverform · tubular · u
 
 ## การจำแนกชนิดของดอก
 
-### ตามความครบของส่วนประกอบ
+### ตามความครบของส่วนประกอบ (4 วง)
 - **ดอกครบส่วน (Complete flower)** — มีครบทั้ง 4 ชั้น เช่น ชบา กุหลาบ แค มะเขือ พู่ระหง
-- **ดอกไม่ครบส่วน (Incomplete flower)** — ขาดชั้นใดชั้นหนึ่งไป
+- **ดอกไม่ครบส่วน (Incomplete flower)** — ขาดชั้นใดชั้นหนึ่งไป เช่น ข้าวโพด มะพร้าว
 
-### ตามเพศของดอก
-- **ดอกสมบูรณ์เพศ (Perfect flower)** — มีทั้งเกสรเพศผู้และเพศเมียในดอกเดียว
-- **ดอกไม่สมบูรณ์เพศ (Imperfect flower)** — มีเพศเดียว เช่น ตำลึง ฟักทอง มะละกอ
+### ตามเพศของดอก (2 เพศ)
+- **ดอกสมบูรณ์เพศ (Perfect flower)** — มีทั้งเกสรเพศผู้และเพศเมียในดอกเดียว → พริก ชบา
+- **ดอกไม่สมบูรณ์เพศ (Imperfect flower)** — มีเพศเดียว → ดอกตัวผู้แตงกวา · ดอกตัวเมียฟักทอง · ตำลึง มะละกอ
 
-> ⚠️ "ครบส่วน" (4 ชั้น) ≠ "สมบูรณ์เพศ" (2 เพศ)
+> ⚠️ "ครบส่วน" (4 ชั้น) ≠ "สมบูรณ์เพศ" (2 เพศ) · **ดอกครบส่วนทุกดอก = ดอกสมบูรณ์เพศ** แต่ดอกสมบูรณ์เพศอาจขาดกลีบได้
+
+![[assets/ไม้ดอก1/p022-01.jpeg|480]]
 
 ### ตามการกระจายเพศบนต้นพืช 🌐
 - **พืชดอกสมบูรณ์เพศ** — ดอกมี 2 เพศในดอกเดียว (ส่วนใหญ่)
@@ -175,7 +207,8 @@ bilabiate · campanulate · funnelform · ligulate · salverform · tubular · u
 
 ## Sources
 
-- [[source-flower-fruit-seed]] (certified ✅) · รูป: [[catalog-flower-fruit-seed]]
+- [[source-maidok1]] (certified ✅) · รูป: [[catalog-maidok1]] — ส่วนประกอบ · รังไข่ · สมมาตร · ความสมบูรณ์ · ช่อดอก
+- [[source-flower-fruit-seed]] (certified ✅) · รูป: [[catalog-flower-fruit-seed]] — เกสรผู้/เมีย · placentation · รูปดอก 9 แบบ · ผล/เมล็ด
 - ที่มาเสริม (external 🌐) — เข้าถึง 2026-07-03:
   - [พืชดอก — สสวท.](https://www.scimath.org/lesson-biology/item/10518-2019-07-18-01-42-50)
   - [ส่วนประกอบของดอก — TruePlookpanya](https://www.trueplookpanya.com/learning/detail/33299)
