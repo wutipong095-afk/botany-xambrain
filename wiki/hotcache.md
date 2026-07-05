@@ -31,6 +31,7 @@ tags:
 - **ขยาย S4**: [[leaf-morphology]] — 6 ประเภทใบ · ใบดัดแปลง 10 · ผิว/เนื้อใบ
 - **ตัดภาพ**: `assets/ดอก-ผล-เมล็ด/` (14 JPEG) · catalog [[catalog-flower-fruit-seed]]
 - **แก้ path รูป**: wikilink ใช้ `assets/...` ให้ Obsidian แสดงรูปได้
+- **ขยาย S5 [[flower-morphology]]**: เพิ่มสมมาตรดอก · การเชื่อม/แยกกลีบ · perianth/tepal · ตำแหน่งรังไข่ (hypo/peri/epigynous) · เพศพืช (monoecious/dioecious) · การผสมเกสร · ลักษณะดอก 6 วงศ์ · ตาราง Layer U/T (อาหาร/รสยา/ย้อมสี/พิธีกรรม) — sync ศัพท์ 13 คำเข้า glossary · เขียนไฟล์ LF ล้วน (แก้ CRLF)
 
 ## Last Session (2026-07-03)
 

@@ -90,6 +90,17 @@ tags:
 | เกสรเพศเมีย | Pistil / Carpel | L. *pistillum* = สาก |
 | รังไข่ | Ovary | L. *ovum* = ไข่ |
 | ดอกช่อ | Inflorescence | L. *inflorescere* = เริ่มบาน |
+| วงกลีบรวม | Perianth | Gr. *peri* (รอบ) + *anthos* (ดอก) |
+| กลีบรวม | Tepal | ใช้เมื่อแยกกลีบเลี้ยง/กลีบดอกไม่ได้ (บัว จำปี) |
+| สมมาตรตามรัศมี | Actinomorphic | Gr. *aktis* = รัศมี |
+| สมมาตรด้านข้าง | Zygomorphic | Gr. *zygon* = คู่/แอก |
+| กลีบเชื่อม (ดอก) | Gamopetalous / Sympetalous | Gr. *gamos* = เชื่อม |
+| กลีบแยก (ดอก) | Polypetalous / Choripetalous | Gr. *poly* = หลาย |
+| ดอกวงล่าง | Hypogynous | Gr. *hypo* (ใต้) + *gyne* (เพศเมีย) → รังไข่เหนือวงกลีบ |
+| ดอกวงบน | Epigynous | Gr. *epi* (บน) → รังไข่ใต้วงกลีบ |
+| การผสมเกสร | Pollination | L. *pollen* = ผง/ละออง |
+| แยกเพศร่วมต้น | Monoecious | Gr. *monos* (เดียว) + *oikos* (บ้าน) |
+| แยกเพศต่างต้น | Dioecious | Gr. *di* (สอง) + *oikos* (บ้าน) |
 
 ## ผลและเมล็ด (Fruit & Seed) → [[fruit-seed-morphology]]
 
