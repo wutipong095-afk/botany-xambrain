@@ -29,7 +29,8 @@
     "targets": ["nsis"],
     "resources": {
       "../../wiki/": "vault/wiki/",
-      "../../assets/": "vault/assets/"
+      "../../assets/": "vault/assets/",
+      "../../data/": "vault/data/"
     },
     "icon": [
       "icons/32x32.png",

@@ -1,3 +1,6 @@
+mod ai;
+pub use ai::{set_api_key, get_api_key_status, ai_chat};
+
 use serde::Serialize;
 use std::fs;
 use std::path::{Path, PathBuf};
@@ -40,13 +43,11 @@ fn local_resources_vault_wiki() -> Option<PathBuf> {
 }
 
 fn vault_wiki_dir(app: &AppHandle) -> Result<PathBuf, String> {
-    // dev: ใช้ repo สด (แก้ wiki แล้วเห็นทันที)
     #[cfg(debug_assertions)]
     if let Some(p) = dev_vault_wiki() {
         return Ok(p);
     }
 
-    // release: ใช้ vault ที่ bundle ใน installer
     if let Some(p) = bundled_vault_wiki(app) {
         return Ok(p);
     }
@@ -213,15 +214,26 @@ fn get_assets_dir(app: AppHandle) -> Result<String, String> {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
+    let ai_state = ai::AiState::new();
+
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
+        .manage(ai_state)
+        .setup(|app| {
+            let state = app.state::<ai::AiState>();
+            ai::load_index(app.handle(), &state);
+            Ok(())
+        })
         .invoke_handler(tauri::generate_handler![
             list_wiki_entries,
             read_wiki_file,
             get_vault_info,
             examflow_url,
             read_asset_data_url,
-            get_assets_dir
+            get_assets_dir,
+            set_api_key,
+            get_api_key_status,
+            ai_chat,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

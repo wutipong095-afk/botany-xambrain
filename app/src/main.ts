@@ -7,6 +7,7 @@ import {
   stripLeadingHeading,
   type WikiEntry,
 } from "./markdown";
+import { mountChat, setChatNavigate } from "./chat";
 
 let wikiEntries: WikiEntry[] = [];
 
@@ -97,6 +98,16 @@ async function init() {
   });
 
   articleBodyEl.addEventListener("click", onArticleClick);
+
+  // mount AI chat panel
+  const chatPanelEl = document.getElementById("chat-panel");
+  if (chatPanelEl) {
+    mountChat(chatPanelEl);
+    setChatNavigate(async (file: string) => {
+      const entry = wikiEntries.find((e) => e.path === file);
+      if (entry) await loadWikiFile(entry);
+    });
+  }
 
   try {
     const vaultPath = await invoke<string>("get_vault_info");
