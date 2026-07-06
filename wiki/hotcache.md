@@ -2,7 +2,7 @@
 title: "Hotcache"
 type: meta
 created: 2026-07-03
-updated: 2026-07-05
+updated: 2026-07-06
 tags:
   - meta
 ---
@@ -11,10 +11,10 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: **การทำสมองที่สอง** — Layer S ครบ · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki
+- **Phase**: **การทำสมองที่สอง** — Layer S ครบ · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
 - **แกนความรู้ (ครูเฮนรี่)**: AX1 "อาหาร = สมดุล" → [[food-as-balance]] · AX2 "เคลื่อนไหว + ความสุขจริง vs หลอก" → [[human-unnatural-life]]
 - **ทิศทางใหม่**: ทำเป็น "ฐานข้อมูล+เครื่องแนะนำเมนู" สำหรับประชาชน (ป้อน BMI+อาการ→เมนู) · ข้อมูลอยู่ `data/*.json` · เฟสถัดไป = เว็บ prototype
-- **เป้าหมายถัดไป**: รอข้อมูลเพิ่มก่อนทำข้อสอบ · ระหว่างรอ: taxonomy (การจำแนกพืช), glossary-herbal (บาลี)
+- **เป้าหมายถัดไป**: รอข้อมูลเพิ่มก่อนทำข้อสอบ · ระหว่างรอ: taxonomy (การจำแนกพืช), glossary-herbal (บาลี) · **AI chat**: ทดสอบ PR → merge master**
 - **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ
 - **Pipeline ย่อยความรู้**: [[knowledge-extraction-pipeline]] — ย่อย → ตรวจอักษร (`scripts/check-text.py`) → ตัดภาพ (`scripts/extract-images.py`)
 - **ตัดสินใจแล้ว**:
@@ -23,6 +23,15 @@ tags:
   - Botany Literacy 5 ระดับ: Naming → Identifying → Using → Connecting → Conserving
   - ข้อสอบ 3 ระดับ: L1 จำ/ระบุ, L2 เชื่อมโยง, L3 วินิจฉัย/ประยุกต์
   - Git local only
+
+## Last Session (2026-07-06)
+
+- **AI ติวเตอร์ (RAG) ในแอปครู** — branch `feature/ai-tutor-chat`
+- **Backend**: `app/src-tauri/src/ai.rs` — Gemini 2.5 Flash + embedding-001 · cosine top-5 · async commands · API key ใน config dir
+- **Frontend**: `app/src/chat.ts` — พาเนลแชตขวา · modal ตั้ง key · ชิปอ้างอิงคลิกเปิดบทเรียน
+- **Build index**: `scripts/build-embeddings.py` → `data/embeddings.json` (257 chunks, gitignore) · resume + rate-limit aware
+- **แก้บั๊ก**: UTF-8 truncate · Mutex drop ก่อน network · modal fixed overlay · maxOutputTokens 8192
+- **Docs**: ARCHITECTURE §7 · app/README (วิธีตั้ง key + build embeddings)
 
 ## Last Session (2026-07-05)
 
@@ -68,14 +77,17 @@ tags:
 15. ~~ย่อย `ดอก ผล เมล็ด.pdf` + อัพเดต S5/S6 (mixed certified)~~ ✅
 16. ~~ย่อย `สัณฐานวิทยา_ใบ.pdf` 58 ห. + ขยาย S4~~ ✅
 17. ~~ย่อย `ไม้ดอก1.pdf` 29 ห. + ขยาย S5 (certified ฉบับเต็มดอก)~~ ✅
+18. ~~AI ติวเตอร์ RAG ใน Teacher App (Gemini + embeddings + chat panel)~~ ✅
 
 ## ต้องทำต่อ
 
-1. **เว็บจริง** — index.html เครื่องแนะนำเมนู อ่าน `data/*.json` deploy ให้ประชาชนใช้ (ตรงเป้า "เข้าถึงได้")
-2. ขยายฐานเมนู 50+ + เติมค่า kcal จริง + ตัวกรองโรคประจำตัว/แพ้อาหาร
-3. (ต่อยอด) node เจาะลึก อายุรเวท / แพทย์แผนจีน เทียบเชิงลึก
-4. **ข้อสอบ 3 ระดับ — พักไว้ก่อน (ผู้ใช้ขอรอข้อมูลเยอะกว่านี้)**
-5. taxonomy (การจำแนกพืช) · glossary-herbal (รสยา/ธาตุ + บาลี/สันสกฤต)
+1. **PR + merge** `feature/ai-tutor-chat` → master
+2. **เว็บจริง** — index.html เครื่องแนะนำเมนู อ่าน `data/*.json` deploy ให้ประชาชนใช้ (ตรงเป้า "เข้าถึงได้")
+3. ขยายฐานเมนู 50+ + เติมค่า kcal จริง + ตัวกรองโรคประจำตัว/แพ้อาหาร
+4. (ต่อยอด) node เจาะลึก อายุรเวท / แพทย์แผนจีน เทียบเชิงลึก
+5. **ข้อสอบ 3 ระดับ — พักไว้ก่อน (ผู้ใช้ขอรอข้อมูลเยอะกว่านี้)**
+6. taxonomy (การจำแนกพืช) · glossary-herbal (รสยา/ธาตุ + บาลี/สันสกฤต)
+7. **AI chat ต่อ**: command ออกข้อสอบเฉพาะ · เพิ่ม top-N สำหรับคำถามกว้าง · (ทางเลือก) Gemini Pro
 
 ## Open Questions
 

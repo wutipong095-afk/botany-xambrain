@@ -31,20 +31,60 @@ npm run tauri build    # สร้าง .exe installer
 
 ไฟล์ติดตั้งจะอยู่ที่ `app/src-tauri/target/release/bundle/`
 
+## ติวเตอร์ AI (RAG)
+
+พาเนลแชตทางขวาของแอปให้ถามคำถามด้านพฤกษศาสตร์ — คำตอบอ้างอิงเฉพาะ vault
+
+### ขั้นตอน (ทำครั้งแรกและทุกครั้งที่เนื้อหาเปลี่ยน)
+
+**1. สร้างดัชนี embeddings**
+
+```powershell
+# จาก root ของ repo (ไม่ใช่ app/)
+$env:GEMINI_API_KEY = "AIza..."
+python scripts/build-embeddings.py
+# จะได้ data/embeddings.json (~หลาย MB)
+```
+
+**2. ตั้งค่า API key ในแอป**
+
+เปิดแอป → คลิกปุ่ม 🔑 ที่มุมพาเนลแชต → ใส่ Gemini API key → บันทึก
+
+Key เก็บในเครื่องผู้ใช้ที่ `%APPDATA%\com.xambrain.teacher\config.json` — ไม่ส่งออกนอกจาก Gemini API
+
+### รับ API key ฟรี
+
+1. ไปที่ [aistudio.google.com](https://aistudio.google.com/)
+2. คลิก "Get API key" → สร้าง key ใหม่
+3. Copy key ที่ขึ้นต้นด้วย `AIza...`
+
+### การทำงาน (RAG flow)
+
+```
+คำถาม → embed (Gemini) → cosine top-5 chunks → prompt → Gemini Flash → คำตอบ + ชิปอ้างอิง
+```
+
+คลิกชิปอ้างอิง → เปิดบทเรียนนั้นในแอปทันที
+
 ## โครงสร้าง
 
 ```
 app/
-├── src/              UI (TypeScript + Vite)
-├── src-tauri/        Rust backend + Tauri config
-│   └── src/lib.rs    คำสั่ง: list_wiki_entries, read_wiki_file, examflow_url
+├── src/
+│   ├── main.ts       ควบคุม UI หลัก + mount chat
+│   ├── chat.ts       พาเนลแชต AI (RAG frontend)
+│   └── markdown.ts   render Markdown + wikilinks
+├── src-tauri/
+│   └── src/
+│       ├── lib.rs    คำสั่ง: wiki, examflow, re-export AI commands
+│       └── ai.rs     API key storage, embed, cosine, Gemini chat
 └── resources/vault/  (อนาคต) copy wiki+data ตอน build สำหรับครูที่ไม่มี repo
 ```
 
 ## หมายเหตุ
 
-- โหมด dev อ่าน vault จาก `botany-xambrain/wiki/` โดยอัตโนมัติ
-- **Release (.exe)** ฝัง `wiki/` + `assets/` ใน installer — ครูไม่ต้องมี repo
+- โหมด dev อ่าน vault + embeddings จาก root ของ repo โดยอัตโนมัติ
+- **Release (.exe)** ฝัง `wiki/` + `assets/` + `data/` ใน installer — ครูไม่ต้องมี repo
 - มุมล่าง sidebar แสดง `[bundled]` หรือ `[dev]` ตามแหล่งข้อมูล
 - รองรับ `![[โฟลเดอร์/รูป.png|500]]` — โหลดจาก `assets/` ใน vault (ตัดต่อจาก PDF)
 - ดูสถาปัตยกรรมรวมที่ [`../ARCHITECTURE.md`](../ARCHITECTURE.md)

@@ -50,7 +50,7 @@
                            └────────────────────┘
 ```
 
-**สถานะ:** ชั้น 1 ✅ (repo นี้) · ชั้น 2 ✅ (ExamFlow ออนไลน์) · ชั้น 3 ✅ (prototype) · AI ⏳ (ยังไม่ทำ)
+**สถานะ:** ชั้น 1 ✅ (repo นี้) · ชั้น 2 ✅ (ExamFlow ออนไลน์) · ชั้น 3 ✅ (prototype) · AI ✅ (RAG ติวเตอร์ในแอป)
 
 ---
 
@@ -197,20 +197,47 @@ app/
 
 ---
 
-## 7. AI Layer (ทางเลือก — เพิ่มภายหลัง)
+## 7. AI Layer — ติวเตอร์แชท (RAG ในแอป)
 
-### 7.1 ออกแบบแบบ provider-agnostic
+**สถานะ:** ✅ MVP พร้อมใช้งาน (branch `feature/ai-tutor-chat`)
+
+### 7.1 สถาปัตยกรรม RAG (Retrieval-Augmented Generation)
+
 ```
-             ┌─────────────────────────┐
-  แอป/เว็บ ──►│  AI Adapter (interface) │
-             └───────────┬─────────────┘
-                 ┌────────┴────────┐
-                 ▼                 ▼
-          Gemini Flash        Ollama (local)
-          (cloud, ฟรี tier)   (offline, privacy)
+scripts/build-embeddings.py
+  wiki/*.md → chunk ตามหัวข้อ ##
+       │  GEMINI_API_KEY
+       ▼
+  data/embeddings.json  [{id, file, title, heading, text, vector[768]}, ...]
+       │ bundle ใน .exe (Tauri resources)
+       ▼
+  Rust (ai.rs)
+    load_index() → AiState (Mutex<Vec<EmbeddingChunk>>)
+       │
+  [user question]
+       │ gemini_embed()  → vec[768]
+       ▼
+  cosine similarity → top-5 chunks
+       │ assemble prompt (system + context + question)
+       ▼
+  gemini_chat() → answer + citations[]
+       │
+  Frontend (chat.ts)
+    แสดงคำตอบ + ชิปอ้างอิง
+    คลิกชิป → เปิดบทเรียน (loadWikiFile)
 ```
 
-### 7.2 บทบาทที่อนุญาต
+### 7.2 ไฟล์ที่เกี่ยวข้อง
+
+| ไฟล์ | หน้าที่ |
+|------|---------|
+| `scripts/build-embeddings.py` | สร้าง `data/embeddings.json` (รันก่อน build ครั้งแรก) |
+| `data/embeddings.json` | ดัชนี vector (ไม่ commit — gitignore) |
+| `app/src-tauri/src/ai.rs` | Rust: load index, set/get API key, ai_chat command |
+| `app/src/chat.ts` | Frontend: พาเนลแชต, modal ตั้ง key, แสดงคำตอบ+citation |
+| `app/src/main.ts` | mount chat panel, wire navigate |
+
+### 7.3 บทบาทที่อนุญาต
 
 | บทบาท | ผู้ใช้ | เงื่อนไข |
 |-------|-------|----------|
@@ -219,12 +246,16 @@ app/
 | ติวเตอร์ถาม-ตอบ | นักเรียน | ตอบเฉพาะในหลักสูตร ไม่ออกนอกขอบเขต |
 | **ห้าม** | — | เลือกเมนูเอง · ตัดเกรด · วินิจฉัยโรค |
 
-### 7.3 LangGraph — เมื่อไหร่จึงจำเป็น
+### 7.4 ความปลอดภัย API Key
+- เก็บใน `app_config_dir()/config.json` (เครื่องผู้ใช้เท่านั้น)
+- Fallback: env `GEMINI_API_KEY` (สำหรับ dev/CI)
+- ไม่มีการส่ง key ผ่าน frontend → Rust เท่านั้นที่เรียก Gemini
+
+### 7.5 LangGraph — เมื่อไหร่จึงจำเป็น
 ```
-แชท 1 รอบ / if-else           → ไม่ต้องใช้ (JavaScript/Python ธรรมดา)
+แชท 1 รอบ / if-else           → ไม่ต้องใช้ (ปัจจุบัน)
 แชทหลายขั้น + หลาย tool + memory ยาว → ค่อยพิจารณา LangGraph
 ```
-ปัจจุบัน **ยังไม่จำเป็น**
 
 ---
 
