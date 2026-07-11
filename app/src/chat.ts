@@ -11,9 +11,19 @@ interface ChatResponse {
   citations: Citation[];
 }
 
+interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
 // ---- state ----------------------------------------------------------------
 
 let onNavigate: ((file: string) => void) | null = null;
+
+/** ประวัติบทสนทนา (ส่งกลับเข้าโมเดลเพื่อให้ตอบต่อเนื่องได้) */
+let history: ChatMessage[] = [];
+/** เก็บประวัติสูงสุดกี่ข้อความก่อน trim (backend จะเลือกใช้เฉพาะล่าสุดอีกที) */
+const MAX_HISTORY = 12;
 
 /** ลงทะเบียน callback สำหรับเปิดบทเรียนเมื่อคลิก citation */
 export function setChatNavigate(fn: (file: string) => void) {
@@ -22,13 +32,13 @@ export function setChatNavigate(fn: (file: string) => void) {
 
 // ---- DOM refs (ถูกสร้างใน mountChat) ------------------------------------
 
-let chatPanel: HTMLElement | null = null;
 let messagesEl: HTMLElement | null = null;
 let inputEl: HTMLInputElement | null = null;
 let sendBtn: HTMLButtonElement | null = null;
 let keyModal: HTMLElement | null = null;
 let keyInput: HTMLInputElement | null = null;
 let keyBadge: HTMLElement | null = null;
+let deepEl: HTMLInputElement | null = null;
 
 // ---- mounting --------------------------------------------------------------
 
@@ -37,6 +47,10 @@ export function mountChat(container: HTMLElement) {
   container.innerHTML = `
     <div class="chat-header">
       <span class="chat-title">ถามครู AI</span>
+      <label class="chat-deep-toggle" title="คิดลึก (Gemini Pro) — ช้ากว่าแต่ตอบคำถามยาก/ซับซ้อนได้ดีขึ้น">
+        <input type="checkbox" id="chat-deep" />
+        <span>คิดลึก</span>
+      </label>
       <button type="button" class="chat-key-btn" id="chat-key-btn" title="ตั้งค่า API key">🔑</button>
     </div>
     <div class="chat-key-badge" id="chat-key-badge">ยังไม่มี key</div>
@@ -78,13 +92,13 @@ export function mountChat(container: HTMLElement) {
   `;
   document.body.appendChild(modalEl.firstElementChild!);
 
-  chatPanel = container;
   messagesEl = document.getElementById("chat-messages");
   inputEl = document.getElementById("chat-input") as HTMLInputElement;
   sendBtn = document.getElementById("chat-send") as HTMLButtonElement;
   keyModal = document.getElementById("key-modal");
   keyInput = document.getElementById("key-input") as HTMLInputElement;
   keyBadge = document.getElementById("chat-key-badge");
+  deepEl = document.getElementById("chat-deep") as HTMLInputElement;
 
   // events
   document.getElementById("chat-form")?.addEventListener("submit", (e) => {
@@ -100,6 +114,12 @@ export function mountChat(container: HTMLElement) {
   });
 
   void refreshKeyBadge();
+}
+
+/** ล้างข้อความแชต + ประวัติบทสนทนา (เรียกเมื่อสลับวิชา) */
+export function clearChat() {
+  if (messagesEl) messagesEl.innerHTML = "";
+  history = [];
 }
 
 // ---- key modal ------------------------------------------------------------
@@ -152,10 +172,21 @@ async function handleSend() {
   appendUserMsg(question);
   const loadingEl = appendSystemMsg("กำลังคิด…", true);
 
+  // ส่งประวัติก่อนหน้า (ไม่รวมคำถามล่าสุด) เข้าไปด้วย เพื่อให้ตอบต่อเนื่องได้
+  const priorHistory = history.slice(-MAX_HISTORY);
+  const deep = deepEl?.checked ?? false;
+
   try {
-    const res = await invoke<ChatResponse>("ai_chat", { question });
+    const res = await invoke<ChatResponse>("ai_chat", {
+      question,
+      history: priorHistory,
+      deep,
+    });
     loadingEl.remove();
     appendBotMsg(res.answer, res.citations);
+    history.push({ role: "user", content: question });
+    history.push({ role: "assistant", content: res.answer });
+    if (history.length > MAX_HISTORY) history = history.slice(-MAX_HISTORY);
   } catch (e) {
     loadingEl.remove();
     const errStr = String(e);

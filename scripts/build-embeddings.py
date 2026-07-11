@@ -26,7 +26,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
-HEADING2_RE = re.compile(r"^## (.+)$", re.MULTILINE)
+# แบ่งตามหัวข้อระดับ 2 และ 3 (## / ###)
+HEADING_RE = re.compile(r"^(#{2,3})\s+(.+)$", re.MULTILINE)
+
+# ขนาด chunk เป้าหมาย (ตัวอักษร) — เผื่อ token limit ของ embedding model
+MAX_CHARS = 1800
+# overlap ระหว่าง chunk ที่ถูกแบ่งย่อย — กันเนื้อหาขาดช่วงตรงรอยต่อ
+OVERLAP_CHARS = 200
+# section สั้นกว่านี้ข้าม (ไม่มีสาระพอจะ embed)
+MIN_CHARS = 40
 
 
 def strip_frontmatter(text: str) -> tuple[str, str]:
@@ -49,55 +57,91 @@ def strip_frontmatter(text: str) -> tuple[str, str]:
     return title, body
 
 
+def _slugify(s: str) -> str:
+    return re.sub(r"[^a-zA-Z0-9ก-ฮ]", "_", s)[:40] or "x"
+
+
+def split_long(text: str, max_chars: int = MAX_CHARS, overlap: int = OVERLAP_CHARS) -> list[str]:
+    """แบ่งข้อความยาวเป็นหลายชิ้นตามย่อหน้า + overlap — ไม่ตัดเนื้อหาทิ้ง"""
+    if len(text) <= max_chars:
+        return [text]
+
+    paras = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+    pieces: list[str] = []
+    cur = ""
+    for p in paras:
+        # ย่อหน้าเดียวยาวเกิน max → ตัดแข็งเป็นช่วงๆ (มี overlap)
+        if len(p) > max_chars:
+            if cur:
+                pieces.append(cur)
+                cur = ""
+            step = max(1, max_chars - overlap)
+            for i in range(0, len(p), step):
+                pieces.append(p[i:i + max_chars])
+            continue
+        if not cur:
+            cur = p
+        elif len(cur) + len(p) + 2 <= max_chars:
+            cur += "\n\n" + p
+        else:
+            pieces.append(cur)
+            tail = cur[-overlap:] if overlap else ""
+            cur = f"{tail}\n\n{p}" if tail else p
+    if cur:
+        pieces.append(cur)
+    return pieces
+
+
+def split_sections(body: str) -> list[tuple[str, str]]:
+    """แบ่ง body ตามหัวข้อ H2/H3 → [(heading_path, section_text)]
+    heading_path = 'H2' หรือ 'H2 › H3' (intro ก่อนหัวข้อแรก = path ว่าง)"""
+    matches = list(HEADING_RE.finditer(body))
+    sections: list[tuple[str, str]] = []
+
+    intro_end = matches[0].start() if matches else len(body)
+    intro = body[:intro_end].strip()
+    if intro:
+        sections.append(("", intro))
+
+    last_h2 = ""
+    for i, m in enumerate(matches):
+        level = len(m.group(1))
+        heading = m.group(2).strip()
+        start = m.start()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
+        text = body[start:end].strip()
+        if level == 2:
+            last_h2 = heading
+            path = heading
+        else:  # H3
+            path = f"{last_h2} › {heading}" if last_h2 else heading
+        sections.append((path, text))
+    return sections
+
+
 def chunk_file(path: Path, base: Path) -> list[dict]:
-    """แบ่งไฟล์ markdown ตามหัวข้อ ## แต่ละชิ้น"""
+    """แบ่งไฟล์ markdown ตามหัวข้อ H2/H3 + แบ่งย่อยถ้ายาวเกิน (มี overlap)"""
     rel = path.relative_to(base).as_posix()
     file_id = path.stem
     raw = path.read_text(encoding="utf-8")
     title, body = strip_frontmatter(raw)
 
     chunks: list[dict] = []
-
-    # หาตำแหน่ง ## ทั้งหมด
-    positions = [(m.start(), m.group(1).strip()) for m in HEADING2_RE.finditer(body)]
-
-    if not positions:
-        # ไฟล์ไม่มี ## → chunk เดียวทั้งไฟล์
-        text = body.strip()
-        if len(text) > 50:
+    for heading_path, text in split_sections(body):
+        if len(text) < MIN_CHARS:
+            continue
+        header = title if not heading_path else f"{title} — {heading_path}"
+        slug = _slugify(heading_path) if heading_path else "intro"
+        pieces = split_long(text)
+        for j, piece in enumerate(pieces):
+            suffix = "" if len(pieces) == 1 else f"__{j}"
             chunks.append({
-                "id": f"{file_id}::intro",
+                "id": f"{file_id}::{slug}{suffix}",
                 "file": rel,
                 "title": title,
-                "heading": "",
-                "text": f"{title}\n\n{text[:3000]}",
+                "heading": heading_path,
+                "text": f"{header}\n\n{piece}",
             })
-        return chunks
-
-    # chunk แรก = เนื้อหาก่อน ## แรก
-    intro = body[:positions[0][0]].strip()
-    if len(intro) > 50:
-        chunks.append({
-            "id": f"{file_id}::intro",
-            "file": rel,
-            "title": title,
-            "heading": "",
-            "text": f"{title}\n\n{intro[:3000]}",
-        })
-
-    # chunk ต่อไปตาม ##
-    for idx, (start, heading) in enumerate(positions):
-        end = positions[idx + 1][0] if idx + 1 < len(positions) else len(body)
-        section = body[start:end].strip()
-        if len(section) < 30:
-            continue
-        chunks.append({
-            "id": f"{file_id}::{re.sub(r'[^a-zA-Z0-9ก-ฮ]', '_', heading)[:40]}",
-            "file": rel,
-            "title": title,
-            "heading": heading,
-            "text": f"{title} — {heading}\n\n{section[:3000]}",
-        })
 
     return chunks
 
