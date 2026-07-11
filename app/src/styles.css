@@ -335,6 +335,23 @@ body {
 
 .chat-key-btn:hover { background: #b7e4c7; }
 
+.chat-deep-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: auto;
+  margin-right: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--accent);
+  cursor: pointer;
+  user-select: none;
+}
+
+.chat-deep-toggle input {
+  cursor: pointer;
+  margin: 0;
+}
+
 .chat-key-badge {
   text-align: center;
   font-size: 0.75rem;
