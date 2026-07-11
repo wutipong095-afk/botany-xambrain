@@ -3,7 +3,6 @@ use std::collections::HashSet;
 use std::fs;
 use std::path::PathBuf;
 use std::sync::Mutex;
-use tauri::path::BaseDirectory;
 use tauri::{AppHandle, Manager};
 
 // ---- types ----------------------------------------------------------------
@@ -136,24 +135,14 @@ pub fn read_api_key(app: &AppHandle) -> Result<String, String> {
 
 // ---- load index ------------------------------------------------------------
 
-/// data/ ที่มี embeddings.json — dev ใช้ repo root, release ใช้ bundled resource
+/// data/ ของวิชาที่ active (มี embeddings.json)
 fn vault_data_dir(app: &AppHandle) -> Option<PathBuf> {
-    #[cfg(debug_assertions)]
-    {
-        let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-        let dev_data = manifest.join("..").join("..").join("data");
-        if dev_data.join("embeddings.json").exists() {
-            return Some(dev_data.canonicalize().unwrap_or(dev_data));
-        }
-    }
-    app.path()
-        .resolve("vault/data", BaseDirectory::Resource)
-        .ok()
-        .filter(|p| p.join("embeddings.json").exists())
+    let dir = crate::pack_root(app).ok()?.join("data");
+    dir.join("embeddings.json").exists().then_some(dir)
 }
 
-/// โหลดดัชนี embeddings เข้าหน่วยความจำ
-/// (ถ้าไม่มี/อ่านไม่ได้ → ล้างดัชนีเป็นว่าง)
+/// โหลดดัชนี embeddings ของวิชาที่ active เข้าหน่วยความจำ
+/// (ถ้าไม่มี/อ่านไม่ได้ → ล้างดัชนีเป็นว่าง เพื่อกันข้อมูลวิชาเก่าค้างหลังสลับวิชา)
 pub fn load_index(app: &AppHandle, state: &AiState) {
     let chunks = vault_data_dir(app)
         .and_then(|d| fs::read_to_string(d.join("embeddings.json")).ok())

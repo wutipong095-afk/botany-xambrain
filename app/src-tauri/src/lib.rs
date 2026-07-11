@@ -15,59 +15,184 @@ struct WikiEntry {
     title: String,
 }
 
-fn dev_vault_wiki() -> Option<PathBuf> {
-    let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    let dev_wiki = manifest.join("..").join("..").join("wiki");
-    if dev_wiki.join("index.md").exists() {
-        Some(dev_wiki.canonicalize().unwrap_or(dev_wiki))
-    } else {
-        None
-    }
+// ---- content packs (multi-subject) ----------------------------------------
+// วิชา built-in (ฝังมากับแอป) + วิชาที่ผู้ใช้โหลดเพิ่มลง {app_local_data}/packs/{id}/
+// แต่ละ pack root มี wiki/ · assets/ · data/ อยู่ข้างใน
+
+const BUILTIN_PACK_ID: &str = "botany";
+const BUILTIN_PACK_NAME: &str = "พฤกษศาสตร์พื้นบ้าน";
+
+/// path ของโฟลเดอร์เก็บแพ็ก — {app_local_data}/packs (ไม่แตะดิสก์)
+fn packs_base_dir(app: &AppHandle) -> Result<PathBuf, String> {
+    Ok(app
+        .path()
+        .app_local_data_dir()
+        .map_err(|e| e.to_string())?
+        .join("packs"))
 }
 
-fn bundled_vault_wiki(app: &AppHandle) -> Option<PathBuf> {
-    app.path()
-        .resolve("vault/wiki", BaseDirectory::Resource)
+/// เหมือน packs_base_dir แต่สร้างโฟลเดอร์ให้ด้วย (ใช้เฉพาะตอนจะเขียน)
+fn ensure_packs_base_dir(app: &AppHandle) -> Result<PathBuf, String> {
+    let dir = packs_base_dir(app)?;
+    fs::create_dir_all(&dir).map_err(|e| format!("create packs dir: {e}"))?;
+    Ok(dir)
+}
+
+fn active_pack_file(app: &AppHandle) -> Result<PathBuf, String> {
+    Ok(packs_base_dir(app)?.join("active.txt"))
+}
+
+/// id ของวิชาที่กำลังใช้งาน (default = built-in botany)
+fn active_pack_id(app: &AppHandle) -> String {
+    active_pack_file(app)
         .ok()
-        .filter(|p| p.join("index.md").exists())
+        .and_then(|p| fs::read_to_string(p).ok())
+        .map(|s| s.trim().to_string())
+        .filter(|s| !s.is_empty())
+        .unwrap_or_else(|| BUILTIN_PACK_ID.to_string())
 }
 
-fn local_resources_vault_wiki() -> Option<PathBuf> {
-    let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    let local = manifest.join("resources").join("vault").join("wiki");
-    if local.join("index.md").exists() {
-        Some(local.canonicalize().unwrap_or(local))
-    } else {
-        None
+fn validate_pack_id(id: &str) -> Result<(), String> {
+    if id.is_empty()
+        || id.contains("..")
+        || id.contains('/')
+        || id.contains('\\')
+        || id.contains(':')
+    {
+        return Err("invalid pack id".into());
     }
+    Ok(())
+}
+
+fn write_active_pack(app: &AppHandle, id: &str) -> Result<(), String> {
+    validate_pack_id(id)?;
+    ensure_packs_base_dir(app)?;
+    let file = active_pack_file(app)?;
+    fs::write(&file, id.as_bytes()).map_err(|e| format!("write active pack: {e}"))
+}
+
+/// root ของแพ็กที่โหลดมา (ต้องมี wiki/index.md) — None ถ้ายังไม่ได้ติดตั้ง
+/// built-in botany ไม่ resolve จาก packs/ (กัน shadow กับโฟลเดอร์ packs/botany/)
+fn installed_pack_root(app: &AppHandle, id: &str) -> Option<PathBuf> {
+    validate_pack_id(id).ok()?;
+    if id == BUILTIN_PACK_ID {
+        return None;
+    }
+    let base = packs_base_dir(app).ok()?;
+    let root = base.join(id);
+    if !root.join("wiki").join("index.md").exists() {
+        return None;
+    }
+    let base_canon = base.canonicalize().unwrap_or(base);
+    let root_canon = root.canonicalize().unwrap_or_else(|_| root.clone());
+    if !root_canon.starts_with(&base_canon) {
+        return None;
+    }
+    Some(root_canon)
+}
+
+/// root ของวิชา built-in (botany) — dev repo หรือ bundled vault/
+fn builtin_pack_root(app: &AppHandle) -> Option<PathBuf> {
+    let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    let dev_root = manifest.join("..").join("..");
+
+    // dev: repo root (../../)
+    #[cfg(debug_assertions)]
+    if dev_root.join("wiki").join("index.md").exists() {
+        return Some(dev_root.canonicalize().unwrap_or(dev_root));
+    }
+
+    // release: bundled resource vault/
+    if let Ok(p) = app.path().resolve("vault", BaseDirectory::Resource) {
+        if p.join("wiki").join("index.md").exists() {
+            return Some(p);
+        }
+    }
+
+    // release-from-source fallback
+    if dev_root.join("wiki").join("index.md").exists() {
+        return Some(dev_root.canonicalize().unwrap_or(dev_root));
+    }
+
+    // local resources
+    let local = manifest.join("resources").join("vault");
+    if local.join("wiki").join("index.md").exists() {
+        return Some(local.canonicalize().unwrap_or(local));
+    }
+
+    None
+}
+
+/// resolve root ของวิชาตาม id — built-in botany ใช้ bundled/dev เท่านั้น
+fn resolve_pack_root(app: &AppHandle, id: &str) -> Result<PathBuf, String> {
+    validate_pack_id(id)?;
+    if id == BUILTIN_PACK_ID {
+        return builtin_pack_root(app)
+            .ok_or_else(|| format!("ไม่พบวิชา built-in: {BUILTIN_PACK_ID}"));
+    }
+    installed_pack_root(app, id).ok_or_else(|| format!("ไม่พบวิชา: {id}"))
+}
+
+/// cache ของวิชาที่ active — (id, root ที่ resolve แล้ว)
+/// กันการอ่าน active.txt + canonicalize ซ้ำทุกครั้งที่โหลดรูป/บทเรียน
+#[derive(Default)]
+struct PackState {
+    active: std::sync::Mutex<Option<(String, PathBuf)>>,
+}
+
+/// resolve วิชาที่ active จากดิสก์ — sync active.txt ถ้า id เก่า/ไม่ถูกต้อง
+/// คืน (effective_id, root)
+fn compute_pack_root(app: &AppHandle) -> Result<(String, PathBuf), String> {
+    let id = active_pack_id(app);
+
+    if validate_pack_id(&id).is_err() {
+        if builtin_pack_root(app).is_some() {
+            write_active_pack(app, BUILTIN_PACK_ID)?;
+            let root = resolve_pack_root(app, BUILTIN_PACK_ID)?;
+            return Ok((BUILTIN_PACK_ID.to_string(), root));
+        }
+        return Err("active pack id ไม่ถูกต้อง".into());
+    }
+
+    match resolve_pack_root(app, &id) {
+        Ok(p) => Ok((id, p)),
+        Err(e) if id != BUILTIN_PACK_ID => {
+            // แพ็กใน active.txt ถูกลบ → reset เป็น built-in แทน fallback เงียบ ๆ
+            if let Some(p) = builtin_pack_root(app) {
+                write_active_pack(app, BUILTIN_PACK_ID)?;
+                Ok((BUILTIN_PACK_ID.to_string(), p))
+            } else {
+                Err(format!("{e} (ไม่มี built-in vault สำรอง)"))
+            }
+        }
+        Err(e) => Err(e),
+    }
+}
+
+fn set_cached_pack(app: &AppHandle, id: String, root: PathBuf) {
+    if let Ok(mut g) = app.state::<PackState>().active.lock() {
+        *g = Some((id, root));
+    }
+}
+
+/// root ของวิชาที่ active (อ่านจาก cache; cold ครั้งแรก compute จากดิสก์)
+pub(crate) fn pack_root(app: &AppHandle) -> Result<PathBuf, String> {
+    if let Ok(g) = app.state::<PackState>().active.lock() {
+        if let Some((_, root)) = g.as_ref() {
+            return Ok(root.clone());
+        }
+    }
+    let (id, root) = compute_pack_root(app)?;
+    set_cached_pack(app, id, root.clone());
+    Ok(root)
 }
 
 fn vault_wiki_dir(app: &AppHandle) -> Result<PathBuf, String> {
-    #[cfg(debug_assertions)]
-    if let Some(p) = dev_vault_wiki() {
-        return Ok(p);
-    }
-
-    if let Some(p) = bundled_vault_wiki(app) {
-        return Ok(p);
-    }
-
-    if let Some(p) = dev_vault_wiki() {
-        return Ok(p);
-    }
-
-    if let Some(p) = local_resources_vault_wiki() {
-        return Ok(p);
-    }
-
-    Err("vault wiki/ not found (bundle vault/wiki or dev ../../wiki)".into())
+    Ok(pack_root(app)?.join("wiki"))
 }
 
 fn vault_root_dir(app: &AppHandle) -> Result<PathBuf, String> {
-    vault_wiki_dir(app)?
-        .parent()
-        .ok_or_else(|| "vault root has no parent".to_string())
-        .map(|p| p.to_path_buf())
+    pack_root(app)
 }
 
 fn vault_assets_dir(app: &AppHandle) -> Result<PathBuf, String> {
@@ -183,13 +308,9 @@ fn read_wiki_file(app: AppHandle, relative_path: String) -> Result<String, Strin
 
 #[tauri::command]
 fn get_vault_info(app: AppHandle) -> Result<String, String> {
-    let wiki = vault_wiki_dir(&app)?;
-    let mode = if bundled_vault_wiki(&app).is_some_and(|b| b == wiki) {
-        "bundled"
-    } else {
-        "dev"
-    };
-    Ok(format!("[{mode}] {}", wiki.display()))
+    let id = active_pack_id(&app);
+    let root = pack_root(&app)?;
+    Ok(format!("[{id}] {}", root.display()))
 }
 
 #[tauri::command]
@@ -212,6 +333,103 @@ fn get_assets_dir(app: AppHandle) -> Result<String, String> {
     vault_assets_dir(&app).map(|p| p.display().to_string())
 }
 
+// ---- pack commands ---------------------------------------------------------
+
+#[derive(Serialize)]
+struct PackInfo {
+    id: String,
+    name: String,
+    active: bool,
+}
+
+/// อ่านชื่อวิชาจาก pack.json (fallback = id)
+fn read_pack_name(root: &Path, fallback: &str) -> String {
+    let raw = match fs::read_to_string(root.join("pack.json")) {
+        Ok(r) => r,
+        Err(_) => return fallback.to_string(),
+    };
+    serde_json::from_str::<serde_json::Value>(&raw)
+        .ok()
+        .as_ref()
+        .and_then(|v| v.get("name"))
+        .and_then(|n| n.as_str())
+        .filter(|n| !n.is_empty())
+        .map(|n| n.to_string())
+        .unwrap_or_else(|| fallback.to_string())
+}
+
+#[tauri::command]
+fn list_packs(app: AppHandle) -> Result<Vec<PackInfo>, String> {
+    let active = active_pack_id(&app);
+    let mut out: Vec<PackInfo> = Vec::new();
+
+    // วิชา built-in (botany) — แสดงเสมอถ้ามี root
+    if builtin_pack_root(&app).is_some() {
+        out.push(PackInfo {
+            id: BUILTIN_PACK_ID.to_string(),
+            name: BUILTIN_PACK_NAME.to_string(),
+            active: active == BUILTIN_PACK_ID,
+        });
+    }
+
+    // วิชาที่ผู้ใช้โหลดมาใน packs/
+    if let Ok(base) = packs_base_dir(&app) {
+        if let Ok(entries) = fs::read_dir(&base) {
+            for entry in entries.flatten() {
+                let root = entry.path();
+                if !root.is_dir() {
+                    continue;
+                }
+                let id = match entry.file_name().to_str() {
+                    Some(s) => s.to_string(),
+                    None => continue,
+                };
+                // กันซ้ำ built-in และข้ามแพ็กที่ยังไม่สมบูรณ์
+                if id == BUILTIN_PACK_ID || !root.join("wiki").join("index.md").exists() {
+                    continue;
+                }
+                let name = read_pack_name(&root, &id);
+                out.push(PackInfo {
+                    active: active == id,
+                    id,
+                    name,
+                });
+            }
+        }
+    }
+
+    out.sort_by(|a, b| a.name.cmp(&b.name));
+    Ok(out)
+}
+
+#[tauri::command]
+fn get_active_pack(app: AppHandle) -> String {
+    active_pack_id(&app)
+}
+
+#[tauri::command]
+async fn set_active_pack(app: AppHandle, id: String) -> Result<(), String> {
+    validate_pack_id(&id)?;
+    // resolve = existence check ในตัว
+    let root = if id == BUILTIN_PACK_ID {
+        builtin_pack_root(&app).ok_or_else(|| format!("ไม่พบวิชา: {id}"))?
+    } else {
+        installed_pack_root(&app, &id).ok_or_else(|| format!("ไม่พบวิชา: {id}"))?
+    };
+    write_active_pack(&app, &id)?;
+    set_cached_pack(&app, id, root);
+
+    // โหลดดัชนีวิชาใหม่นอก main thread (parse embeddings.json อาจใหญ่)
+    let app2 = app.clone();
+    tauri::async_runtime::spawn_blocking(move || {
+        let state = app2.state::<ai::AiState>();
+        ai::load_index(&app2, &state);
+    })
+    .await
+    .map_err(|e| e.to_string())?;
+    Ok(())
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     let ai_state = ai::AiState::new();
@@ -219,6 +437,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .manage(ai_state)
+        .manage(PackState::default())
         .setup(|app| {
             let state = app.state::<ai::AiState>();
             ai::load_index(app.handle(), &state);
@@ -231,6 +450,9 @@ pub fn run() {
             examflow_url,
             read_asset_data_url,
             get_assets_dir,
+            list_packs,
+            get_active_pack,
+            set_active_pack,
             set_api_key,
             get_api_key_status,
             ai_chat,
