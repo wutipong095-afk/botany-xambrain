@@ -39,7 +39,7 @@ tags:
   - [[flower-morphology]] — ดอก (S5) ✅🌐 mixed
   - [[fruit-seed-morphology]] — ผลและเมล็ด (S6) ✅🌐 mixed
 - [[plant-tissue]] — เนื้อเยื่อพืช: เจริญ/ถาวร, xylem/phloem (S7) 🌐 external
-- [[plant-taxonomy]] — การจำแนกพืช: อันดับอนุกรม · binomial · ตรวจเอกลักษณ์ (S8) 🌐 external
+- [[plant-taxonomy]] — การจำแนกพืช: อันดับอนุกรม · binomial · เคส THP 5 ชนิด (S8) 🌐 external
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 

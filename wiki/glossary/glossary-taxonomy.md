@@ -8,6 +8,7 @@ source_type: external
 tags:
   - glossary
   - taxonomy
+  - thp
 ---
 
 # คลังคำศัพท์: การจำแนกพืช (Taxonomy Glossary)
@@ -49,8 +50,20 @@ tags:
 | ยาสมุนไพรดิบ / วัตถุยา | Crude drug | ส่วนพืชที่เตรียมเป็นยา |
 | ตำรามาตรฐานยาสมุนไพรไทย | Thai Herbal Pharmacopoeia (THP) | กรมวิทยาศาสตร์การแพทย์ |
 
-## วงศ์ตัวอย่าง (สมุนไพรไทย)
+## วงศ์ตัวอย่าง (สมุนไพรไทย) → [[plant-taxonomy]] §7
 
-| ไทย | Family | ตัวอย่างสกุล |
-|-----|--------|--------------|
-| วงศ์ขิง | Zingiberaceae | *Zingiber*, *Curcuma*, *Kaempferia*, *Boesenbergia*, *Alpinia* |
+| ไทย | Family | ตัวอย่างสกุล / ชนิด |
+|-----|--------|----------------------|
+| วงศ์ขิง | Zingiberaceae | *Zingiber officinale*, *Curcuma longa*, *Boesenbergia rotunda* |
+| วงศ์เหงือกปลาหมอ | Acanthaceae | *Andrographis paniculata* (ฟ้าทะลายโจร) |
+| วงศ์ยางพารา *(ตาม THP)* | Euphorbiaceae | *Phyllanthus emblica* (มะขามป้อม) |
+
+## จุดวินิจฉัย THP (ศัพท์ย่อย)
+
+| ไทย | อังกฤษ | หมายเหตุ |
+|-----|--------|----------|
+| ข้อเป็นวงบนเหง้า | Annulated nodes | จุด macro ของขิง |
+| ลำต้นเทียม | Pseudostem | ใบหุ้มเป็นลำต้น (วงศ์ขิง) |
+| เซลล์หินปูนในใบ | Lithocyst | จุด micro ของฟ้าทะลายโจร |
+| ปากใบแบบไดอะไซติก | Diacytic stomata | เซลล์คุมขนาบด้วยเซลล์คู่ขนานกับปากใบ |
+| รากและเหง้า (วัตถุดิบ) | Radix et rhizoma | กระชายตาม THP ใช้ทั้งสองส่วน |
