@@ -56,14 +56,15 @@ tags:
 
 ## Questions
 
-*(ยังไม่มี — สั่ง "ทำข้อสอบ [concept node]")*
+- [[questions/qbank-plant-taxonomy]] — การจำแนกพืช / เคส THP (L1×5 · L2×4 · L3×3)
 
 ## Assessments
 
-*(ยังไม่มี)*
+- [[assessment/master-assessment]] — แผนประเมินผลรวม
 
 ## Glossary (คลังคำศัพท์)
 
 - [[glossary/glossary-index]] — สารบัญคำศัพท์
 - [[glossary/glossary-morphology]] — สัณฐานวิทยา (ไทย/อังกฤษ/รากศัพท์ L.-Gr.)
 - [[glossary/glossary-taxonomy]] — การจำแนกพืช (ไทย/ละติน/รากศัพท์) 🌐
+- [[glossary/glossary-herbal]] — รสยา + ธาตุ + พิกัด (ไทย/บาลี-สันสกฤต) 🌐

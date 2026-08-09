@@ -216,6 +216,7 @@ tags:
 ## Leads to
 
 - [[glossary/glossary-taxonomy]] — คลังศัพท์อนุกรมวิธาน
+- [[questions/qbank-plant-taxonomy]] — ข้อสอบ L1–L3 จาก node นี้
 - [[thai-herbal]] — ใช้การระบุพืชเป็นขั้นแรกของกรอบสมุนไพร
 - [[flower-morphology]] — ตารางลักษณะดอกเด่นรายวงศ์
 - [[herbal-formula]] — มะขามป้อมในตำรับ (ตรีผลา ฯลฯ)

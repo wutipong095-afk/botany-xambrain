@@ -261,9 +261,10 @@
     <div id="results"></div>
     <p id="load-error" class="error" hidden></p>
 
-    <footer>
+    <footer id="app-footer">
       เปิดผ่านเว็บเซิร์ฟเวอร์ท้องถิ่น (เช่น <code>python -m http.server 8080</code>) แล้วเข้า
       <code>http://localhost:8080/</code> · ข้อมูลจาก <code>data/*.json</code>
+      <span id="data-status"></span>
     </footer>
   </div>
 
@@ -479,6 +480,12 @@
       .then(() => {
         buildChips();
         updateAgeHint();
+        const n = (menuDb.menus || []).length;
+        const t2 = (menuDb.menus || []).filter((m) => m.analysisTier === 2).length;
+        const status = el("data-status");
+        if (status) {
+          status.textContent = ` · โหลดแล้ว ${n} เมนู (Tier 2: ${t2}) · อัปเดตฐาน ${menuDb.updated || "—"}`;
+        }
       })
       .catch((err) => {
         el("load-error").hidden = false;
