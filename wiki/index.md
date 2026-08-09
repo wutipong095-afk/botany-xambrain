@@ -2,7 +2,7 @@
 title: "Index"
 type: overview
 created: 2026-07-03
-updated: 2026-07-05
+updated: 2026-08-09
 tags:
   - meta
 ---
@@ -39,6 +39,7 @@ tags:
   - [[flower-morphology]] — ดอก (S5) ✅🌐 mixed
   - [[fruit-seed-morphology]] — ผลและเมล็ด (S6) ✅🌐 mixed
 - [[plant-tissue]] — เนื้อเยื่อพืช: เจริญ/ถาวร, xylem/phloem (S7) 🌐 external
+- [[plant-taxonomy]] — การจำแนกพืช: อันดับอนุกรม · binomial · ตรวจเอกลักษณ์ (S8) 🌐 external
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
@@ -65,3 +66,4 @@ tags:
 
 - [[glossary/glossary-index]] — สารบัญคำศัพท์
 - [[glossary/glossary-morphology]] — สัณฐานวิทยา (ไทย/อังกฤษ/รากศัพท์ L.-Gr.)
+- [[glossary/glossary-taxonomy]] — การจำแนกพืช (ไทย/ละติน/รากศัพท์) 🌐

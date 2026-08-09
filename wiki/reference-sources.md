@@ -53,12 +53,13 @@ tags:
 
 | วันที่ | หนังสือ | ผู้แต่ง / สำนักพิมพ์ | เข้าถึง | เป้าหมาย |
 |--------|---------|----------------------|--------|----------|
-| 2026-08-09 | *การตรวจเอกลักษณ์พืชสมุนไพร : พฤกษอนุกรมวิธาน* · ISBN `9789740337584` · 867 หน้า · PDF | รศ.สมพร ภูติยานันต์ · สำนักพิมพ์จุฬาลงกรณ์มหาวิทยาลัย | [ARU Hibrary (ebook)](https://elibrary-aru.hibrary.me/rent/ebook/detail/f7344b52-4529-45c3-b745-46a466ee7fb5) · ม.ราชภัฏพระนครศรีอยุธยา · Rent (คิว 1 · ยืม 5 วัน) · สมัครด้วย `@aru.ac.th` | taxonomy / ตรวจเอกลักษณ์สมุนไพร → Layer S↔T · [[thai-herbal]] · glossary-taxonomy *(จะสร้าง)* |
+| 2026-08-09 | *การตรวจเอกลักษณ์พืชสมุนไพร : พฤกษอนุกรมวิธาน* · ISBN `9789740337584` · 867 หน้า · PDF | รศ.สมพร ภูติยานันต์ · สำนักพิมพ์จุฬาลงกรณ์มหาวิทยาลัย | [ARU Hibrary (ebook)](https://elibrary-aru.hibrary.me/rent/ebook/detail/f7344b52-4529-45c3-b745-46a466ee7fb5) · ม.ราชภัฏพระนครศรีอยุธยา · Rent (คิว 1 · ยืม 5 วัน) · สมัครด้วย `@aru.ac.th` | อัปเกรด taxonomy เมื่อเข้าถึงได้ · คู่ขนานกับแหล่งเปิดด้านล่าง |
 
 ## External source log (แหล่งอินเทอร์เน็ตที่ใช้แล้ว)
 
 | วันที่ | หัวข้อ | แหล่ง | ใช้ใน node |
 |--------|--------|-------|-----------|
+| 2026-08-09 | การจำแนกพืช (taxonomy): อันดับอนุกรม · binomial · ชื่อไทย–วิทยาศาสตร์ · ตรวจเอกลักษณ์สมุนไพร | [ชื่อพรรณไม้แห่งประเทศไทย / DNP](https://botany.dnp.go.th/) · [Thai Plant Names](https://botany.dnp.go.th/mplant/about.html) · [THP กรมวิทย์ฯ](https://bdn-thp.dmsc.moph.go.th/home) · [THP 2021 Vol.II](https://bdn.dmsc.moph.go.th/th/detailAll/1080/ebook/136) · [รูปวิธานระบุพืช มหิดล](https://il.mahidol.ac.th/e-media/plants/webcontent3/main.html) · [Siree bioportal มหิดล](https://sireebioportal.mahidol.ac.th/plant/) · [SciMath วงศ์ขิง](https://www.scimath.org/project/item/6355-zingiberaceae) | [[plant-taxonomy]] · [[glossary/glossary-taxonomy]] · [[thai-herbal]] |
 | 2026-07-03 | ส่วนประกอบ/ชนิดของดอก | สสวท. scimath.org, ทรูปลูกปัญญา | [[flower-morphology]] |
 | 2026-07-03 | ชนิดของผล + เมล็ด | สสวท. scimath.org, ทรูปลูกปัญญา | [[fruit-seed-morphology]] |
 | 2026-07-03 | รสยา 9 รส + สรรพคุณ | คณะการแพทย์แผนไทย ม.อ. (ttmed.psu.ac.th), Poonrada | [[herbal-taste-9]], [[thai-herbal]] |

@@ -2,7 +2,7 @@
 title: "สารบัญคลังคำศัพท์"
 type: glossary-index
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-08-09
 tags:
   - glossary
   - meta
@@ -13,8 +13,8 @@ tags:
 | หมวด | ไฟล์ | ภาษา | สถานะ |
 |------|------|------|-------|
 | สัณฐานวิทยาพืช | [[glossary-morphology]] | ไทย / อังกฤษ / รากศัพท์ (L./Gr.) | ✅ |
+| การจำแนกพืช (taxonomy) | [[glossary-taxonomy]] | ไทย / ละติน / รากศัพท์ (L./Gr.) | ✅ |
 | รสยา + ธาตุ | glossary-herbal *(จะสร้าง)* | ไทย / อังกฤษ / บาลี-สันสกฤต | ⏳ |
-| การจำแนกพืช (taxonomy) | glossary-taxonomy *(จะสร้าง)* | ไทย / ละติน | ⏳ |
 
 ## หมายเหตุ
 

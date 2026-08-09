@@ -4,9 +4,10 @@ id: T0
 type: concept
 layer: thai-traditional
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-08-09
 prerequisites:
   - plant-morphology
+  - plant-taxonomy
 source_type: external
 references:
   - "https://www.ttmed.psu.ac.th/th/blog/86"
@@ -44,14 +45,14 @@ Layer S (ส่วนพืช)  →  Layer U (ส่วนที่ใช้)  
 
 ## กรอบวิเคราะห์สมุนไพร (Herbal analysis frame)
 
-1. **ระบุพืช** (Layer S: สัณฐานวิทยา ช่วยจำแนก) → [[plant-morphology]]
+1. **ระบุพืช** (Layer S: สัณฐาน + อนุกรมวิธาน · ตรวจชื่อ/เอกลักษณ์) → [[plant-morphology]] · [[plant-taxonomy]]
 2. **ส่วนที่ใช้** (Layer U) → ราก/เหง้า/ใบ/ดอก/ผล
 3. **รส** (Layer T) → [[herbal-taste-9]]
 4. **ผลต่อธาตุ + สรรพคุณ** → เลือกใช้ตามความพิการของธาตุ
 
 ## Prerequisites
 
-- [[plant-morphology]] · [[herbal-taste-9]]
+- [[plant-morphology]] · [[plant-taxonomy]] · [[herbal-taste-9]]
 
 ## Leads to
 
