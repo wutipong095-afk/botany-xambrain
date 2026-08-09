@@ -4,7 +4,7 @@ id: S1
 type: concept
 layer: structure
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-08-09
 sources:
   - source-plant-morphology
   - source-flower-fruit-seed
@@ -42,6 +42,7 @@ tags:
 
 - [[root-morphology]] · [[stem-morphology]] · [[leaf-morphology]] · [[flower-morphology]] · [[fruit-seed-morphology]]
 - [[plant-tissue]] — ระดับเนื้อเยื่อ (ละเอียดกว่าอวัยวะ)
+- [[plant-taxonomy]] — การจำแนก/ระบุพืช (Naming → Identifying)
 
 ## Sources
 

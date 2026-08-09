@@ -4,7 +4,7 @@ id: U3
 type: concept
 layer: utilization
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-08-09
 prerequisites:
   - food-dhatu-plants
   - food-analysis-ttm
@@ -170,9 +170,20 @@ flowchart TD
 - [[food-as-balance]] — แกนความรู้ "อาหารคือสมดุล" (ทำไมต้องบูรณาการสากล+ไทย)
 - [[food-dhatu-plants]] · [[food-analysis-ttm]] · [[dhatu-4-plants]] · [[herbal-taste-9]]
 
+## วิธีรันเว็บท้องถิ่น
+
+```bash
+# ที่ราก repo
+python -m http.server 8080
+# เปิด http://localhost:8080/
+```
+
+หน้าเว็บโหลด `data/menu-db.json` · `symptom-element.json` · `age-food.json` แล้วแสดงจำนวนเมนูใน footer เมื่อโหลดสำเร็จ
+
 ## Leads to
 
 - เว็บ prototype: `index.html` + `recommender.js` (รากโปรเจกต์)
+- [[glossary/glossary-herbal]] — ศัพท์รส/ธาตุที่ใช้ในกฎแนะนำ
 
 ## ที่มา (External sources) — เข้าถึง 2026-07-03
 

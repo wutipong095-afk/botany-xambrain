@@ -2,7 +2,7 @@
 title: "Hotcache"
 type: meta
 created: 2026-07-03
-updated: 2026-07-06
+updated: 2026-08-09
 tags:
   - meta
 ---
@@ -11,18 +11,30 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: **การทำสมองที่สอง** — Layer S ครบ · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
+- **Phase**: **การทำสมองที่สอง** — Layer S (+S8 taxonomy scaffold) · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
 - **แกนความรู้ (ครูเฮนรี่)**: AX1 "อาหาร = สมดุล" → [[food-as-balance]] · AX2 "เคลื่อนไหว + ความสุขจริง vs หลอก" → [[human-unnatural-life]]
 - **ทิศทางใหม่**: ทำเป็น "ฐานข้อมูล+เครื่องแนะนำเมนู" สำหรับประชาชน (ป้อน BMI+อาการ→เมนู) · ข้อมูลอยู่ `data/*.json` · เฟสถัดไป = เว็บ prototype
-- **เป้าหมายถัดไป**: รอข้อมูลเพิ่มก่อนทำข้อสอบ · ระหว่างรอ: taxonomy (การจำแนกพืช), glossary-herbal (บาลี) · **AI chat**: ทดสอบ PR → merge master**
-- **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ
+- **เป้าหมายถัดไป**: วิเคราะห์เมนู Tier 2 รอบถัดไป · เติม kcal · ตัวกรองแพ้อาหาร · ผลิตข้อสอบพิมพ์จาก qbank taxonomy (ถ้าต้องการ) · (เมื่อเข้าถึงได้) ย่อยเล่มสมพร
+- **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ · มี **Textbook queue**
 - **Pipeline ย่อยความรู้**: [[knowledge-extraction-pipeline]] — ย่อย → ตรวจอักษร (`scripts/check-text.py`) → ตัดภาพ (`scripts/extract-images.py`)
+- **เว็บแนะนำเมนู**: `index.html` + `recommender.js` อ่าน `data/*.json` · ฐาน **124 เมนู** (Tier 2 = 28)
 - **ตัดสินใจแล้ว**:
   - โครงสร้าง + workflow เหมือน body-xambrain (ดู CLAUDE.md)
   - Framework 3 Layer: S=พฤกษศาสตร์ / U=การใช้ประโยชน์ / T=ภูมิปัญญาไทย
   - Botany Literacy 5 ระดับ: Naming → Identifying → Using → Connecting → Conserving
   - ข้อสอบ 3 ระดับ: L1 จำ/ระบุ, L2 เชื่อมโยง, L3 วินิจฉัย/ประยุกต์
-  - Git local only
+  - taxonomy เริ่มจากแหล่งเปิด (DNP · THP · มหิดล · SciMath) — เล่มสมพรเป็นคิวอัปเกรดเมื่อเข้าถึง ARU ได้
+
+## Last Session (2026-08-09)
+
+- **Textbook queue**: บันทึกเล่ม *การตรวจเอกลักษณ์พืชสมุนไพร : พฤกษอนุกรมวิธาน* (สมพร ภูติยานันต์, จุฬาฯ) ใน [[reference-sources]] — ARU Hibrary ต้อง `@aru.ac.th` (ยังย่อยตรงไม่ได้)
+- **แหล่งเปิด taxonomy**: DNP ชื่อพรรณไม้ · THP · รูปวิธาน/ Siree มหิดล · SciMath Zingiberaceae → log ใน [[reference-sources]]
+- **S8 [[plant-taxonomy]]** scaffold 🌐 + [[glossary/glossary-taxonomy]] ✅ · อัปเดต [[index]] · [[glossary/glossary-index]] · ลิงก์จาก [[plant-morphology]] · [[thai-herbal]] · [[overview]]
+- **ขยาย S8 §7**: เคส THP 5 ชนิด (ขิง · ขมิ้นชัน · กระชาย · ฟ้าทะลายโจร · มะขามป้อม) + sync ศัพท์ glossary
+- **ข้อสอบ**: [[questions/qbank-plant-taxonomy]] 12 ข้อ (L1×5 · L2×4 · L3×3) + [[assessment/master-assessment]]
+- **[[glossary/glossary-herbal]]** ✅ รสยา 9+1 · ธาตุ 4 · พิกัด (บาลี/สันสกฤต + วิธีอ่าน)
+- **เว็บ**: `index.html` แสดงสถานะโหลดจำนวนเมนูใน footer · ยืนยันฐาน 124 เมนู (เป้า 50+ ครบแล้ว)
+- **AI tutor**: PR #5 `feature/ai-tutor-chat` **merged แล้ว** (ไม่ต้องเปิดใหม่)
 
 ## Last Session (2026-07-06)
 
@@ -78,16 +90,23 @@ tags:
 16. ~~ย่อย `สัณฐานวิทยา_ใบ.pdf` 58 ห. + ขยาย S4~~ ✅
 17. ~~ย่อย `ไม้ดอก1.pdf` 29 ห. + ขยาย S5 (certified ฉบับเต็มดอก)~~ ✅
 18. ~~AI ติวเตอร์ RAG ใน Teacher App (Gemini + embeddings + chat panel)~~ ✅
+19. ~~S8 [[plant-taxonomy]] scaffold + [[glossary/glossary-taxonomy]] จากแหล่งเปิด~~ ✅
+20. ~~Textbook queue: สมพร ภูติยานันต์ (ARU Hibrary)~~ ✅
+21. ~~S8 §7 เคส THP 5 ชนิด (ขิง/ขมิ้น/กระชาย/ฟ้าทะลาย/มะขามป้อม)~~ ✅
+22. ~~ข้อสอบ [[questions/qbank-plant-taxonomy]] (12 ข้อ)~~ ✅
+23. ~~[[glossary/glossary-herbal]] (บาลี/สันสกฤต)~~ ✅
+24. ~~เว็บแนะนำเมนู: footer สถานะโหลด · ฐาน 124 เมนู~~ ✅
 
 ## ต้องทำต่อ
 
-1. **PR + merge** `feature/ai-tutor-chat` → master
-2. **เว็บจริง** — index.html เครื่องแนะนำเมนู อ่าน `data/*.json` deploy ให้ประชาชนใช้ (ตรงเป้า "เข้าถึงได้")
-3. ขยายฐานเมนู 50+ + เติมค่า kcal จริง + ตัวกรองโรคประจำตัว/แพ้อาหาร
+1. **PR** branch `content/reference-putiyanan-herbal-id` → master
+2. วิเคราะห์เมนู Tier 2 รอบ 2–5 · เติม kcal · ตัวกรองแพ้อาหาร/โรคประจำตัว
+3. Deploy เว็บแนะนำเมนูให้ประชาชนเข้าถึงได้ (hosting)
 4. (ต่อยอด) node เจาะลึก อายุรเวท / แพทย์แผนจีน เทียบเชิงลึก
-5. **ข้อสอบ 3 ระดับ — พักไว้ก่อน (ผู้ใช้ขอรอข้อมูลเยอะกว่านี้)**
-6. taxonomy (การจำแนกพืช) · glossary-herbal (รสยา/ธาตุ + บาลี/สันสกฤต)
-7. **AI chat ต่อ**: command ออกข้อสอบเฉพาะ · เพิ่ม top-N สำหรับคำถามกว้าง · (ทางเลือก) Gemini Pro
+5. **ข้อสอบ concept อื่น** — ยังพักชุดใหญ่ · มี qbank taxonomy แล้ว
+6. **AI chat ต่อ**: command ออกข้อสอบเฉพาะ · เพิ่ม top-N สำหรับคำถามกว้าง · (ทางเลือก) Gemini Pro
+7. (เมื่อเข้าถึงได้) ย่อยเล่มสมพรจาก Textbook queue
+8. (ทางเลือก) ผลิตข้อสอบพิมพ์จาก qbank taxonomy → `output/`
 
 ## Open Questions
 

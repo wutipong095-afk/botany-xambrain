@@ -2,7 +2,7 @@
 title: "แหล่งอ้างอิงและระดับการรับรอง"
 type: reference
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-08-09
 tags:
   - meta
   - reference
@@ -47,10 +47,21 @@ tags:
 > 📎 TA301 = anchor ยืนยันว่า "โภชนบำบัดตามธาตุเจ้าเรือน" เป็นศาสตร์ในหลักสูตรจริง และวิชาจริง **บูรณาการ** โภชนาการสมัยใหม่กับธาตุ — ตรงกับแนวสะพาน "แคลอรี↔ธาตุไฟ" ใน U2
 > ที่มา: [รายวิชาหลักสูตรแพทย์แผนไทยประยุกต์ — TU Moodle](https://moodle.tu.ac.th/course/index.php?categoryid=1253) · [โภชนบำบัดตามธาตุเจ้าเรือน — TMJ (TCI)](https://he02.tci-thaijo.org/index.php/tmj/article/download/243873/165769)
 
+## Textbook queue (ตำราที่สนใจ — ยังไม่ย่อย)
+
+ตำราวิชาการที่บันทึกไว้สำหรับย่อยภายหลัง · ระดับ **external** · ต้องมี URL เข้าถึง
+
+| วันที่ | หนังสือ | ผู้แต่ง / สำนักพิมพ์ | เข้าถึง | เป้าหมาย |
+|--------|---------|----------------------|--------|----------|
+| 2026-08-09 | *การตรวจเอกลักษณ์พืชสมุนไพร : พฤกษอนุกรมวิธาน* · ISBN `9789740337584` · 867 หน้า · PDF | รศ.สมพร ภูติยานันต์ · สำนักพิมพ์จุฬาลงกรณ์มหาวิทยาลัย | [ARU Hibrary (ebook)](https://elibrary-aru.hibrary.me/rent/ebook/detail/f7344b52-4529-45c3-b745-46a466ee7fb5) · ม.ราชภัฏพระนครศรีอยุธยา · Rent (คิว 1 · ยืม 5 วัน) · สมัครด้วย `@aru.ac.th` | อัปเกรด taxonomy เมื่อเข้าถึงได้ · คู่ขนานกับแหล่งเปิดด้านล่าง |
+
 ## External source log (แหล่งอินเทอร์เน็ตที่ใช้แล้ว)
 
 | วันที่ | หัวข้อ | แหล่ง | ใช้ใน node |
 |--------|--------|-------|-----------|
+| 2026-08-09 | การจำแนกพืช (taxonomy): อันดับอนุกรม · binomial · ชื่อไทย–วิทยาศาสตร์ · ตรวจเอกลักษณ์สมุนไพร | [ชื่อพรรณไม้แห่งประเทศไทย / DNP](https://botany.dnp.go.th/) · [Thai Plant Names](https://botany.dnp.go.th/mplant/about.html) · [THP กรมวิทย์ฯ](https://bdn-thp.dmsc.moph.go.th/home) · [THP 2021 Vol.II](https://bdn.dmsc.moph.go.th/th/detailAll/1080/ebook/136) · [รูปวิธานระบุพืช มหิดล](https://il.mahidol.ac.th/e-media/plants/webcontent3/main.html) · [Siree bioportal มหิดล](https://sireebioportal.mahidol.ac.th/plant/) · [SciMath วงศ์ขิง](https://www.scimath.org/project/item/6355-zingiberaceae) | [[plant-taxonomy]] · [[glossary/glossary-taxonomy]] · [[thai-herbal]] |
+| 2026-08-09 | เคส THP 5 ชนิด: ขิง · ขมิ้นชัน · กระชาย · ฟ้าทะลายโจร · มะขามป้อม (macro/micro + ส่วน crude drug) | [KHING](https://bdn-thp.dmsc.moph.go.th/ebook/qQWcZ3tkpR9gC3q0GT5gMJq0qT5co3uw) · [KHAMIN CHAN](https://bdn-thp.dmsc.moph.go.th/ebook/qQycBUtlpR9gC3q0GT5gMJq0qT5co3uw) · [KRACHAI](https://bdn-thp.dmsc.moph.go.th/ebook/qQMcAUtlpR9gC3q0GT5gMJq0qT5co3uw) · [FA THALAI](https://bdn-thp.dmsc.moph.go.th/ebook/nGu4A3OCoG93qRkhoJIaqUEhnJ94LjWewEb3QWewEb3Q) · [MAKHAM POM](https://bdn-thp.dmsc.moph.go.th/ebook/qQEcZUtkpR9gC3q0GT5gMJq0qT5co3uw) | [[plant-taxonomy]] §7 · [[glossary/glossary-taxonomy]] · [[thai-herbal]] |
+| 2026-08-09 | glossary-herbal: รสยา 9+1 · ธาตุ 4 · พิกัด (บาลี/สันสกฤต + วิธีอ่าน) | [ม.อ. รสยา](https://www.ttmed.psu.ac.th/th/blog/86) · [Ayurvedic Assoc. TH — รสยา](http://ayurvedicassociationofthailand.blogspot.com/2014/04/9.html) · [มหิดล ธาตุ](https://pharmacy.mahidol.ac.th/th/knowledge/article/98/) | [[glossary/glossary-herbal]] · [[herbal-taste-9]] · [[dhatu-4-plants]] · [[herbal-formula]] |
 | 2026-07-03 | ส่วนประกอบ/ชนิดของดอก | สสวท. scimath.org, ทรูปลูกปัญญา | [[flower-morphology]] |
 | 2026-07-03 | ชนิดของผล + เมล็ด | สสวท. scimath.org, ทรูปลูกปัญญา | [[fruit-seed-morphology]] |
 | 2026-07-03 | รสยา 9 รส + สรรพคุณ | คณะการแพทย์แผนไทย ม.อ. (ttmed.psu.ac.th), Poonrada | [[herbal-taste-9]], [[thai-herbal]] |

@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-08-09
 tags:
   - meta
 ---
@@ -36,7 +36,7 @@ Layer S: พฤกษศาสตร์ (Structure)
   ├── สัณฐานวิทยาพืช (plant morphology)
   ├── ส่วนของพืช: ราก ลำต้น ใบ ดอก ผล เมล็ด
   ├── เนื้อเยื่อพืช (plant tissue)
-  └── การจำแนกพืช (taxonomy: วงศ์ สกุล ชนิด)
+  └── การจำแนกพืช ([[plant-taxonomy]]: วงศ์ สกุล ชนิด)
 
 Layer U: การใช้ประโยชน์ (Utilization)
   ├── พืชอาหาร (food plants)

@@ -70,6 +70,7 @@ tags:
 
 ## Leads to
 
+- [[glossary/glossary-herbal]] — คลังศัพท์ธาตุ/รส (บาลี/สันสกฤต)
 - [[herbal-formula]] — พิกัดยา (เบญจกูล/ตรีกฏุก/ตรีผลา)
 - [[food-dhatu-plants]] — อาหารเป็นยา: เลือกผัก–ผลไม้ตามธาตุเจ้าเรือน (Layer U)
 
