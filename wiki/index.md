@@ -53,6 +53,7 @@ tags:
 - [[plant-inthanin-bok]] — อินทนิลบก *Lagerstroemia macrocarpa* (Lythraceae): ใบ/ดอก/ผลใหญ่ · แยกจากตะแบก-เสลา-อินทนิลน้ำ (M6) 🌐
 - [[plant-khao-kae]] — เขาแกะ *Rhynchostylis coelestis* (Orchidaceae): กล้วยไม้อิงอาศัย · รากอากาศ velamen · ใบ distichous · เส้าเกสร (M7) 🌐 — **monocot ตัวแรก**
 - [[plant-khae-ban]] — แคบ้าน *Sesbania grandiflora* (Fabaceae): ดอกถั่วขนาดใหญ่ · เกสร (9)+1 · ใบขนนกปลายคู่ · ปมราก (M8) 🌐 — **เคสตรวจสอบข้อมูลผิดที่ลอกต่อกันมา**
+- [[plant-khun]] — คูน/ราชพฤกษ์ *Cassia fistula* (Fabaceae): **วงศ์ย่อย Caesalpinioideae** ดอกไม่ใช่ดอกถั่ว · ฝักทรงกระบอกไม่แตก · ไม้ประจำชาติ (M9) 🌐 — **คู่เทียบ Caesalpinioideae ↔ Faboideae**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 

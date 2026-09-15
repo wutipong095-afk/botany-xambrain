@@ -242,6 +242,7 @@ tags:
 - [[root-morphology]] (ปมราก · รากแก้ว) · [[stem-morphology]] (เปลือกสะเก็ด · ยางไม้) · [[leaf-morphology]] (ขนนกปลายคู่ · nyctinasty) · [[flower-morphology]] (ดอกถั่ว · (9)+1 · รังไข่เหนือวงกลีบ) · [[fruit-seed-morphology]] (ฝักถั่วแตก 2 ซีก)
 - [[plant-anchan]] — เทียบดอกถั่ว **ใหญ่-ปกติ vs เล็ก-กลับหัว** และใบขนนกปลายคู่ vs ปลายคี่
 - [[plant-thaowan-priang]] — วงศ์ถั่วที่ใช้ **เถา** เป็นเครื่องยา เทียบกับแคที่ใช้ **เปลือกต้น**
+- [[plant-khun]] — คูน/ราชพฤกษ์ วงศ์ถั่ว **วงศ์ย่อยต่างกัน (Caesalpinioideae)** — เทียบดอกถั่ว vs ดอกแผ่กาง · ฝักแตก vs ฝักไม่แตก · ใบขนนกปลายคู่เหมือนกัน
 - [[herbal-taste-9]] · [[dhatu-4-plants]] · [[food-recommender]] — รสฝาด/ขม และเมนูดอกแคตามฤดู
 - [[plant-morphology-comparison]] · [[plant-key-6species]] — จุดขยายชุดเทียบเป็น 8 ชนิด
 
