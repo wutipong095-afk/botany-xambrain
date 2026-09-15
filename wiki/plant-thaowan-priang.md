@@ -96,6 +96,7 @@ tags:
 - [[stem-morphology]] · [[leaf-morphology]] · [[flower-morphology]] · [[fruit-seed-morphology]] · [[plant-tissue]]
 - [[herbal-taste-9]] · [[herbal-formula]] · [[thai-herbal]]
 - [[plant-anchan]] — เทียบวงศ์ถั่วด้วยกัน
+- [[plant-pradu-pa]] — ประดู่ป่า วงศ์ถั่ว Faboideae อีกชนิด (ไม้ต้นใหญ่ · **ฝักมีปีกกระจายด้วยลม** · ยางแดง)
 
 ## ที่มา (External sources) — เข้าถึง 2026-08-20
 

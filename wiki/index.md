@@ -59,6 +59,7 @@ tags:
 - [[plant-maduea-chumphon]] — มะเดื่อชุมพร/อุทุมพร *Ficus racemosa* (Moraceae): **ช่อ syconium (ดอกซ่อนใน)** · cauliflory · แตนมะเดื่อ · ผลรวม fig · อุทุมพรในคติพุทธ (M12) 🌐 — **วงศ์เดียวกับหม่อน · syconium ↔ sorosis**
 - [[plant-supphannika]] — สุพรรณิการ์/ฝ้ายคำ *Cochlospermum regium* (Bixaceae): ใบแฉกฝ่ามือ · ดอกเหลือง 5 กลีบ เกสรมาก **อับเรณูเปิดรู (buzz)** · แคปซูล เมล็ดมีปุยฝ้าย (M13) 🌐
 - [[plant-chang]] — จั๋ง *Rhapis subtilis* (Arecaceae): **ปาล์มแตกกอ · monocot ตัวที่ 2** · ใบรูปพัด · เส้นใบขนาน · ดอกวง 3 · ผล berry (M14) 🌐 — **คู่เทียบ dicot ↔ monocot กับสุพรรณิการ์**
+- [[plant-pradu-pa]] — ประดู่ป่า *Pterocarpus macrocarpus* (Fabaceae/Faboideae): ไม้ต้นใหญ่ · ดอกถั่วเหลือง (9)+1 · **ฝักมีปีกโดยรอบ ไม่แตก กระจายด้วยลม** · **ยางแดง (kino)** · ไม้เศรษฐกิจ (M15) 🌐 — **ปิดกลุ่มดอกถั่ว · ฝักมีปีก**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
