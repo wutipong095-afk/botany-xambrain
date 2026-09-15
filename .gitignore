@@ -1,6 +1,6 @@
-# Obsidian workspace (เปลี่ยนทุกครั้งที่เปิด ไม่ต้อง track)
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+# Obsidian config + stray files (ไม่ต้อง track)
+.obsidian/
+Untitled.base
 
 # OS files
 Thumbs.db

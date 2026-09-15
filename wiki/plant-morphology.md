@@ -4,7 +4,7 @@ id: S1
 type: concept
 layer: structure
 created: 2026-07-03
-updated: 2026-08-09
+updated: 2026-08-20
 sources:
   - source-plant-morphology
   - source-flower-fruit-seed
@@ -43,6 +43,7 @@ tags:
 - [[root-morphology]] · [[stem-morphology]] · [[leaf-morphology]] · [[flower-morphology]] · [[fruit-seed-morphology]]
 - [[plant-tissue]] — ระดับเนื้อเยื่อ (ละเอียดกว่าอวัยวะ)
 - [[plant-taxonomy]] — การจำแนก/ระบุพืช (Naming → Identifying)
+- **Monographs (เคสระดับชนิด)**: [[plant-cannabis]] · [[plant-anchan]] · [[plant-thaowan-priang]] · [[plant-mon]] · [[plant-tabaek]] · [[plant-inthanin-bok]] · [[plant-khao-kae]] · [[plant-khae-ban]] — ใช้ทวนศัพท์ทุกอวัยวะกับพืชจริง
 
 ## Sources
 
