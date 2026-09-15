@@ -66,6 +66,9 @@ tags:
 - [[plant-wan-kap-hoi]] — ว่านกาบหอย *Tradescantia spathacea* (Commelinaceae): **monocot ล้มลุก** · ใบล่างม่วง · ช่อดอกในกาบรูปเรือ · ดอกขาววง 3 (M19) 🌐
 - [[plant-takhrai]] — ตะไคร้ *Cymbopogon citratus* (Poaceae): **หญ้าตัวแรก** · "ต้น" = กาบใบซ้อน · เหง้า · เส้นขนาน ขอบสากคม · citral (M20) 🌐 — **โครงสร้างใบหญ้า**
 - [[plant-mak-khiao]] — หมากเขียว *Ptychosperma macarthurii* (Arecaceae): **ปาล์มใบขนนก (feather)** · monoecious · ผลสุกแดง (M21) 🌐 — **คู่เทียบปาล์มกับจั๋ง (fan) + ตารางกลุ่ม monocot**
+- [[plant-mayom]] — มะยม *Phyllanthus acidus* (Phyllanthaceae): **ใบประกอบเทียม (phyllanthoid)** · cauliflory · ดอกไม่มีกลีบ · ผลฉ่ำน้ำเป็นเหลี่ยมรสเปรี้ยว (M22) 🌐
+- [[plant-mamuang-hao]] — มะม่วงหาวมะนาวโห่/หนามแดง *Carissa carandas* (Apocynaceae): **น้ำยางขาว + หนามง่าม** · ใบตรงข้าม · ดอกหลอดขาว · ผล berry สุกม่วงดำกินได้ (M23) 🌐 — **วงศ์เดียวกับส้มลม**
+- [[plant-farang-khi-nok]] — ฝรั่งขี้นก *Psidium guajava* (Myrtaceae): **เกสรพู่จำนวนมาก** · ใบมีต่อมน้ำมัน+เส้นขอบใน · เปลือกลอก · ผล berry เมล็ดแข็งมาก (M24) 🌐
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
