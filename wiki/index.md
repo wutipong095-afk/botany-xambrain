@@ -53,6 +53,13 @@ tags:
 - [[plant-inthanin-bok]] — อินทนิลบก *Lagerstroemia macrocarpa* (Lythraceae): ใบ/ดอก/ผลใหญ่ · แยกจากตะแบก-เสลา-อินทนิลน้ำ (M6) 🌐
 - [[plant-khao-kae]] — เขาแกะ *Rhynchostylis coelestis* (Orchidaceae): กล้วยไม้อิงอาศัย · รากอากาศ velamen · ใบ distichous · เส้าเกสร (M7) 🌐 — **monocot ตัวแรก**
 - [[plant-khae-ban]] — แคบ้าน *Sesbania grandiflora* (Fabaceae): ดอกถั่วขนาดใหญ่ · เกสร (9)+1 · ใบขนนกปลายคู่ · ปมราก (M8) 🌐 — **เคสตรวจสอบข้อมูลผิดที่ลอกต่อกันมา**
+- [[plant-khun]] — คูน/ราชพฤกษ์ *Cassia fistula* (Fabaceae): **วงศ์ย่อย Caesalpinioideae** ดอกไม่ใช่ดอกถั่ว · ฝักทรงกระบอกไม่แตก · ไม้ประจำชาติ (M9) 🌐 — **คู่เทียบ Caesalpinioideae ↔ Faboideae**
+- [[plant-somlom]] — ส้มลม *Aganonerion polymorphum* (Apocynaceae): **น้ำยางขาว** · ใบเดี่ยวเรียงตรงข้าม · กลีบดอกเชื่อมเป็นหลอด · **ผลฝักคู่ (follicle)** เมล็ดมีปุยปลิวลม · ผักรสเปรี้ยว (M10) 🌐 — **วงศ์ใหม่ตัวแรก · เทียบชนิดผล+การกระจายเมล็ด**
+- [[plant-namjaikhrai]] — น้ำใจใคร่ *Olax psittacorum* (Olacaceae): ไม้พุ่มรอเลื้อย · **ดอกวง 3 (กลีบ 3/เกสร 3) แต่กลีบเลี้ยง 5 รูปถ้วย** · ผลกลมเมล็ดเดียว · หลายชื่อท้องถิ่น (M11) 🌐 — **วงศ์ใหม่ตัวที่สอง · เคส merosity + binomial**
+- [[plant-maduea-chumphon]] — มะเดื่อชุมพร/อุทุมพร *Ficus racemosa* (Moraceae): **ช่อ syconium (ดอกซ่อนใน)** · cauliflory · แตนมะเดื่อ · ผลรวม fig · อุทุมพรในคติพุทธ (M12) 🌐 — **วงศ์เดียวกับหม่อน · syconium ↔ sorosis**
+- [[plant-supphannika]] — สุพรรณิการ์/ฝ้ายคำ *Cochlospermum regium* (Bixaceae): ใบแฉกฝ่ามือ · ดอกเหลือง 5 กลีบ เกสรมาก **อับเรณูเปิดรู (buzz)** · แคปซูล เมล็ดมีปุยฝ้าย (M13) 🌐
+- [[plant-chang]] — จั๋ง *Rhapis subtilis* (Arecaceae): **ปาล์มแตกกอ · monocot ตัวที่ 2** · ใบรูปพัด · เส้นใบขนาน · ดอกวง 3 · ผล berry (M14) 🌐 — **คู่เทียบ dicot ↔ monocot กับสุพรรณิการ์**
+- [[plant-pradu-pa]] — ประดู่ป่า *Pterocarpus macrocarpus* (Fabaceae/Faboideae): ไม้ต้นใหญ่ · ดอกถั่วเหลือง (9)+1 · **ฝักมีปีกโดยรอบ ไม่แตก กระจายด้วยลม** · **ยางแดง (kino)** · ไม้เศรษฐกิจ (M15) 🌐 — **ปิดกลุ่มดอกถั่ว · ฝักมีปีก**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 

@@ -142,6 +142,7 @@ tags:
 
 - [[root-morphology]] (รากอากาศ · velamen) · [[leaf-morphology]] (distichous · conduplicate · เส้นใบขนาน) · [[flower-morphology]] (ช่อกระจะ · zygomorphic · resupinate · เส้าเกสร) · [[fruit-seed-morphology]] (แคปซูล · เมล็ดฝุ่น)
 - [[plant-anchan]] — เทียบกลไก **resupinate** ระหว่างดอกถั่วกับดอกกล้วยไม้
+- [[plant-chang]] — **monocot อีกชนิด (ปาล์มจั๋ง)** → เทียบ orchid vs palm ในกลุ่มใบเลี้ยงเดี่ยว (ดอกวง 3 · เส้นใบขนาน)
 - [[plant-classification-chart]] · [[plant-key-6species]] — จุดขยายเป็นชุดเทียบ monocot vs dicot
 
 ## ที่มา (External sources) — เข้าถึง 2026-08-22
