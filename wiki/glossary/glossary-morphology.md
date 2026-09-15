@@ -3,7 +3,7 @@ title: "คลังคำศัพท์: สัณฐานวิทยาพ�
 type: glossary
 category: morphology
 created: 2026-07-03
-updated: 2026-07-05
+updated: 2026-08-23
 source_type: mixed
 tags:
   - glossary
@@ -24,6 +24,8 @@ tags:
 | รากแขนง | Lateral root | L. *latus* = ด้านข้าง |
 | รากพิเศษ | Adventitious root | L. *adventicius* = มาจากภายนอก |
 | รากอากาศ | Aerial root | Gr. *aer* = อากาศ |
+| ปมราก | Root nodule | L. *nodulus* = ปมเล็ก — ปมไรโซเบียมตรึงไนโตรเจนของวงศ์ถั่ว [[plant-khae-ban]] · [[plant-anchan]] |
+| เนื้อเยื่อซับน้ำหุ้มรากอากาศ | Velamen | L. *velamen* = ผ้าคลุม — [[plant-khao-kae]] |
 
 ## ลำต้น (Stem) → [[stem-morphology]]
 
@@ -39,6 +41,10 @@ tags:
 | คอร์ม | Corm | Gr. *kormos* = ลำต้น |
 | ไหล | Stolon | L. *stolo* = หน่อ |
 | มือพัน | Tendril | L. *tendere* = ยืด |
+| ช่องอากาศที่เปลือก | Lenticel | L. *lens* = เลนส์ (รูปร่างคล้ายเมล็ดถั่ว) |
+| พูพอน | Buttress | โคนต้นแผ่เป็นครีบค้ำ — เช่น [[plant-inthanin-bok]] |
+| ไม้เถาเนื้อแข็ง | Liana / Woody climber | เทียบเถาล้มลุก — [[plant-thaowan-priang]] vs [[plant-anchan]] |
+| เลื้อยพันด้วยลำต้น | Twining climber | ไม่ใช้มือพัน — เช่นอัญชัน |
 
 ## ใบ (Leaf) → [[leaf-morphology]]
 
@@ -53,6 +59,15 @@ tags:
 | การเรียงใบ | Phyllotaxy | Gr. *phyllon* ใบ + *taxis* การจัดเรียง |
 | แบบขนนก | Pinnate | L. *pinna* = ขนนก |
 | แบบนิ้วมือ | Palmate | L. *palma* = ฝ่ามือ |
+| ขนนกปลายคี่ | Odd-pinnate / Imparipinnate | L. *impar* = ไม่เป็นคู่ — [[plant-anchan]] · [[plant-thaowan-priang]] |
+| ขนนกปลายคู่ | Even-pinnate / Paripinnate | L. *par* = คู่ — ไม่มีใบย่อยปลายเดี่ยว [[plant-khae-ban]] |
+| การหุบใบเวลากลางคืน | Nyctinasty | Gr. *nyx* กลางคืน + *nastos* กด — ลักษณะร่วมวงศ์ถั่ว |
+| หูใบ | Stipule | L. *stipula* = ฟาง |
+| หูใบย่อย | Stipel | หูใบที่โคนใบย่อยของใบประกอบ |
+| เส้นใบออกจากโคน 3 เส้น | Trinerved | L. *tri* สาม + *nervus* เส้น — จุดสังเกตใบหม่อน |
+| ขน/รยางค์ผิว | Trichome | Gr. *trichoma* = เส้นผม — ดู [[plant-cannabis]] §8 |
+| ขนมีต่อม | Glandular trichome | สร้างและสะสมสารทุติยภูมิ |
+| ขนมีผลึกหินปูน | Cystolith hair | Gr. *kystis* ถุง + *lithos* หิน |
 
 ### ปลายใบ / โคนใบ / ขอบใบ
 
@@ -108,6 +123,20 @@ tags:
 | การผสมเกสร | Pollination | L. *pollen* = ผง/ละออง |
 | แยกเพศร่วมต้น | Monoecious | Gr. *monos* (เดียว) + *oikos* (บ้าน) |
 | แยกเพศต่างต้น | Dioecious | Gr. *di* (สอง) + *oikos* (บ้าน) |
+| ใบประดับ | Bract | L. *bractea* = แผ่นบาง — รองรับดอก/ช่อดอก |
+| ช่อกระจะ | Raceme | L. *racemus* = พวงองุ่น |
+| ช่อแยกแขนง | Panicle | L. *panicula* = พู่เล็ก |
+| ดอกไม่มีกลีบดอก | Apetalous | Gr. *a* (ไม่มี) + *petalon* |
+| ผสมเกสรโดยลม | Anemophily | Gr. *anemos* = ลม |
+| ดอกรูปดอกถั่ว | Papilionaceous | L. *papilio* = ผีเสื้อ — วงศ์ย่อย Faboideae |
+| ดอกกลับหัว | Resupinate | L. *resupinatus* = พลิกหงาย — เช่นอัญชัน |
+| ฐานรองดอกรูปถ้วย | Hypanthium | Gr. *hypo* ใต้ + *anthos* ดอก — วงศ์ Lythraceae |
+| เกสรเพศผู้เชื่อม 9+1 | Diadelphous | Gr. *di* สอง + *adelphos* พี่น้อง — [[plant-khae-ban]] §6 |
+| กลีบกลาง (ดอกถั่ว) | Standard / Vexillum | L. *vexillum* = ธง — กลีบบนสุดที่ใหญ่ที่สุด |
+| กลีบคู่ข้าง (ดอกถั่ว) | Wing / Ala | L. *ala* = ปีก |
+| กลีบกระโดง (ดอกถั่ว) | Keel / Carina | L. *carina* = ท้องเรือ — กลีบคู่ล่างเชื่อมกันห่อเกสร |
+| กลีบเลี้ยงรูประฆัง | Campanulate calyx | L. *campana* = ระฆัง |
+| ผสมเกสรโดยนก | Ornithophily | Gr. *ornis* นก + *philein* รัก — [[plant-khae-ban]] |
 
 ## ผลและเมล็ด (Fruit & Seed) → [[fruit-seed-morphology]]
 
@@ -122,9 +151,14 @@ tags:
 | รากอ่อน | Radicle | L. *radicula* = รากเล็ก |
 | ยอดอ่อน | Plumule | L. *plumula* = ขนนกเล็ก |
 | ใบเลี้ยง | Cotyledon | Gr. *kotyledon* = แอ่ง |
+| ผลแห้งเมล็ดล่อน | Achene | Gr. *a* ไม่ + *chainein* อ้า (ไม่แตก) — ผลกัญชา |
+| ผลแห้งแตก | Capsule | L. *capsula* = กล่องเล็ก — ผลตะแบก/อินทนิล |
+| ฝักแบบถั่ว | Legume / Pod | L. *legumen* = ถั่ว |
+| ผลรวมแบบหม่อน | Sorosis | Gr. *soros* = กอง — [[plant-mon]] |
+| เมล็ดมีปีก | Winged seed | กระจายโดยลม (anemochory) |
 | เอนโดสเปิร์ม | Endosperm | Gr. *endon* ภายใน + *sperma* เมล็ด |
 
 ## ดูเพิ่ม
 
 - [[glossary-index]] — สารบัญคำศัพท์
-- คำศัพท์รสยา/ธาตุ (บาลี/สันสกฤต) → จะรวมใน glossary-herbal (ยังไม่สร้าง)
+- [[glossary-herbal]] — คำศัพท์รสยา/ธาตุ/พิกัด (บาลี-สันสกฤต)

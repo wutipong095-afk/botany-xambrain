@@ -4,7 +4,7 @@ id: T0
 type: concept
 layer: thai-traditional
 created: 2026-07-03
-updated: 2026-08-09
+updated: 2026-08-20
 prerequisites:
   - plant-morphology
   - plant-taxonomy
@@ -59,6 +59,7 @@ Layer S (ส่วนพืช)  →  Layer U (ส่วนที่ใช้)  
 - [[dhatu-4-plants]] — ธาตุ 4 กับการเลือกสมุนไพร (+ เบญจกูล)
 - [[herbal-formula]] — ตำรับยา (ตรีกฏุก/ตรีผลา/เบญจกูล)
 - [[food-dhatu-plants]] — อาหารตามธาตุ: ผัก–ผลไม้ รสตามธาตุเจ้าเรือน (Layer U)
+- **Monographs สมุนไพรรายชนิด**: [[plant-cannabis]] (รสเมาเบื่อ · 16 ตำรับ) · [[plant-thaowan-priang]] (รสเฝื่อนเอียน · บัญชียาหลัก) · [[plant-mon]] (ใบรสจืดเย็น) · [[plant-anchan]] · [[plant-khae-ban]] (ดอกแก้ไข้หัวลม · เปลือกรสฝาด)
 
 ## ที่มา (External sources) — เข้าถึง 2026-07-03
 

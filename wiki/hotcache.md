@@ -2,7 +2,7 @@
 title: "Hotcache"
 type: meta
 created: 2026-07-03
-updated: 2026-08-09
+updated: 2026-08-23
 tags:
   - meta
 ---
@@ -11,10 +11,10 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: **การทำสมองที่สอง** — Layer S (+S8 taxonomy scaffold) · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
+- **Phase**: **การทำสมองที่สอง** — Layer S (+S8 taxonomy · +M1–M8 monographs รายชนิด) · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
 - **แกนความรู้ (ครูเฮนรี่)**: AX1 "อาหาร = สมดุล" → [[food-as-balance]] · AX2 "เคลื่อนไหว + ความสุขจริง vs หลอก" → [[human-unnatural-life]]
 - **ทิศทางใหม่**: ทำเป็น "ฐานข้อมูล+เครื่องแนะนำเมนู" สำหรับประชาชน (ป้อน BMI+อาการ→เมนู) · ข้อมูลอยู่ `data/*.json` · เฟสถัดไป = เว็บ prototype
-- **เป้าหมายถัดไป**: วิเคราะห์เมนู Tier 2 รอบถัดไป · เติม kcal · ตัวกรองแพ้อาหาร · ผลิตข้อสอบพิมพ์จาก qbank taxonomy (ถ้าต้องการ) · (เมื่อเข้าถึงได้) ย่อยเล่มสมพร
+- **เป้าหมายถัดไป**: ทำข้อสอบ qbank ให้ monographs M1–M8 · วิเคราะห์เมนู Tier 2 รอบถัดไป · เติม kcal · ตัวกรองแพ้อาหาร · ผลิตข้อสอบพิมพ์จาก qbank taxonomy (ถ้าต้องการ) · (เมื่อเข้าถึงได้) ย่อยเล่มสมพร
 - **ระบบอ้างอิง**: มี [[reference-sources]] แยก certified ✅ / external 🌐 — external ต้องมี URL เสมอ · มี **Textbook queue**
 - **Pipeline ย่อยความรู้**: [[knowledge-extraction-pipeline]] — ย่อย → ตรวจอักษร (`scripts/check-text.py`) → ตัดภาพ (`scripts/extract-images.py`)
 - **เว็บแนะนำเมนู**: `index.html` + `recommender.js` อ่าน `data/*.json` · ฐาน **124 เมนู** (Tier 2 = 28)
@@ -24,6 +24,32 @@ tags:
   - Botany Literacy 5 ระดับ: Naming → Identifying → Using → Connecting → Conserving
   - ข้อสอบ 3 ระดับ: L1 จำ/ระบุ, L2 เชื่อมโยง, L3 วินิจฉัย/ประยุกต์
   - taxonomy เริ่มจากแหล่งเปิด (DNP · THP · มหิดล · SciMath) — เล่มสมพรเป็นคิวอัปเกรดเมื่อเข้าถึง ARU ได้
+
+## Last Session (2026-08-23)
+
+- **M8 [[plant-khae-ban]]** แคบ้าน *Sesbania grandiflora* (Fabaceae) — โครงเดียวกับ M1–M7: **§0 ตารางข้อมูล (data sheet) 50 แถว** → Naming → ราก/ลำต้น/ใบ/ดอก/ผล → key แยกจากแคนา-โสน → Layer U/T → Misconceptions → ใบงานภาคสนาม
+  - **จุดเด่น**: ดอกถั่วใหญ่ที่สุดในพืชอาหารไทย (ผ่าดูกลีบ+เกสรด้วยตาเปล่า) · **เกสรเพศผู้ 10 อัน (9)+1 diadelphous** · ใบขนนก **ปลายคู่ (paripinnate)** ตรงข้ามอัญชัน/เถาวัลย์เปรียงที่ปลายคี่ · **ปมรากตรึงไนโตรเจน** · nyctinasty
+  - **เคสตรวจสอบข้อมูล**: เอกสารไทยที่ลอกต่อกันมาระบุ "เกสรเพศผู้ 60 อัน" (จริง = 10) และ "ฝักยาว 8–15 ซม." (ฝักแก่จริง 30–50 ซม. · 8–15 ซม. = ฝักอ่อนที่เก็บกิน) → ใช้สอน Botany Literacy ระดับ Identifying
+  - **สะพาน S→U→T**: เกสรที่แม่ครัวเด็ดทิ้งก่อนแกงส้ม = androecium+gynoecium ที่ขม · ฤดูออกดอก (ปลายฝน–ต้นหนาว) ตรงฤดู **ไข้หัวลม** ที่ใช้ดอกแคแก้ · เปลือกรสฝาด (แทนนิน) แก้ท้องร่วง
+  - **หมายเหตุ taxonomy**: PAPILIONACEAE = ชื่อเดิม → ปัจจุบัน Fabaceae วงศ์ย่อย Faboideae · ผู้ตั้งชื่อระบุไม่ตรงกัน (Poir./Desv./Pers.) *ยังไม่ยืนยัน*
+- **Glossary**: +9 ศัพท์เข้า [[glossary/glossary-morphology]] (ปมราก · velamen · paripinnate · nyctinasty · standard/vexillum · wing · keel · campanulate · ornithophily)
+- **อัปเดต**: [[index]] (M8) · [[reference-sources]] (+1 แถว external log 9 แหล่ง) · ลิงก์จาก [[plant-morphology]] · [[thai-herbal]]
+- **ยังไม่ทำ**: qbank ของ M1–M8 · เพิ่มแคบ้านเข้า [[plant-morphology-comparison]] / [[plant-key-6species]] (จะกลายเป็น 8 ชนิด) · เชื่อมเมนูดอกแค (แกงส้มดอกแค) เข้า `data/menu-db.json`
+
+## Last Session (2026-08-20)
+
+- **เปิดหมวดใหม่: Plant monographs (เคสระดับชนิด M1–M6)** — โครงเดียวกันทุกโหนด: Naming → ราก/ลำต้น/ใบ/ดอก/ผล → Layer U/T → Misconceptions → ที่มา (external มี URL ครบ)
+  - **M1 [[plant-cannabis]]** กัญชา — ใบประกอบนิ้วมือ · phyllotaxy เปลี่ยนตามตำแหน่ง · dioecious ผสมโดยลม · achene · **ไตรโครม 3 แบบ** (สะพาน S→U→กฎหมาย) · sativa/indica/ruderalis · กัญชา vs กัญชง · ประกาศ สธ. สมุนไพรควบคุม (กัญชา) พ.ศ. 2568 · 16 ตำรับที่มีกัญชาปรุงผสม
+  - **M2 [[plant-anchan]]** อัญชัน — ขนนกปลายคี่ · ดอกรูปดอกถั่ว **resupinate** · ฝักแตก 2 แนว · ternatin/pH · ข้อควรระวังกับยาต้านเกล็ดเลือด
+  - **M3 [[plant-thaowan-priang]]** เถาวัลย์เปรียง — ไม้เถาเนื้อแข็ง · เครื่องยาจาก**เถา** · รสเฝื่อนเอียน · บัญชียาหลัก · หลักฐานเทียบ diclofenac/ibuprofen
+  - **M4 [[plant-mon]]** หม่อน — ยางขาว (Moraceae) · ใบ trinerved + หลายรูป · ช่อหางกระรอก · **ผลรวม sorosis** · ใบรสจืดเย็น
+  - **M5 [[plant-tabaek]]** ตะแบกนา · **M6 [[plant-inthanin-bok]]** อินทนิลบก — ใช้ **เปลือกต้น** เป็นลักษณะวินิจฉัย + ตารางแยก 4 ชนิด (ตะแบก · เสลา · อินทนิลน้ำ · อินทนิลบก)
+- **Glossary**: เติม 26 ศัพท์เข้า [[glossary/glossary-morphology]] (trichome · bract · raceme/panicle · papilionaceous · resupinate · hypanthium · achene · capsule · legume · sorosis · buttress · lenticel ฯลฯ) + แก้ลิงก์ glossary-herbal ที่เขียนว่า "ยังไม่สร้าง"
+- **อัปเดต**: [[index]] (หมวด Plant monographs) · [[reference-sources]] (+6 แถว external log) · ลิงก์จาก [[plant-morphology]] · [[thai-herbal]]
+- **ใบงาน 6 ชนิด**: [[plant-morphology-comparison]] (M0 ตารางสรุป) · [[plant-key-6species]] (K1 รูปวิธาน) · [[plant-classification-chart]] (K2 ผังอนุกรมวิธาน)
+- **ผังกล่อง-ลูกศร**: `scripts/make-plant-charts.py` สร้าง SVG → แปลงเป็น PNG ด้วย LibreOffice → `assets/charts/` (ใช้ในโหนดและใน .docx)
+- **เอกสารส่ง**: `output/worksheet-plant-morphology-6species.docx` (11 หน้า A4 แนวนอน: ตาราง · รูปวิธาน · ผังจำแนก · ผังอนุกรมวิธาน) สร้างด้วย docx-js
+- **ยังไม่ทำ**: qbank ของ M1–M6 · ตัดภาพประกอบ (ยังไม่มีไฟล์ใน `raw/`) · เชื่อม M4 หม่อนเข้าฐานเมนู
 
 ## Last Session (2026-08-09)
 

@@ -2,7 +2,7 @@
 title: "Index"
 type: overview
 created: 2026-07-03
-updated: 2026-08-09
+updated: 2026-08-20
 tags:
   - meta
 ---
@@ -40,6 +40,19 @@ tags:
   - [[fruit-seed-morphology]] — ผลและเมล็ด (S6) ✅🌐 mixed
 - [[plant-tissue]] — เนื้อเยื่อพืช: เจริญ/ถาวร, xylem/phloem (S7) 🌐 external
 - [[plant-taxonomy]] — การจำแนกพืช: อันดับอนุกรม · binomial · เคส THP 5 ชนิด (S8) 🌐 external
+
+## Plant monographs — เคสระดับชนิด (Species cases)
+
+- [[plant-morphology-comparison]] — **ตารางสรุปสัณฐานวิทยา 6 ชนิด** (วิสัย/ใบ/ดอก/ผล) แบบใบงาน (M0) 🌐
+- [[plant-key-6species]] — **รูปวิธาน (dichotomous key) 6 ชนิด** + แผนผังการแยก (K1) 🌐
+- [[plant-cannabis]] — กัญชา *Cannabis sativa* (Cannabaceae): ใบประกอบนิ้วมือ · ดอกแยกเพศต่างต้น · achene · ไตรโครม (M1) 🌐
+- [[plant-anchan]] — อัญชัน *Clitoria ternatea* (Fabaceae): ดอกรูปดอกถั่วแบบกลับหัว · ฝัก · สีจาก anthocyanin (M2) 🌐
+- [[plant-thaowan-priang]] — เถาวัลย์เปรียง *Derris scandens* (Fabaceae): ไม้เถาเนื้อแข็ง · เครื่องยาจากเถา · บัญชียาหลัก (M3) 🌐
+- [[plant-mon]] — หม่อน *Morus alba* (Moraceae): ยางขาว · ช่อหางกระรอก · ผลรวม sorosis (M4) 🌐
+- [[plant-tabaek]] — ตะแบกนา *Lagerstroemia floribunda* (Lythraceae): เปลือกลอกเป็นแผ่น · แคปซูล 6 พู (M5) 🌐
+- [[plant-inthanin-bok]] — อินทนิลบก *Lagerstroemia macrocarpa* (Lythraceae): ใบ/ดอก/ผลใหญ่ · แยกจากตะแบก-เสลา-อินทนิลน้ำ (M6) 🌐
+- [[plant-khao-kae]] — เขาแกะ *Rhynchostylis coelestis* (Orchidaceae): กล้วยไม้อิงอาศัย · รากอากาศ velamen · ใบ distichous · เส้าเกสร (M7) 🌐 — **monocot ตัวแรก**
+- [[plant-khae-ban]] — แคบ้าน *Sesbania grandiflora* (Fabaceae): ดอกถั่วขนาดใหญ่ · เกสร (9)+1 · ใบขนนกปลายคู่ · ปมราก (M8) 🌐 — **เคสตรวจสอบข้อมูลผิดที่ลอกต่อกันมา**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
