@@ -69,6 +69,9 @@ tags:
 - [[plant-mayom]] — มะยม *Phyllanthus acidus* (Phyllanthaceae): **ใบประกอบเทียม (phyllanthoid)** · cauliflory · ดอกไม่มีกลีบ · ผลฉ่ำน้ำเป็นเหลี่ยมรสเปรี้ยว (M22) 🌐
 - [[plant-mamuang-hao]] — มะม่วงหาวมะนาวโห่/หนามแดง *Carissa carandas* (Apocynaceae): **น้ำยางขาว + หนามง่าม** · ใบตรงข้าม · ดอกหลอดขาว · ผล berry สุกม่วงดำกินได้ (M23) 🌐 — **วงศ์เดียวกับส้มลม**
 - [[plant-farang-khi-nok]] — ฝรั่งขี้นก *Psidium guajava* (Myrtaceae): **เกสรพู่จำนวนมาก** · ใบมีต่อมน้ำมัน+เส้นขอบใน · เปลือกลอก · ผล berry เมล็ดแข็งมาก (M24) 🌐
+- [[plant-donya]] — ดอนญ่า *Mussaenda* (Rubiaceae): **กลีบเลี้ยงขยายเป็นแผ่นสีสด (petaloid sepal)** · หูใบระหว่างก้านใบ · ดอกจริงเล็กเหลืองหลอด (M25) 🌐
+- [[plant-yo-pa]] — ยอป่า *Morinda coreia* (Rubiaceae): ช่อดอกก้อนกลม → **ผลรวม syncarp** · หูใบระหว่างก้านใบ · รากให้สีย้อม (M26) 🌐 — **ผลรวมแบบที่ 3**
+- [[plant-sai-tan]] — ไส้ตัน *Aganosma marginata* (Apocynaceae): ไม้เถายางขาว · ใบตรงข้าม · ดอกขาวหลอด · follicle คู่ (M27) 🌐 — **ปิดกลุ่ม Apocynaceae 3 วิสัย**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 

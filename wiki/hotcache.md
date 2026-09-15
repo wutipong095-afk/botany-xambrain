@@ -11,7 +11,7 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: **การทำสมองที่สอง** — Layer S (+S8 taxonomy · +M1–M24 monographs รายชนิด) · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
+- **Phase**: **การทำสมองที่สอง** — Layer S (+S8 taxonomy · +M1–M27 monographs รายชนิด · **ครบชุด 21 ชนิดนักเรียน**) · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
 - **แกนความรู้ (ครูเฮนรี่)**: AX1 "อาหาร = สมดุล" → [[food-as-balance]] · AX2 "เคลื่อนไหว + ความสุขจริง vs หลอก" → [[human-unnatural-life]]
 - **ทิศทางใหม่**: ทำเป็น "ฐานข้อมูล+เครื่องแนะนำเมนู" สำหรับประชาชน (ป้อน BMI+อาการ→เมนู) · ข้อมูลอยู่ `data/*.json` · เฟสถัดไป = เว็บ prototype
 - **เป้าหมายถัดไป**: ทำข้อสอบ qbank ให้ monographs M1–M8 · วิเคราะห์เมนู Tier 2 รอบถัดไป · เติม kcal · ตัวกรองแพ้อาหาร · ผลิตข้อสอบพิมพ์จาก qbank taxonomy (ถ้าต้องการ) · (เมื่อเข้าถึงได้) ย่อยเล่มสมพร
@@ -64,7 +64,13 @@ tags:
     - **M23 [[plant-mamuang-hao]]** มะม่วงหาวมะนาวโห่ *Carissa carandas* (Apocynaceae) — **วงศ์เดียวกับส้มลม** · ยางขาว+หนามง่าม · berry กินได้
     - **M24 [[plant-farang-khi-nok]]** ฝรั่งขี้นก *Psidium guajava* (**Myrtaceae**) — เกสรพู่มาก · ใบมีต่อมน้ำมัน+เส้นขอบใน · เปลือกลอก (เทียบตะแบก)
     - **อัปเดต**: [[index]] · [[reference-sources]] (+3) · back-link จาก [[plant-somlom]] · [[plant-tabaek]]
-  - **คิวชุดสุดท้าย (4 ชนิด · ชื่อกำกวม ต้องค้นยืนยันชนิดก่อน)**: ดอนญ่า · เถาแกะ · ไส้ตัน · ยอป่า
+  - **ชุดที่ 4 (สุดท้าย · ชื่อกำกวม) — เสร็จ 3 ชนิด**:
+    - **M25 [[plant-donya]]** ดอนญ่า *Mussaenda* (**Rubiaceae**) — **กลีบเลี้ยงขยายเป็นแผ่นสีสด (petaloid sepal)** · หูใบระหว่างก้านใบ
+    - **M26 [[plant-yo-pa]]** ยอป่า *Morinda coreia* (Rubiaceae) — ช่อก้อนกลม → **ผลรวม syncarp (แบบที่ 3)** · รากให้สีย้อม
+    - **M27 [[plant-sai-tan]]** ไส้ตัน *Aganosma marginata* (Apocynaceae) — ไม้เถายางขาว · follicle คู่ · **ปิดกลุ่ม Apocynaceae 3 วิสัย** (ส้มลม/มะม่วงหาวฯ/ไส้ตัน)
+    - **อัปเดต**: [[index]] · [[reference-sources]] (+3) · back-link จาก [[plant-somlom]] · [[plant-maduea-chumphon]]
+  - **"เถาแกะ"** = **เขาแกะ (กล้วยไม้) = [[plant-khao-kae]] (M7)** ที่ทำแล้ว (ผู้ใช้ยืนยัน) → นับเป็นซ้ำ ไม่ต้องทำใหม่
+- **✅ ครบทั้ง 21 ชนิดจากใบงานนักเรียน** — 7 ชนิดจาก PDF (M9–M15, PR #10 merged) + 12 ชนิดแหล่งเปิด (M16–M27) + 2 ซ้ำ (แค=M8 · เถาแกะ=M7 เขาแกะ) · branch `content/plant-profiles-opensource` (4 commits) พร้อมเปิด PR
 - **หมายเหตุ**: "แค" (กลุ่ม 1) น่าจะซ้ำกับ [[plant-khae-ban]] (M8) — เหลือชนิดใหม่จริง ~20
 
 ## Last Session (2026-08-23)

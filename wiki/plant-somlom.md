@@ -167,6 +167,7 @@ tags:
 - [[plant-mon]] — พืชมีน้ำยางขาวอีกชนิด (Moraceae) เทียบกับ Apocynaceae
 - [[plant-namjaikhrai]] — คู่เทียบไม้เถา/พุ่ม ใบเดี่ยว: ส้มลม **มียาง/ใบตรงข้าม** ↔ น้ำใจใคร่ **ไม่มียาง/ใบสลับ**
 - [[plant-mamuang-hao]] — **คู่เทียบวงศ์เดียวกัน (Apocynaceae)**: ยางขาว+ใบตรงข้าม+ดอกหลอดเหมือนกัน · ต่างวิสัย (เถา ↔ พุ่มมีหนาม) และผล (follicle ↔ berry)
+- [[plant-sai-tan]] — Apocynaceae ไม้เถายางขาวอีกชนิด (follicle คู่เหมือนส้มลม · ดอกขาว)
 - [[herbal-taste-9]] · [[food-dhatu-plants]] · [[food-recommender]] — ผักรสเปรี้ยวในเมนูต้มเปรี้ยว
 
 ## ที่มา (Sources) — เข้าถึง 2026-09-15
