@@ -115,6 +115,7 @@ tags:
 
 - [[leaf-morphology]] · [[flower-morphology]] · [[fruit-seed-morphology]] (ผลรวม) · [[stem-morphology]]
 - [[plant-cannabis]] — เทียบพืชอันดับ Rosales ที่ดอกลดรูปและผสมโดยลม
+- [[plant-maduea-chumphon]] — **คู่เทียบวงศ์เดียวกัน (Moraceae)**: ยางขาว + ผลรวมเหมือนกัน แต่ **sorosis (หม่อน) ↔ syconium (มะเดื่อ)**
 - [[thai-herbal]] · [[herbal-taste-9]] · [[dhatu-4-plants]] · [[food-dhatu-plants]]
 
 ## ที่มา (External sources) — เข้าถึง 2026-08-20

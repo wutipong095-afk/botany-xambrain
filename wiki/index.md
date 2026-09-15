@@ -56,6 +56,7 @@ tags:
 - [[plant-khun]] — คูน/ราชพฤกษ์ *Cassia fistula* (Fabaceae): **วงศ์ย่อย Caesalpinioideae** ดอกไม่ใช่ดอกถั่ว · ฝักทรงกระบอกไม่แตก · ไม้ประจำชาติ (M9) 🌐 — **คู่เทียบ Caesalpinioideae ↔ Faboideae**
 - [[plant-somlom]] — ส้มลม *Aganonerion polymorphum* (Apocynaceae): **น้ำยางขาว** · ใบเดี่ยวเรียงตรงข้าม · กลีบดอกเชื่อมเป็นหลอด · **ผลฝักคู่ (follicle)** เมล็ดมีปุยปลิวลม · ผักรสเปรี้ยว (M10) 🌐 — **วงศ์ใหม่ตัวแรก · เทียบชนิดผล+การกระจายเมล็ด**
 - [[plant-namjaikhrai]] — น้ำใจใคร่ *Olax psittacorum* (Olacaceae): ไม้พุ่มรอเลื้อย · **ดอกวง 3 (กลีบ 3/เกสร 3) แต่กลีบเลี้ยง 5 รูปถ้วย** · ผลกลมเมล็ดเดียว · หลายชื่อท้องถิ่น (M11) 🌐 — **วงศ์ใหม่ตัวที่สอง · เคส merosity + binomial**
+- [[plant-maduea-chumphon]] — มะเดื่อชุมพร/อุทุมพร *Ficus racemosa* (Moraceae): **ช่อ syconium (ดอกซ่อนใน)** · cauliflory · แตนมะเดื่อ · ผลรวม fig · อุทุมพรในคติพุทธ (M12) 🌐 — **วงศ์เดียวกับหม่อน · syconium ↔ sorosis**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
