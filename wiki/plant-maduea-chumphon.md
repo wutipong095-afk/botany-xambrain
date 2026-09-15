@@ -155,6 +155,7 @@ tags:
 
 - [[flower-morphology]] (syconium · cauliflory · ดอกแยกเพศ) · [[fruit-seed-morphology]] (ผลรวม · fig) · [[leaf-morphology]] (หูใบสกุล Ficus) · [[stem-morphology]] (น้ำยางขาว)
 - [[plant-mon]] — **คู่เทียบวงศ์เดียวกัน (Moraceae)**: ยางขาวเหมือนกัน · ผลรวม syconium ↔ sorosis
+- [[plant-yo-pa]] — ผลรวมอีกแบบ: **syncarp** (ยอป่า) ↔ syconium (มะเดื่อ)
 - [[plant-somlom]] — พืชมีน้ำยางขาวต่างวงศ์ (Apocynaceae) → ยางขาวข้ามวงศ์
 - [[herbal-taste-9]] · [[food-dhatu-plants]] · [[food-recommender]] — ผล/ยอดมะเดื่อเป็นผัก · รสฝาดสมาน
 

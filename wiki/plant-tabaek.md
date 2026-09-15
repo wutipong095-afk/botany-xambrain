@@ -95,6 +95,7 @@ tags:
 ## Leads to
 
 - [[plant-inthanin-bok]] — ชนิดคู่เทียบในสกุลเดียวกัน
+- [[plant-farang-khi-nok]] — เทียบ **เปลือกลอกเป็นแผ่น** ข้ามวงศ์ (ตะแบก Lythraceae ↔ ฝรั่ง Myrtaceae)
 - [[stem-morphology]] (เปลือกต้นเป็นลักษณะวินิจฉัย) · [[leaf-morphology]] · [[flower-morphology]] · [[fruit-seed-morphology]]
 
 ## ที่มา (External sources) — เข้าถึง 2026-08-20

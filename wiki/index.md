@@ -60,6 +60,18 @@ tags:
 - [[plant-supphannika]] — สุพรรณิการ์/ฝ้ายคำ *Cochlospermum regium* (Bixaceae): ใบแฉกฝ่ามือ · ดอกเหลือง 5 กลีบ เกสรมาก **อับเรณูเปิดรู (buzz)** · แคปซูล เมล็ดมีปุยฝ้าย (M13) 🌐
 - [[plant-chang]] — จั๋ง *Rhapis subtilis* (Arecaceae): **ปาล์มแตกกอ · monocot ตัวที่ 2** · ใบรูปพัด · เส้นใบขนาน · ดอกวง 3 · ผล berry (M14) 🌐 — **คู่เทียบ dicot ↔ monocot กับสุพรรณิการ์**
 - [[plant-pradu-pa]] — ประดู่ป่า *Pterocarpus macrocarpus* (Fabaceae/Faboideae): ไม้ต้นใหญ่ · ดอกถั่วเหลือง (9)+1 · **ฝักมีปีกโดยรอบ ไม่แตก กระจายด้วยลม** · **ยางแดง (kino)** · ไม้เศรษฐกิจ (M15) 🌐 — **ปิดกลุ่มดอกถั่ว · ฝักมีปีก**
+- [[plant-kanlapaphruek]] — กัลปพฤกษ์ *Cassia bakeriana* (Fabaceae/Caesalpinioideae): สกุล *Cassia* เดียวกับคูน · **ดอกชมพู** · ฝักทรงกระบอกไม่แตก (M16) 🌐 — **เคสคูน–ชัยพฤกษ์–กัลปพฤกษ์**
+- [[plant-arang]] — อะราง/นนทรีป่า *Peltophorum dasyrhachis* (Fabaceae/Caesalpinioideae): **ใบขนนกสองชั้น (bipinnate)** · ดอกเหลือง · ฝักแบนมีปีกที่ตะเข็บ (M17) 🌐 — **bipinnate ครั้งแรก**
+- [[plant-hang-nok-yung-farang]] — หางนกยูงฝรั่ง *Delonix regia* (Fabaceae/Caesalpinioideae): ใบขนนกสองชั้นใหญ่ · **ดอกแดงกลีบธงลายจุด** · ฝักแบนยาวเนื้อไม้ (M18) 🌐 — **ตารางเทียบ Caesalpinioideae 4 ชนิด**
+- [[plant-wan-kap-hoi]] — ว่านกาบหอย *Tradescantia spathacea* (Commelinaceae): **monocot ล้มลุก** · ใบล่างม่วง · ช่อดอกในกาบรูปเรือ · ดอกขาววง 3 (M19) 🌐
+- [[plant-takhrai]] — ตะไคร้ *Cymbopogon citratus* (Poaceae): **หญ้าตัวแรก** · "ต้น" = กาบใบซ้อน · เหง้า · เส้นขนาน ขอบสากคม · citral (M20) 🌐 — **โครงสร้างใบหญ้า**
+- [[plant-mak-khiao]] — หมากเขียว *Ptychosperma macarthurii* (Arecaceae): **ปาล์มใบขนนก (feather)** · monoecious · ผลสุกแดง (M21) 🌐 — **คู่เทียบปาล์มกับจั๋ง (fan) + ตารางกลุ่ม monocot**
+- [[plant-mayom]] — มะยม *Phyllanthus acidus* (Phyllanthaceae): **ใบประกอบเทียม (phyllanthoid)** · cauliflory · ดอกไม่มีกลีบ · ผลฉ่ำน้ำเป็นเหลี่ยมรสเปรี้ยว (M22) 🌐
+- [[plant-mamuang-hao]] — มะม่วงหาวมะนาวโห่/หนามแดง *Carissa carandas* (Apocynaceae): **น้ำยางขาว + หนามง่าม** · ใบตรงข้าม · ดอกหลอดขาว · ผล berry สุกม่วงดำกินได้ (M23) 🌐 — **วงศ์เดียวกับส้มลม**
+- [[plant-farang-khi-nok]] — ฝรั่งขี้นก *Psidium guajava* (Myrtaceae): **เกสรพู่จำนวนมาก** · ใบมีต่อมน้ำมัน+เส้นขอบใน · เปลือกลอก · ผล berry เมล็ดแข็งมาก (M24) 🌐
+- [[plant-donya]] — ดอนญ่า *Mussaenda* (Rubiaceae): **กลีบเลี้ยงขยายเป็นแผ่นสีสด (petaloid sepal)** · หูใบระหว่างก้านใบ · ดอกจริงเล็กเหลืองหลอด (M25) 🌐
+- [[plant-yo-pa]] — ยอป่า *Morinda coreia* (Rubiaceae): ช่อดอกก้อนกลม → **ผลรวม syncarp** · หูใบระหว่างก้านใบ · รากให้สีย้อม (M26) 🌐 — **ผลรวมแบบที่ 3**
+- [[plant-sai-tan]] — ไส้ตัน *Aganosma marginata* (Apocynaceae): ไม้เถายางขาว · ใบตรงข้าม · ดอกขาวหลอด · follicle คู่ (M27) 🌐 — **ปิดกลุ่ม Apocynaceae 3 วิสัย**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 

@@ -11,7 +11,7 @@ tags:
 
 ## สถานะปัจจุบัน
 
-- **Phase**: **การทำสมองที่สอง** — Layer S (+S8 taxonomy · +M1–M15 monographs รายชนิด) · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
+- **Phase**: **การทำสมองที่สอง** — Layer S (+S8 taxonomy · +M1–M27 monographs รายชนิด · **ครบชุด 21 ชนิดนักเรียน**) · Layer T ครบ · U1/U2/U3 · AX1+AX2 · เครื่องแนะนำเมนู + wiki · **AI ติวเตอร์ (RAG) MVP ในแอป**
 - **แกนความรู้ (ครูเฮนรี่)**: AX1 "อาหาร = สมดุล" → [[food-as-balance]] · AX2 "เคลื่อนไหว + ความสุขจริง vs หลอก" → [[human-unnatural-life]]
 - **ทิศทางใหม่**: ทำเป็น "ฐานข้อมูล+เครื่องแนะนำเมนู" สำหรับประชาชน (ป้อน BMI+อาการ→เมนู) · ข้อมูลอยู่ `data/*.json` · เฟสถัดไป = เว็บ prototype
 - **เป้าหมายถัดไป**: ทำข้อสอบ qbank ให้ monographs M1–M8 · วิเคราะห์เมนู Tier 2 รอบถัดไป · เติม kcal · ตัวกรองแพ้อาหาร · ผลิตข้อสอบพิมพ์จาก qbank taxonomy (ถ้าต้องการ) · (เมื่อเข้าถึงได้) ย่อยเล่มสมพร
@@ -47,7 +47,30 @@ tags:
   - **M15 [[plant-pradu-pa]]** ประดู่ป่า *Pterocarpus macrocarpus* (**Fabaceae/Faboideae**) — แหล่งหลัก = ตารางคำตอบประดู่ป่า (xlsx อ่านด้วย openpyxl)
     - **จุดเรียนหลัก**: **ผลฝักกลมแบนมีปีกโดยรอบ ไม่แตก กระจายด้วยลม (samaroid legume)** → ตารางเทียบชนิดฝักวงศ์ถั่ว 4 แบบ (ปีก/ทรงกระบอก/แตกดีด/แตก 2 ซีก) · **ยางแดง (kino)** ตัดกับยางขาว · ปิดกลุ่มดอกถั่ว Faboideae (ดอกถั่ว+เกสร (9)+1) · ไม้เศรษฐกิจ/ดอกสัญลักษณ์ทหารเรือ · แยกจากประดู่บ้าน *P. indicus*
     - **อัปเดต**: [[index]] (M15) · [[reference-sources]] (+1) · back-link จาก [[plant-thaowan-priang]]
-- **จบคิวไฟล์ต้นฉบับแล้ว (7 ชนิด: คูน · ส้มลม · น้ำใจใคร่ · มะเดื่อ · สุพรรณิการ์ · จั๋ง · ประดู่)** — เหลือ **14 ชนิดใน 21 ที่ไม่มีไฟล์แนบ** (ฝรั่งขี้นก · ว่านกาบหอย · อะราง · ดอนญ่า · เถาแกะ · ไส้ตัน · หางนกยูง · ตะไคร้ · กัลปพฤกษ์ · แค[อาจซ้ำ M8] · มะม่วงหาวมะนาวโห่ · มะยม · ยอป่า · หมากเขียว) → ทำจากแหล่งเปิด (QSBG/DNP/WFO)
+- **จบคิวไฟล์ต้นฉบับแล้ว (7 ชนิด M9–M15)** — PR #10 merged
+- **ชุดแหล่งเปิด (ไม่มีไฟล์แนบ) — branch `content/plant-profiles-opensource`** · ข้าม "แค" (ซ้ำ M8) → เหลือ **13 ชนิด** · ทำทีละชุด commit ต่อชุด · ค้นเว็บยืนยัน (WebSearch)
+  - **ชุดที่ 1 (Caesalpinioideae ต่อยอดจากคูน) — เสร็จ 3 ชนิด**:
+    - **M16 [[plant-kanlapaphruek]]** กัลปพฤกษ์ *Cassia bakeriana* — สกุล Cassia เดียวกับคูน ดอกชมพู · ปิดเคสคูน–ชัยพฤกษ์–กัลปพฤกษ์
+    - **M17 [[plant-arang]]** อะราง/นนทรีป่า *Peltophorum dasyrhachis* — **ใบขนนกสองชั้น (bipinnate) ครั้งแรก** · ฝักแบนมีปีกที่ตะเข็บ
+    - **M18 [[plant-hang-nok-yung-farang]]** หางนกยูงฝรั่ง *Delonix regia* — ใบสองชั้นใหญ่ · ดอกแดงกลีบธงลายจุด · **ตารางเทียบ Caesalpinioideae 4 ชนิด** (คูน/กัลปพฤกษ์/อะราง/หางนกยูงฝรั่ง)
+    - **อัปเดต**: [[index]] · [[reference-sources]] (+3) · back-link จาก [[plant-khun]]
+  - **ชุดที่ 2 (monocot) — เสร็จ 3 ชนิด**:
+    - **M19 [[plant-wan-kap-hoi]]** ว่านกาบหอย *Tradescantia spathacea* (Commelinaceae) — monocot ล้มลุก · ใบล่างม่วง · ช่อในกาบรูปเรือ (spathe)
+    - **M20 [[plant-takhrai]]** ตะไคร้ *Cymbopogon citratus* (**Poaceae — หญ้าตัวแรก**) — "ต้น" = กาบใบซ้อน · เหง้า · โครงสร้างใบหญ้า (กาบ/แผ่น/ลิ้นใบ) · citral
+    - **M21 [[plant-mak-khiao]]** หมากเขียว *Ptychosperma macarthurii* (Arecaceae) — **ปาล์มใบขนนก (feather)** ↔ จั๋ง (ใบพัด) · monoecious · **ตารางกลุ่ม monocot 5 ชนิด**
+    - **อัปเดต**: [[index]] · [[reference-sources]] (+3) · back-link จาก [[plant-chang]]
+  - **ชุดที่ 3 (ผลไม้พื้นบ้าน) — เสร็จ 3 ชนิด**:
+    - **M22 [[plant-mayom]]** มะยม *Phyllanthus acidus* (Phyllanthaceae) — **ใบประกอบเทียม (phyllanthoid)** · cauliflory · ดอกไม่มีกลีบ
+    - **M23 [[plant-mamuang-hao]]** มะม่วงหาวมะนาวโห่ *Carissa carandas* (Apocynaceae) — **วงศ์เดียวกับส้มลม** · ยางขาว+หนามง่าม · berry กินได้
+    - **M24 [[plant-farang-khi-nok]]** ฝรั่งขี้นก *Psidium guajava* (**Myrtaceae**) — เกสรพู่มาก · ใบมีต่อมน้ำมัน+เส้นขอบใน · เปลือกลอก (เทียบตะแบก)
+    - **อัปเดต**: [[index]] · [[reference-sources]] (+3) · back-link จาก [[plant-somlom]] · [[plant-tabaek]]
+  - **ชุดที่ 4 (สุดท้าย · ชื่อกำกวม) — เสร็จ 3 ชนิด**:
+    - **M25 [[plant-donya]]** ดอนญ่า *Mussaenda* (**Rubiaceae**) — **กลีบเลี้ยงขยายเป็นแผ่นสีสด (petaloid sepal)** · หูใบระหว่างก้านใบ
+    - **M26 [[plant-yo-pa]]** ยอป่า *Morinda coreia* (Rubiaceae) — ช่อก้อนกลม → **ผลรวม syncarp (แบบที่ 3)** · รากให้สีย้อม
+    - **M27 [[plant-sai-tan]]** ไส้ตัน *Aganosma marginata* (Apocynaceae) — ไม้เถายางขาว · follicle คู่ · **ปิดกลุ่ม Apocynaceae 3 วิสัย** (ส้มลม/มะม่วงหาวฯ/ไส้ตัน)
+    - **อัปเดต**: [[index]] · [[reference-sources]] (+3) · back-link จาก [[plant-somlom]] · [[plant-maduea-chumphon]]
+  - **"เถาแกะ"** = **เขาแกะ (กล้วยไม้) = [[plant-khao-kae]] (M7)** ที่ทำแล้ว (ผู้ใช้ยืนยัน) → นับเป็นซ้ำ ไม่ต้องทำใหม่
+- **✅ ครบทั้ง 21 ชนิดจากใบงานนักเรียน** — 7 ชนิดจาก PDF (M9–M15, PR #10 merged) + 12 ชนิดแหล่งเปิด (M16–M27) + 2 ซ้ำ (แค=M8 · เถาแกะ=M7 เขาแกะ) · branch `content/plant-profiles-opensource` (4 commits) พร้อมเปิด PR
 - **หมายเหตุ**: "แค" (กลุ่ม 1) น่าจะซ้ำกับ [[plant-khae-ban]] (M8) — เหลือชนิดใหม่จริง ~20
 
 ## Last Session (2026-08-23)
