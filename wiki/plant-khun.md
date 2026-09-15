@@ -166,6 +166,7 @@ tags:
 
 - [[flower-morphology]] (ดอกไม่ใช่ดอกถั่ว · เกสรขนาดไม่เท่ากัน) · [[fruit-seed-morphology]] (ฝากไม่แตก) · [[leaf-morphology]] (ขนนกปลายคู่) · [[root-morphology]]
 - **คู่เทียบวงศ์ถั่ว**: [[plant-anchan]] · [[plant-khae-ban]] · [[plant-thaowan-priang]] (Faboideae ดอกถั่ว) ↔ คูน (Caesalpinioideae ดอกแผ่กาง)
+- [[plant-somlom]] — เทียบชนิดผลและการกระจายเมล็ด: ฝักคูนทรงกระบอก**ไม่แตก/กระจายโดยสัตว์** ↔ follicle ส้มลม**แตก/ปลิวตามลม**
 - [[thai-herbal]] · [[food-dhatu-plants]]
 
 ## ที่มา (Sources) — เข้าถึง 2026-09-15
