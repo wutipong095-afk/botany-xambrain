@@ -63,6 +63,9 @@ tags:
 - [[plant-kanlapaphruek]] — กัลปพฤกษ์ *Cassia bakeriana* (Fabaceae/Caesalpinioideae): สกุล *Cassia* เดียวกับคูน · **ดอกชมพู** · ฝักทรงกระบอกไม่แตก (M16) 🌐 — **เคสคูน–ชัยพฤกษ์–กัลปพฤกษ์**
 - [[plant-arang]] — อะราง/นนทรีป่า *Peltophorum dasyrhachis* (Fabaceae/Caesalpinioideae): **ใบขนนกสองชั้น (bipinnate)** · ดอกเหลือง · ฝักแบนมีปีกที่ตะเข็บ (M17) 🌐 — **bipinnate ครั้งแรก**
 - [[plant-hang-nok-yung-farang]] — หางนกยูงฝรั่ง *Delonix regia* (Fabaceae/Caesalpinioideae): ใบขนนกสองชั้นใหญ่ · **ดอกแดงกลีบธงลายจุด** · ฝักแบนยาวเนื้อไม้ (M18) 🌐 — **ตารางเทียบ Caesalpinioideae 4 ชนิด**
+- [[plant-wan-kap-hoi]] — ว่านกาบหอย *Tradescantia spathacea* (Commelinaceae): **monocot ล้มลุก** · ใบล่างม่วง · ช่อดอกในกาบรูปเรือ · ดอกขาววง 3 (M19) 🌐
+- [[plant-takhrai]] — ตะไคร้ *Cymbopogon citratus* (Poaceae): **หญ้าตัวแรก** · "ต้น" = กาบใบซ้อน · เหง้า · เส้นขนาน ขอบสากคม · citral (M20) 🌐 — **โครงสร้างใบหญ้า**
+- [[plant-mak-khiao]] — หมากเขียว *Ptychosperma macarthurii* (Arecaceae): **ปาล์มใบขนนก (feather)** · monoecious · ผลสุกแดง (M21) 🌐 — **คู่เทียบปาล์มกับจั๋ง (fan) + ตารางกลุ่ม monocot**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 

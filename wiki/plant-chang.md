@@ -144,6 +144,7 @@ tags:
 - [[leaf-morphology]] (ใบรูปพัด · เส้นใบขนาน) · [[flower-morphology]] (ดอกวง 3 · dioecious) · [[fruit-seed-morphology]] (berry · endosperm) · [[root-morphology]] (รากฝอย)
 - [[plant-supphannika]] — **คู่เทียบ dicot ↔ monocot** (ดูตารางด้านล่าง)
 - [[plant-khao-kae]] — monocot อีกชนิด (กล้วยไม้) → เทียบ palm vs orchid ในกลุ่มใบเลี้ยงเดี่ยว
+- [[plant-mak-khiao]] — **คู่เทียบปาล์ม**: จั๋ง (ใบพัด/dioecious) ↔ หมากเขียว (ใบขนนก/monoecious) · [[plant-wan-kap-hoi]] · [[plant-takhrai]] — monocot ล้มลุก/หญ้า
 - [[thai-herbal]]
 
 ## ภาคผนวก — ตารางเทียบ dicot ↔ monocot (สุพรรณิการ์ ↔ จั๋ง)
