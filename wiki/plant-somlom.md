@@ -165,6 +165,7 @@ tags:
 - [[leaf-morphology]] (ใบเดี่ยวเรียงตรงข้าม · ใบหลายรูป) · [[flower-morphology]] (กลีบเชื่อมเป็นหลอด · 2 คาร์เพล) · [[fruit-seed-morphology]] (follicle คู่ · เมล็ดมีปุย) · [[stem-morphology]] (น้ำยางขาว · lenticel)
 - [[plant-khun]] · [[plant-anchan]] — เทียบชนิดผลและการกระจายเมล็ด (follicle/ลม vs legume/สัตว์ vs ดีดเอง)
 - [[plant-mon]] — พืชมีน้ำยางขาวอีกชนิด (Moraceae) เทียบกับ Apocynaceae
+- [[plant-namjaikhrai]] — คู่เทียบไม้เถา/พุ่ม ใบเดี่ยว: ส้มลม **มียาง/ใบตรงข้าม** ↔ น้ำใจใคร่ **ไม่มียาง/ใบสลับ**
 - [[herbal-taste-9]] · [[food-dhatu-plants]] · [[food-recommender]] — ผักรสเปรี้ยวในเมนูต้มเปรี้ยว
 
 ## ที่มา (Sources) — เข้าถึง 2026-09-15
