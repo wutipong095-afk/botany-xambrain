@@ -60,6 +60,9 @@ tags:
 - [[plant-supphannika]] — สุพรรณิการ์/ฝ้ายคำ *Cochlospermum regium* (Bixaceae): ใบแฉกฝ่ามือ · ดอกเหลือง 5 กลีบ เกสรมาก **อับเรณูเปิดรู (buzz)** · แคปซูล เมล็ดมีปุยฝ้าย (M13) 🌐
 - [[plant-chang]] — จั๋ง *Rhapis subtilis* (Arecaceae): **ปาล์มแตกกอ · monocot ตัวที่ 2** · ใบรูปพัด · เส้นใบขนาน · ดอกวง 3 · ผล berry (M14) 🌐 — **คู่เทียบ dicot ↔ monocot กับสุพรรณิการ์**
 - [[plant-pradu-pa]] — ประดู่ป่า *Pterocarpus macrocarpus* (Fabaceae/Faboideae): ไม้ต้นใหญ่ · ดอกถั่วเหลือง (9)+1 · **ฝักมีปีกโดยรอบ ไม่แตก กระจายด้วยลม** · **ยางแดง (kino)** · ไม้เศรษฐกิจ (M15) 🌐 — **ปิดกลุ่มดอกถั่ว · ฝักมีปีก**
+- [[plant-kanlapaphruek]] — กัลปพฤกษ์ *Cassia bakeriana* (Fabaceae/Caesalpinioideae): สกุล *Cassia* เดียวกับคูน · **ดอกชมพู** · ฝักทรงกระบอกไม่แตก (M16) 🌐 — **เคสคูน–ชัยพฤกษ์–กัลปพฤกษ์**
+- [[plant-arang]] — อะราง/นนทรีป่า *Peltophorum dasyrhachis* (Fabaceae/Caesalpinioideae): **ใบขนนกสองชั้น (bipinnate)** · ดอกเหลือง · ฝักแบนมีปีกที่ตะเข็บ (M17) 🌐 — **bipinnate ครั้งแรก**
+- [[plant-hang-nok-yung-farang]] — หางนกยูงฝรั่ง *Delonix regia* (Fabaceae/Caesalpinioideae): ใบขนนกสองชั้นใหญ่ · **ดอกแดงกลีบธงลายจุด** · ฝักแบนยาวเนื้อไม้ (M18) 🌐 — **ตารางเทียบ Caesalpinioideae 4 ชนิด**
 
 ## Concepts — Layer U: การใช้ประโยชน์ (Utilization)
 
